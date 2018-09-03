@@ -1,0 +1,6 @@
+[submodule "hugo-theme-pixyll"]
+	path = hugo-theme-pixyll
+	url = https://github.com/azmelanar/hugo-theme-pixyll.git
+[submodule "themes/tale"]
+	path = themes/tale
+	url = https://github.com/EmielH/tale-hugo.git
