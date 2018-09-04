@@ -2,10 +2,10 @@
 comments: true
 date: "2015-01-30T00:00:00Z"
 description: ""
-externalurl: http://www.billboard.com/articles/news/6450775/zakk-wylde-wylde-audio-line-namm?utm_source=loopinsight.com&utm_medium=referral&utm_campaign=Feed%3A+loopinsight%2FKqJb+(The+Loop)&utm_content=FeedBurner
+external-url: http://www.billboard.com/articles/news/6450775/zakk-wylde-wylde-audio-line-namm?utm_source=loopinsight.com&utm_medium=referral&utm_campaign=Feed%3A+loopinsight%2FKqJb+(The+Loop)&utm_content=FeedBurner
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

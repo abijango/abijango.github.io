@@ -2,7 +2,7 @@
 comments: true
 date: "2013-12-03T00:00:00Z"
 description: Art on an iPad
-externalurl: http://www.youtube.com/watch?v=uEdRLlqdgA4&feature=youtu.be
+external-url: http://www.youtube.com/watch?v=uEdRLlqdgA4&feature=youtu.be
 published: true
 share: true
 tags:

@@ -2,10 +2,10 @@
 comments: true
 date: "2013-10-27T00:00:00Z"
 description: ""
-externalurl: http://www.bbc.co.uk/news/magazine-24706863
+external-url: http://www.bbc.co.uk/news/magazine-24706863
 image:
   credit: Fernando Del Berro
-  creditexternalurl: http://news.bbcimg.co.uk/media/images/70787000/jpg/_70787582_cargo976fernandodelberro.jpg
+  creditexternal-url: http://news.bbcimg.co.uk/media/images/70787000/jpg/_70787582_cargo976fernandodelberro.jpg
   feature: mule.jpg
 published: true
 share: true

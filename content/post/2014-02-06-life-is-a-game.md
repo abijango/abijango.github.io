@@ -2,10 +2,10 @@
 comments: true
 date: "2014-02-06T00:00:00Z"
 description: Life is a Game
-externalurl: http://www.instapaper.com/read/456713563
+external-url: http://www.instapaper.com/read/456713563
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

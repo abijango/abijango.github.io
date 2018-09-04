@@ -2,7 +2,7 @@
 comments: true
 date: "2014-01-09T00:00:00Z"
 description: ""
-externalurl: http://burgerbuoy.wordpress.com/2014/01/08/burgerislamabad/
+external-url: http://burgerbuoy.wordpress.com/2014/01/08/burgerislamabad/
 published: true
 share: true
 tags:

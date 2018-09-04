@@ -2,7 +2,7 @@
 comments: true
 date: "2013-11-18T00:00:00Z"
 description: Sharing a husband
-externalurl: http://blogs.tribune.com.pk/story/18085/when-sharing-her-husband-was-her-best-choice/
+external-url: http://blogs.tribune.com.pk/story/18085/when-sharing-her-husband-was-her-best-choice/
 published: true
 share: true
 tags:

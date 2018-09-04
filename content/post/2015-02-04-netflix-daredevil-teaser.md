@@ -2,10 +2,10 @@
 comments: true
 date: "2015-02-04T00:00:00Z"
 description: Daredevil Reborn
-externalurl: http://io9.com/first-daredevil-trailer-is-dark-dangerous-and-full-of-1683708033
+external-url: http://io9.com/first-daredevil-trailer-is-dark-dangerous-and-full-of-1683708033
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

@@ -2,7 +2,7 @@
 comments: true
 date: "2014-01-09T00:00:00Z"
 description: ""
-externalurl: http://deeperdesign.wordpress.com/2010/02/26/is-iron-man-made-of-lego/
+external-url: http://deeperdesign.wordpress.com/2010/02/26/is-iron-man-made-of-lego/
 published: true
 share: true
 tags:

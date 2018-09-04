@@ -2,7 +2,7 @@
 comments: true
 date: "2013-12-31T00:00:00Z"
 description: ""
-externalurl: http://www.bbc.co.uk/news/blogs-magazine-monitor-23005848
+external-url: http://www.bbc.co.uk/news/blogs-magazine-monitor-23005848
 published: true
 share: true
 tags:

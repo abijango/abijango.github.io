@@ -2,10 +2,10 @@
 comments: true
 date: "2014-02-20T00:00:00Z"
 description: The Lego Movie
-externalurl: http://www.rottentomatoes.com/m/the_lego_movie/
+external-url: http://www.rottentomatoes.com/m/the_lego_movie/
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

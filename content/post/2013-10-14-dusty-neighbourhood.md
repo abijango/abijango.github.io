@@ -4,7 +4,7 @@ date: "2013-10-14T00:00:00Z"
 description: Injustice for All
 image:
   credit: Unknown
-  creditexternalurl: http://manalkhan.files.wordpress.com/2010/03/pigeonswindow.jpg?w=500
+  creditexternal-url: http://manalkhan.files.wordpress.com/2010/03/pigeonswindow.jpg?w=500
   feature: dustywindow.jpg
 modified: null
 published: true

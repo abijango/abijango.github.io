@@ -2,10 +2,10 @@
 comments: true
 date: "2014-02-12T00:00:00Z"
 description: 'Gotham: The Series'
-externalurl: http://bernardin.tumblr.com/post/76374503340/if-i-was-writing-this-new-gotham-series
+external-url: http://bernardin.tumblr.com/post/76374503340/if-i-was-writing-this-new-gotham-series
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

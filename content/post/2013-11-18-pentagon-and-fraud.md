@@ -2,7 +2,7 @@
 comments: true
 date: "2013-11-18T00:00:00Z"
 description: Pentagon and fraud
-externalurl: http://www.theverge.com/2013/11/18/5117816/pentagon-guilty-of-billion-dollar-accounting-fraud-reveals-reuters
+external-url: http://www.theverge.com/2013/11/18/5117816/pentagon-guilty-of-billion-dollar-accounting-fraud-reveals-reuters
 published: true
 share: true
 tags:

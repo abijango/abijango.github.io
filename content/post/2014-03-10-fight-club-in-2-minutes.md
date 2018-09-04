@@ -2,10 +2,10 @@
 comments: true
 date: "2014-03-10T00:00:00Z"
 description: Fight Club in 2 minutes
-externalurl: http://www.theverge.com/2014/3/10/5490064/fight-club-reimagined-as-snes-beat-em-up
+external-url: http://www.theverge.com/2014/3/10/5490064/fight-club-reimagined-as-snes-beat-em-up
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

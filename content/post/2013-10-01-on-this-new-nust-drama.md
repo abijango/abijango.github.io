@@ -2,7 +2,7 @@
 comments: true
 date: "2013-10-01T00:00:00Z"
 description: NUST Stupidities
-externalurl: http://dawn.com/news/1045274
+external-url: http://dawn.com/news/1045274
 share: true
 tags:
 - link post

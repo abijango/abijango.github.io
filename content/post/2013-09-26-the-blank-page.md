@@ -4,7 +4,7 @@ date: "2013-09-26T00:00:00Z"
 description: Intro Post
 image:
   credit: John Carey
-  creditexternalurl: http://fiftyfootshadows.net/mjuploads/writing.XYVnzAIkenzI.jpg
+  creditexternal-url: http://fiftyfootshadows.net/mjuploads/writing.XYVnzAIkenzI.jpg
   feature: openbook.jpg
 modified: null
 share: true

@@ -2,10 +2,10 @@
 comments: true
 date: "2014-03-24T00:00:00Z"
 description: Censorship
-externalurl: http://www.theverge.com/2014/3/22/5536676/pakistan-erases-international-new-york-times-cover-story
+external-url: http://www.theverge.com/2014/3/22/5536676/pakistan-erases-international-new-york-times-cover-story
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

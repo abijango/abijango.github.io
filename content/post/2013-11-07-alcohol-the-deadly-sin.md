@@ -2,7 +2,7 @@
 comments: true
 date: "2013-11-07T00:00:00Z"
 description: ""
-externalurl: http://blogs.tribune.com.pk/story/14528/why-ban-alcohol-when-it-is-consumed-openly/
+external-url: http://blogs.tribune.com.pk/story/14528/why-ban-alcohol-when-it-is-consumed-openly/
 published: true
 share: true
 tags:

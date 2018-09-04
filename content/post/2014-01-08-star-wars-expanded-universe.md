@@ -2,7 +2,7 @@
 comments: true
 date: "2014-01-08T00:00:00Z"
 description: ""
-externalurl: http://www.theverge.com/2014/1/7/5285906/official-star-wars-canon-can-now-include-expanded-universe-stories
+external-url: http://www.theverge.com/2014/1/7/5285906/official-star-wars-canon-can-now-include-expanded-universe-stories
 published: true
 share: true
 tags:

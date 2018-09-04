@@ -2,10 +2,10 @@
 comments: true
 date: "2014-02-19T00:00:00Z"
 description: Sacrifice
-externalurl: http://messythoughts.com/2014/01/26/patience-and-perseverance-make-a-perfect-home-or-so-it-seems/
+external-url: http://messythoughts.com/2014/01/26/patience-and-perseverance-make-a-perfect-home-or-so-it-seems/
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true
@@ -17,7 +17,7 @@ tags:
 title: Sacrifice
 ---
 
-## Women
+##Women
 
 All of what is written in the linked article is true, women are *generally* expected to make all the sacrifices for a marriage; or more accurately, trained to believe to give up all their hopes and dreams and live according to the lives their husbands choose for them.
 
@@ -27,7 +27,7 @@ And no matter how much we want it to be not true, it is. Even the modern woman f
 
 Though that kind of black mailing and threatening is in no way acceptable, it is the accepted methodology employed to, and to excuse the phrase as this is now how I would put it but, keep women in line. Because as a society we all believe that women are the ones we must keep in line, men can do as they please.
 
-## Men
+##Men
 
 Now talking about men is where I wanted to digress a little from the original posts topic. Though all that is said in the original article is true for the *majority* of women **and** men in our societies, it may not be so true for the opposite demographic. Namely, the very minority of modern men and women in relationships.
 
@@ -43,11 +43,11 @@ I know women talk a lot about how they have nothing of their own, they have thei
 
 And being men, these things might bother them, they shrug it off. Move on. Check all the check boxes, and get on with it.
 
-After marriage, he has been told the gentleman respects his wife. Does not make demands on her, considers her dreams and career aspirations and all that. Great, he wants to please his wife, he does that! And if he is lucky, she does the same.
+After marriage, he has been told the gentleman respects his wife. Does not make demands on her, considers her dreams and career aspirations and all that. Great, he wants to please his wife, he does that! And if he is lucky, she does the same. 
 
 But now I come to the sacrifice part after marriage for men. They give up all their friends and family. A modern wife will not want to share her husband. Because obviously that is what both men and women do right? The man respects the woman's right to go to work where she wants, meet and make friends with whom she wants, but not the other way around right? That is how it goes?
 
-His way of decorating a house is obviously wrong, we all know men can't maintain a home. So the house is transformed, and you say mostly for the better! Maybe, maybe not. You liked smoking before marriage? Tough luck, change. Liked leaving your laundry on the floor of the bedroom? Tough luck, change. Liked going out with friends on Friday nights? Tough luck there too bro, and you got it right, Change! Your stuff was exactly where you liked it, the keys there, the phone there, the TV remote there; NO! All wrong, change sir! You want time to yourself to meditate or practice your fancy arts/music/whatever, hell no, too much to do around the house man!
+His way of decorating a house is obviously wrong, we all know men can't maintain a home. So the house is transformed, and you say mostly for the better! Maybe, maybe not. You liked smoking before marriage? Tough luck, change. Liked leaving your laundry on the floor of the bedroom? Tough luck, change. Liked going out with friends on Friday nights? Tough luck there too bro, and you got it right, Change! Your stuff was exactly where you liked it, the keys there, the phone there, the TV remote there; NO! All wrong, change sir! You want time to yourself to meditate or practice your fancy arts/music/whatever, hell no, too much to do around the house man! 
 
 Funny how when he used to live alone, he got everything done in the house, and **still** had time for all of the things he liked doing. Suddenly having a second person in the house increases the amount of work non-linearly.
 
@@ -56,3 +56,4 @@ Again this is not a general rule, it doesn't happen to all men. And certainly no
 You may say, oh that is nothing, and sure I agree it's not a lot in the grand scheme of things. But please don't say that men don't make any sacrifices, and maybe you don't hear the men complaining, because hey, some of them are happy to make the sacrifices or rather, most of them just don't complain.
 
 You can follow the author or shout at him on [Twitter](https://twitter.com/abijango)
+	

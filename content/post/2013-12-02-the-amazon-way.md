@@ -2,7 +2,7 @@
 comments: true
 date: "2013-12-02T00:00:00Z"
 description: Amazon
-externalurl: http://www.cbsnews.com/news/amazons-jeff-bezos-looks-to-the-future/
+external-url: http://www.cbsnews.com/news/amazons-jeff-bezos-looks-to-the-future/
 published: true
 share: true
 tags:

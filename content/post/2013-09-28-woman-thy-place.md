@@ -1,10 +1,10 @@
 ---
 comments: false
-date: '2013-09-28'
+date: "2013-09-28T00:00:00Z"
 description: Link Post
 image:
   credit: John Carey
-  creditexternalurl: http://images.fiftyfootshadows.net/2012/04/000016ss.jpg
+  creditexternal-url: http://images.fiftyfootshadows.net/2012/04/000016ss.jpg
   feature: window.jpg
 modified: null
 share: true
@@ -13,9 +13,7 @@ tags:
 - issues
 - women
 title: My take on Woman, thy place is at home
-url: /2013/09/28/woman-thy-place
 ---
-
 
 I read an article over at [Messy Thoughts](http://messythoughts.com/2013/09/26/woman-thy-place-is-at-home/) which I think is an excellent take on the issue of *'useless education'*. Go ahead read it first and come back, I'll wait.
 

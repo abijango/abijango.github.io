@@ -2,7 +2,7 @@
 comments: true
 date: "2013-11-14T00:00:00Z"
 description: Link post for abuses in orthodox communities
-externalurl: http://www.vice.com/read/the-child-rape-assembly-line-0000141-v20n11
+external-url: http://www.vice.com/read/the-child-rape-assembly-line-0000141-v20n11
 published: true
 share: true
 tags:

@@ -2,10 +2,10 @@
 comments: true
 date: "2015-02-23T00:00:00Z"
 description: The Great Escape
-externalurl: http://toybox.io9.com/this-incredible-lego-diorama-shows-how-boba-fett-escape-1687038905
+external-url: http://toybox.io9.com/this-incredible-lego-diorama-shows-how-boba-fett-escape-1687038905
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

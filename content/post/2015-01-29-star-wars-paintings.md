@@ -2,10 +2,10 @@
 comments: true
 date: "2015-01-29T00:00:00Z"
 description: The paintings of the Original Star Wars Trilogy
-externalurl: http://sploid.gizmodo.com/the-amazing-matte-paintings-from-star-wars-and-their-cr-1680372651
+external-url: http://sploid.gizmodo.com/the-amazing-matte-paintings-from-star-wars-and-their-cr-1680372651
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

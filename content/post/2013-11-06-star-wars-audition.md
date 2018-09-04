@@ -2,7 +2,7 @@
 comments: true
 date: "2013-11-06T00:00:00Z"
 description: Star Wars
-externalurl: http://www.bbc.co.uk/news/entertainment-arts-24828750
+external-url: http://www.bbc.co.uk/news/entertainment-arts-24828750
 published: true
 share: true
 tags:

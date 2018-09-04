@@ -2,7 +2,7 @@
 comments: true
 date: "2013-11-06T00:00:00Z"
 description: Post on my Jekyll setup Part 1
-externalurl: null
+external-url: null
 published: true
 share: true
 tags:
@@ -15,13 +15,13 @@ I think finally I would like to write about how this blog is set up, for all you
 
 So let us begin!
 
-## Jekyll and all that
+##Jekyll and all that
 
 [Jekyll](http://jekyllrb.com/), is a simple static blogging system, or as they say, blogging for hackers. Basically, it eliminates the database from the backend. All that is there is your content (posts) and that is it. No database to store all that content, and retrive it when a user requests to view a post, hence making it blazing fast.
 
 A Jekyll blog is essentially 'built' before you publish it. Sounds a bit complicated you say? Not really, you don't even need to know a lot of programming to get it all working honestly.
 
-## What is needed
+##What is needed
 
 Here is a list of all the things you need to get it up and working.
 
@@ -37,7 +37,7 @@ Here is a list of all the things you need to get it up and working.
 
 And that is pretty much it :). Scared already? Don't be. Read on.
 
-## My setup
+#My setup
 
 Ok granted my setup is a bit lame and complicated. You don't need something as complicated, I just do it to keep things automated and all that.
 
@@ -51,11 +51,11 @@ layout: post
 title: "The Blank Page"
 description: "Intro Post"
 tags: [blog]
-modified:
+modified: 
 image:
   feature: openbook.jpg
   credit: John Carey
-  creditexternalurl: http://fiftyfootshadows.net/mjuploads/writing.XYVnzAIkenzI.jpg
+  creditexternal-url: http://fiftyfootshadows.net/mjuploads/writing.XYVnzAIkenzI.jpg
 comments: true
 share: true
 ---

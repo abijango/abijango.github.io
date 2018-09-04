@@ -2,7 +2,7 @@
 comments: true
 date: "2013-11-07T00:00:00Z"
 description: Peter's Blog Link Post
-externalurl: http://ceomk.blogspot.co.uk/
+external-url: http://ceomk.blogspot.co.uk/
 published: true
 share: true
 tags:

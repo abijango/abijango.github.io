@@ -2,7 +2,7 @@
 comments: true
 date: "2013-11-13T00:00:00Z"
 description: Life
-externalurl: null
+external-url: null
 published: true
 share: true
 tags:

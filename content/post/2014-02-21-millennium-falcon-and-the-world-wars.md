@@ -2,10 +2,10 @@
 comments: true
 date: "2014-02-21T00:00:00Z"
 description: How the World Wars inspired the Millennium Falcon
-externalurl: http://starwarsblog.starwars.com/2014/02/18/from-world-war-to-star-wars-the-millennium-falcon/
+external-url: http://starwarsblog.starwars.com/2014/02/18/from-world-war-to-star-wars-the-millennium-falcon/
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

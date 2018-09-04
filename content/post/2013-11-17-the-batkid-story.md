@@ -2,7 +2,7 @@
 comments: true
 date: "2013-11-17T00:00:00Z"
 description: BatKid Story
-externalurl: http://www.theverge.com/2013/11/15/5108996/batkid-saves-san-francisco-takes-over-the-internet
+external-url: http://www.theverge.com/2013/11/15/5108996/batkid-saves-san-francisco-takes-over-the-internet
 published: true
 share: true
 tags:

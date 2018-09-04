@@ -2,10 +2,10 @@
 comments: true
 date: "2015-02-04T00:00:00Z"
 description: Star Wars Wax Museum
-externalurl: https://starwars.madametussauds.com/london/en/
+external-url: https://starwars.madametussauds.com/london/en/
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

@@ -2,10 +2,10 @@
 comments: true
 date: "2015-01-30T00:00:00Z"
 description: 50 Years of James Bond in Black Tie
-externalurl: http://thesuitsofjamesbond.com/50-years-james-bond-black-tie-inforgraphic/
+external-url: http://thesuitsofjamesbond.com/50-years-james-bond-black-tie-inforgraphic/
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

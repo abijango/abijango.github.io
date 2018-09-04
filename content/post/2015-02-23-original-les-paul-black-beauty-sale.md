@@ -2,10 +2,10 @@
 comments: true
 date: "2015-02-23T00:00:00Z"
 description: The Original Original Les Paul
-externalurl: http://www.guitarplayer.com/gear/1012/les-pauls-1954-black-beauty-goes-for-six-figures-at-auction/50927?utm_source=loopinsight.com&utm_medium=referral&utm_campaign=Feed%3A+loopinsight%2FKqJb+(The+Loop)&utm_content=FeedBurner
+external-url: http://www.guitarplayer.com/gear/1012/les-pauls-1954-black-beauty-goes-for-six-figures-at-auction/50927?utm_source=loopinsight.com&utm_medium=referral&utm_campaign=Feed%3A+loopinsight%2FKqJb+(The+Loop)&utm_content=FeedBurner
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

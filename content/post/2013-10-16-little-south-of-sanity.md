@@ -4,7 +4,7 @@ date: "2013-10-16T00:00:00Z"
 description: Injustice for All
 image:
   credit: Unknown
-  creditexternalurl: http://www.theprisma.co.uk/wp-content/uploads/2013/09/La-odisea-de-pedir-asilo.jpeg
+  creditexternal-url: http://www.theprisma.co.uk/wp-content/uploads/2013/09/La-odisea-de-pedir-asilo.jpeg
   feature: asylum.jpg
 modified: null
 published: true

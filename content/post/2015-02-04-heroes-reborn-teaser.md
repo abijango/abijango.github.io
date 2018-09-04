@@ -2,10 +2,10 @@
 comments: true
 date: "2015-02-04T00:00:00Z"
 description: Heroes Reborn
-externalurl: http://io9.com/the-heroes-reborn-teaser-zachary-levi-and-jack-coleman-1683198978
+external-url: http://io9.com/the-heroes-reborn-teaser-zachary-levi-and-jack-coleman-1683198978
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

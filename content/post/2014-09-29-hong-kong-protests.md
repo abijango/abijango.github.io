@@ -2,10 +2,10 @@
 comments: true
 date: "2014-09-29T00:00:00Z"
 description: Hong Kong Protests
-externalurl: http://www.nytimes.com/2014/09/29/world/asia/clashes-in-hong-kong.html?rref=world&module=Ribbon&version=origin&region=Header&action=click&contentCollection=World&pgtype=article
+external-url: http://www.nytimes.com/2014/09/29/world/asia/clashes-in-hong-kong.html?rref=world&module=Ribbon&version=origin&region=Header&action=click&contentCollection=World&pgtype=article
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true/
 share: true

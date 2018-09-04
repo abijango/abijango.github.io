@@ -4,7 +4,7 @@ date: "2013-10-02T00:00:00Z"
 description: Injustice for All
 image:
   credit: Unknown
-  creditexternalurl: http://www.textureking.com/content/img/stock/big/DSC_5791.JPG
+  creditexternal-url: http://www.textureking.com/content/img/stock/big/DSC_5791.JPG
   feature: glass.jpg
 modified: null
 published: true

@@ -2,7 +2,7 @@
 comments: true
 date: "2013-11-18T00:00:00Z"
 description: Tolerance
-externalurl: http://blogs.tribune.com.pk/story/19610/ashuras-message-looking-away-being-indifferent-is-not-an-option/
+external-url: http://blogs.tribune.com.pk/story/19610/ashuras-message-looking-away-being-indifferent-is-not-an-option/
 published: true
 share: true
 tags:

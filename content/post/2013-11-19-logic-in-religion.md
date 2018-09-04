@@ -2,7 +2,7 @@
 comments: true
 date: "2013-11-19T00:00:00Z"
 description: Logic in Religion
-externalurl: http://messythoughts.com/2013/11/16/can-logic-and-religion-go-hand-in-hand/
+external-url: http://messythoughts.com/2013/11/16/can-logic-and-religion-go-hand-in-hand/
 published: true
 share: true
 tags:

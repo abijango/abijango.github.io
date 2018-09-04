@@ -2,10 +2,10 @@
 comments: true
 date: "2014-09-25T00:00:00Z"
 description: Chris Avellone's Gaming Rig
-externalurl: http://www.pcgamer.com/2014/09/23/show-us-your-rig-wasteland-2s-chris-avellone/
+external-url: http://www.pcgamer.com/2014/09/23/show-us-your-rig-wasteland-2s-chris-avellone/
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

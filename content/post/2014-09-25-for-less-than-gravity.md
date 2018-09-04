@@ -2,10 +2,10 @@
 comments: true
 date: "2014-09-25T00:00:00Z"
 description: India's mission to Mars
-externalurl: http://www.theverge.com/2014/9/24/6837745/india-spacecraft-reaches-mars-orbit-less-than-gravity
+external-url: http://www.theverge.com/2014/9/24/6837745/india-spacecraft-reaches-mars-orbit-less-than-gravity
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

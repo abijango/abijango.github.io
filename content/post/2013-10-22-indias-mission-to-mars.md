@@ -2,7 +2,7 @@
 comments: true
 date: "2013-10-22T00:00:00Z"
 description: India's Mission to Mars
-externalurl: http://www.bbc.co.uk/news/science-environment-24550971
+external-url: http://www.bbc.co.uk/news/science-environment-24550971
 published: true
 share: true
 tags:

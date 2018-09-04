@@ -2,10 +2,10 @@
 comments: true
 date: "2014-02-19T00:00:00Z"
 description: House of Cards and China
-externalurl: http://www.theverge.com/2014/2/19/5425144/china-loves-house-of-cards
+external-url: http://www.theverge.com/2014/2/19/5425144/china-loves-house-of-cards
 image:
   credit: null
-  creditexternalurl: null
+  creditexternal-url: null
   feature: null
 published: true
 share: true

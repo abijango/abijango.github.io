@@ -2,7 +2,7 @@
 comments: true
 date: "2015-02-03T00:00:00Z"
 description: Old and new
-externalurl: http://io9.com/a-brief-history-of-star-wars-canon-old-and-new-1683320381
+external-url: http://io9.com/a-brief-history-of-star-wars-canon-old-and-new-1683320381
 image:
   credit: null
   creditlink: null

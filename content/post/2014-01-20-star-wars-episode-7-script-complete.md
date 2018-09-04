@@ -2,7 +2,7 @@
 comments: true
 date: "2014-01-20T00:00:00Z"
 description: ""
-externalurl: http://www.theverge.com/2014/1/20/5326760/star-wars-episode-vii-script-complete-jesse-plemons-in-talks-to-star
+external-url: http://www.theverge.com/2014/1/20/5326760/star-wars-episode-vii-script-complete-jesse-plemons-in-talks-to-star
 published: true
 share: true
 tags:
