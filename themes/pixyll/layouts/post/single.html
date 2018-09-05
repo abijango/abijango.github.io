@@ -10,7 +10,7 @@
         {{ if not .Params.externalurl }}
           <h1 class="py2">{{ .Title }}</h1>
         {{ end }}
-        <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }} by {{ .Params.author }}</span><br>
+        <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }} by {{ .Site.Params.author }}</span><br>
         {{ $baseurl := .Site.BaseURL }}
       </div>
 

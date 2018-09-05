@@ -2,12 +2,11 @@ baseURL = "https://priceless-kirch-d40887.netlify.com"
 languageCode = "en-us"
 title = "Butterfly Dream"
 theme = "pixyll"
-author = "Naufal"
-
 
 [params]
   twitter_username = "abijango"
   paginate = true
+  author = "Naufal Mir"
 
   # number of posts to show on index
   # default: 10
