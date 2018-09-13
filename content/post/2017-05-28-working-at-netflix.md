@@ -2,6 +2,7 @@
 date: "2017-05-28T10:38:57Z"
 external-url: http://www.brendangregg.com/blog/2017-05-16/working-at-netflix-2017.html
 title: Working at Netflix
+tags: [work, tech]
 ---
 
 Just a small reminder to all of us that work environments do not need to be vile swamps filled with politics and nonsense. There are great places to work out there, we just haven't found them yet.

@@ -2,6 +2,7 @@
 date: "2017-05-16T14:20:38Z"
 external-url: https://www.theverge.com/2017/5/15/15644352/pirates-caribbean-5-hackers-demand-ransom-disney
 title: Pirates pirating Pirates
+tags: [film]
 ---
 
 This made me laugh this morning.

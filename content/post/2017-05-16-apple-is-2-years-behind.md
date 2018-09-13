@@ -2,6 +2,7 @@
 date: "2017-05-16T14:29:54Z"
 external-url: http://appleinsider.com/articles/17/05/14/editorial-when-apple-is-2-years-behind-you-put-your-things-in-order
 title: Apple is 2 years behind
+tags: [apple, tech]
 ---
 
 Let's be serious for a second, despite the absurdity of the statements like 'is Apple the next Blackberry?'. The only way Apple could be the next 'Blackberry'

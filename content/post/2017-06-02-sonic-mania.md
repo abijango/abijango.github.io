@@ -2,6 +2,7 @@
 date: "2017-06-02T11:43:22Z"
 externalurl: https://www.polygon.com/2017/5/30/15713530/sonic-mania-release-date-switch-ps4-xbox-one-pc
 title: Sonic Mania
+tags: [gaming, nostalgia, sega]
 ---
 
 OMG OMG OMG!

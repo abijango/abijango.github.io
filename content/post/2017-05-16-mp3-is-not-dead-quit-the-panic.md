@@ -2,6 +2,7 @@
 date: "2017-05-16T14:42:14Z"
 external-url: https://www.washingtonpost.com/news/the-switch/wp/2017/05/15/your-mp3s-are-going-to-be-just-fine/?utm_term=.d3350f13606c
 title: MP3 is not dead, quit the panic
+tags: [tech]
 ---
 
 People can't really be blamed for losing their shit. All the click-bait articles were not helping. But seriously, everything is fine.
