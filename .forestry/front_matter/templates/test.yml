@@ -1,0 +1,19 @@
+---
+label: test
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title
+  description: title of the post
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: date
+  description: date of the post
+  config:
+    date_format: YYYY-MM-DD
+    display_utc: false
+    required: true
