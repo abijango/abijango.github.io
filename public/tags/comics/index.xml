@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Comics on Butterfly Dream</title>
+    <link>/tags/comics/</link>
+    <description>Recent content in Comics on Butterfly Dream</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 May 2017 14:23:14 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/comics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Marvel&#39;s Gifted</title>
+      <link>/2017/05/16/marvels-gifted/</link>
+      <pubDate>Tue, 16 May 2017 14:23:14 +0000</pubDate>
+      
+      <guid>/2017/05/16/marvels-gifted/</guid>
+      <description>If this is anywhere near as good as Heroes (Yes I am a huge fan of Heroes), this could be good!
+You can follow the author or shout at him on Twitter</description>
+    </item>
+    
+    <item>
+      <title>Netflix&#39;s Daredevil Teaser</title>
+      <link>/2015/02/04/netflixs-daredevil-teaser/</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/2015/02/04/netflixs-daredevil-teaser/</guid>
+      <description>Daredevil heads to the tv screen! And it is bloody! Let&amp;rsquo;s hope it can make us forget all about that bad, bad movie. Yes you know which one I am talking about. You have just removed it from your memory.
+You can follow the author or shout at him on Twitter</description>
+    </item>
+    
+  </channel>
+</rss>

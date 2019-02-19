@@ -8,6 +8,9 @@ theme = "pixyll"
   paginate = true
   author = "Naufal Mir"
 
+[permalinks]
+  post = "/:year/:month/:day/:title/"
+
   # number of posts to show on index
   # default: 10
   # HomepagePosts = 5

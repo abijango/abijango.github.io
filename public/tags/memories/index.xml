@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memories on Butterfly Dream</title>
+    <link>/tags/memories/</link>
+    <description>Recent content in Memories on Butterfly Dream</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Oct 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/memories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pakistan</title>
+      <link>/2013/10/25/pakistan/</link>
+      <pubDate>Fri, 25 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/10/25/pakistan/</guid>
+      <description>Granted I do not reside in the country of my birth anymore, nor have I for the last 5 years. A lot of arguments have been made to me in this regard.
+Pakistan is not the same as you remember it to be.
+Thinks have changed.
+And so on.
+Granted those arguments are valid. And the reasons for which I left my country are still valid to this day from when I left.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Space on Butterfly Dream</title>
+    <link>/tags/space/</link>
+    <description>Recent content in Space on Butterfly Dream</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Sep 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/space/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>For less than the price of a Hollywood movie</title>
+      <link>/2014/09/25/for-less-than-the-price-of-a-hollywood-movie/</link>
+      <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/09/25/for-less-than-the-price-of-a-hollywood-movie/</guid>
+      <description>I wrote about India&amp;rsquo;s mission to Mars a while back, and now that spaceship has finally reached Mar&amp;rsquo;s orbit.
+And all of this for less than the cost of what it took to make Gravity.
+I think the New York Time&amp;rsquo;s article say&amp;rsquo;s it best though.
+ One a shoestring, India sends orbiter to Mars on it&amp;rsquo;s first try.
+ The trip cost India $74 million. Gravity on the other hand cost $100 million.</description>
+    </item>
+    
+  </channel>
+</rss>

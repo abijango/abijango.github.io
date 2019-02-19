@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technology on Butterfly Dream</title>
+    <link>/tags/technology/</link>
+    <description>Recent content in Technology on Butterfly Dream</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Dec 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/technology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Amazon Way</title>
+      <link>/2013/12/02/the-amazon-way/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/12/02/the-amazon-way/</guid>
+      <description>Amazing interview. From the scale of Amazon&amp;rsquo;s operations, to the forward thinking ideas (some very sci-fi), and just the general philosophy. Jeff Bezos:
+ Jeff Bezos: The long term approach is rare enough that it means you&amp;rsquo;re not competing against very many companies. &amp;lsquo;Cause most companies wanna see a return on investment in, you know, one, two, three years.
+Charlie Rose: You don’t care about that?
+Jeff Bezos: I care, but I&amp;rsquo;m willing for it to be five, six, seven years.</description>
+    </item>
+    
+  </channel>
+</rss>

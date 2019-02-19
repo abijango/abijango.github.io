@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bbc on Butterfly Dream</title>
+    <link>/tags/bbc/</link>
+    <description>Recent content in Bbc on Butterfly Dream</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Dec 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/bbc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Finally an answer to: How long is the Runway in Fast 6?</title>
+      <link>/2013/12/31/finally-an-answer-to-how-long-is-the-runway-in-fast-6/</link>
+      <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/12/31/finally-an-answer-to-how-long-is-the-runway-in-fast-6/</guid>
+      <description>Totally useless bit of information, but it has nagged me since I saw the movie. My estimates were around ~26km, accounting for the scenes that could have taken place in parallel. Seems like the guys over in BBC had the same idea.
+ Our best estimate after calculating plane speed, car speed and simultaneous action sequences is that the runway is 18.37 miles (29.6km) long. Which is still very long when you consider the longest paved runway in the world is the Qamdo Bamda airport in China, at around 3.</description>
+    </item>
+    
+  </channel>
+</rss>
