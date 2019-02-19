@@ -30,5 +30,3 @@ fields:
   label: Layout
   name: layout
   default: post
-pages:
-- content/post/testing-1-2-3.md

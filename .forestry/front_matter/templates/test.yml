@@ -17,5 +17,3 @@ fields:
     date_format: YYYY-MM-DD
     display_utc: false
     required: true
-pages:
-- content/post/test.md
