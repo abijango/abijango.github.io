@@ -8,7 +8,7 @@ theme = "hugo-journal"
   Author = "Naufal Mir"
   githubUsername = "abijango"
   twitterUsername = "abijango"
-  tagline = "Just a bunch of random bullshit."
+  tagline = "Writing random crap since 2013"
 
 [permalinks]
   post = "/:year/:month/:day/:title/"
