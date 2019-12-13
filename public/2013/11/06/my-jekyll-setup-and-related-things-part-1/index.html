@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.61.0" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <meta property="og:url" content="/2013/11/06/my-jekyll-setup-and-related-things-part-1/">
+
+  <title>My Jekyll Setup and related things - Part 1 - abijango</title>
+  <meta property="og:title" content="My Jekyll Setup and related things - Part 1 - abijango">
+  <meta property="og:type" content="article">
+  <meta name="description" content="Post on my Jekyll setup Part 1">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Arvo:400,700">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <link rel="stylesheet" href="/css/journal.css">
+  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="abijango">
+
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="site-nav">
+      <a href="/">Index</a>
+    </nav>
+
+
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a href="/2013/11/06/my-jekyll-setup-and-related-things-part-1/">My Jekyll Setup and related things - Part 1</a>
+        
+      </h1>
+      <time class="post-date" datetime="2013-11-06 00:00:00 UTC">06 Nov 2013</time>
+    </header>
+
+    <p>I think finally I would like to write about how this blog is set up, for all you geeks out there, I am sure you might enjoy this.</p>
+<p>So let us begin!</p>
+<p>##Jekyll and all that</p>
+<p><a href="http://jekyllrb.com/">Jekyll</a>, is a simple static blogging system, or as they say, blogging for hackers. Basically, it eliminates the database from the backend. All that is there is your content (posts) and that is it. No database to store all that content, and retrive it when a user requests to view a post, hence making it blazing fast.</p>
+<p>A Jekyll blog is essentially &lsquo;built&rsquo; before you publish it. Sounds a bit complicated you say? Not really, you don't even need to know a lot of programming to get it all working honestly.</p>
+<p>##What is needed</p>
+<p>Here is a list of all the things you need to get it up and working.</p>
+<ol>
+<li><a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> - Don't worry too much about knowing Ruby, you just need to download and install it based on your platform. I am currently using Windows, where it is a bit more involved, but the guides are very straight forward.</li>
+<li><a href="http://jekyllrb.com/">Jekyll</a> - is very straightfoward to install from the command-line/shell once you have Ruby installed, home page of Jekyll shows you how to do it.</li>
+<li><a href="https://github.com/">GitHub</a> account, you will need this to either:</li>
+</ol>
+<ul>
+<li>Host your blog on GitHub itself, eliminating the need for a dedicated hosting service.</li>
+<li>Storing your blog for version control if you want.</li>
+<li>If you plan on using a theme (process shown below), you can either download the theme directly, or fork it on GitHub and use Git.</li>
+</ul>
+<ol start="4">
+<li><a href="http://git-scm.com/">Git</a> - version control. They have a simple Windows installer, be sure to use Windows style commits in the installer if you are on Windows, and add it to the Windows commandl-line (In the installation steps you will be asked to do this.)</li>
+<li>A Jekyll theme - You can pick up up at <a href="http://jekyllthemes.org/">Jekyll themes</a>, setups and how-tos included with each of them.</li>
+<li><a href="https://db.tt/byHoqV0">Dropbox</a> account (Optional), I keep my blog in Dropbox so that it is synced across machines and makes my writing process as simple as creating a new text file from anywhere, be it my office machine, home machine or phone/tablet etc. Will explain later on in the post.</li>
+</ol>
+<p>And that is pretty much it :). Scared already? Don't be. Read on.</p>
+<p>#My setup</p>
+<p>Ok granted my setup is a bit lame and complicated. You don't need something as complicated, I just do it to keep things automated and all that.</p>
+<p>Dropbox holds my blog itself. All the assets, images, posts etc. It is all hosted on GitHub Pages (will explain how). To write a new post, I create a new text file in the _posts directory, give it a proper name according to the Jekyll naming convention &lt;YYYY-MM-DD-name-of-post.md&gt;, note the .md at the end, that is a <a href="http://daringfireball.net/projects/markdown/">Markdown</a> based file. Very simple plain text format for writing, easily understood and picked up, just follow the link.</p>
+<p>Once the file is created, there is just some little bit of stuff to do to add the front matter, basically a header of sorts for Jekyll's parsing engine to understand what the post looks like, it's name/description etc. An example is below from the first post:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">---</span>
+<span style="color:#f92672">layout</span><span style="color:#f92672">:</span> <span style="color:#f92672">post</span>
+<span style="color:#f92672">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;The Blank Page&#34;</span>
+<span style="color:#f92672">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Intro Post&#34;</span>
+<span style="color:#f92672">tags</span><span style="color:#f92672">:</span> <span style="color:#f92672">[</span><span style="color:#f92672">blog</span><span style="color:#f92672">]</span>
+<span style="color:#f92672">modified</span><span style="color:#f92672">:</span> 
+<span style="color:#f92672">image</span><span style="color:#f92672">:</span>
+  <span style="color:#f92672">feature</span><span style="color:#f92672">:</span> <span style="color:#f92672">openbook</span>.<span style="color:#a6e22e">jpg</span>
+  <span style="color:#f92672">credit</span><span style="color:#f92672">:</span> <span style="color:#f92672">John</span> <span style="color:#f92672">Carey</span>
+  <span style="color:#f92672">creditexternal-url</span><span style="color:#f92672">:</span> <span style="color:#f92672">http</span><span style="color:#f92672">:</span><span style="color:#f92672">/</span><span style="color:#f92672">/</span><span style="color:#f92672">fiftyfootshadows</span>.<span style="color:#a6e22e">net</span><span style="color:#f92672">/</span><span style="color:#f92672">mjuploads</span><span style="color:#f92672">/</span><span style="color:#f92672">writing</span>.<span style="color:#a6e22e">XYVnzAIkenzI</span>.<span style="color:#a6e22e">jpg</span>
+<span style="color:#f92672">comments</span><span style="color:#f92672">:</span> <span style="color:#f92672">true</span>
+<span style="color:#f92672">share</span><span style="color:#f92672">:</span> <span style="color:#f92672">true</span>
+<span style="color:#f92672">---</span></code></pre></div>
+<p>After which I basically use standard Markdown for writing my plain text post, include pictures etc. and save the file. Once I have done that, all I need to do is commit back to GitHub and the magic over at GitHub Pages builds the Jekyll blog and publishes it. The commit is also automated with simple bash scripts that are scheduled on a Windows machine that is always on (my office one :P), all of that will be in Part 2.</p>
+<p>To be continued in Part 2.</p>
+<p>You can follow the author or shout at him on <a href="https://twitter.com/abijango">Twitter</a></p>
+
+
+  </article>
+
+
+      <footer class="site-footer">
+        <span itemscope itemtype="http://schema.org/Person">
+          <link itemprop="url" href="/">
+          <span itemprop="name"></span>
+
+          <br>
+
+          <a itemprop="sameAs" href="https://github.com/abijango" title="GitHub">GH</a>
+
+          <a itemprop="sameAs" href="https://twitter.com/abijango" title="Twitter">TW</a>
+
+          
+        </span>
+
+        
+      </footer>
+    </div>
+
+  <script src="/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  </body>
+</html>
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>movies on abijango</title>
+    <link>/tags/movies/</link>
+    <description>Recent content in movies on abijango</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Mar 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/movies/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fight Club in 2 minutes</title>
+      <link>/2014/03/10/fight-club-in-2-minutes/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/03/10/fight-club-in-2-minutes/</guid>
+      <description>Fight Club is, and always will be one of my favourite movies. Call it a hunger for violence, or a passion for dark gritty stories. I don&#39;t care, I love this movie. And for you who can&#39;t stand the original because of its violence (I pity you!), go ahead and watch this 2 minute version.
+It blends the original story with the classic Sega games like Streets of Rage style graphics, classic!</description>
+    </item>
+    
+    <item>
+      <title>The Lego Movie</title>
+      <link>/2014/02/20/the-lego-movie/</link>
+      <pubDate>Thu, 20 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/02/20/the-lego-movie/</guid>
+      <description>With a 96% critics rating and a 92% audience rating, you know this movie has done something right. It is a family movie, so go in obviously expecting that. But given that, I enjoyed it more than I ever imagined.
+The little details, the references. The way the references were handled, even the overall main and underlying stories; typical as they were, were pretty good. Not all entertainment needs to be vulgar to make it big.</description>
+    </item>
+    
+    <item>
+      <title>Is Iron Man made of Lego?</title>
+      <link>/2014/01/09/is-iron-man-made-of-lego/</link>
+      <pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/01/09/is-iron-man-made-of-lego/</guid>
+      <description>So it seems like Tony Stark is also a fan of Lego. Or his captors are? In either case it is always pretty funny when movies/series use code copied from somewhere, but in this case it looks like one of the designers had a sense of humour.
+ The code above comes from a firmware downloader for the RCX (a programmable, microcontroller-based Lego brick), written in 1998 at Stanford University by Kekoa Proudfoot.</description>
+    </item>
+    
+    <item>
+      <title>Finally an answer to: How long is the Runway in Fast 6?</title>
+      <link>/2013/12/31/finally-an-answer-to-how-long-is-the-runway-in-fast-6/</link>
+      <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/12/31/finally-an-answer-to-how-long-is-the-runway-in-fast-6/</guid>
+      <description>Totally useless bit of information, but it has nagged me since I saw the movie. My estimates were around ~26km, accounting for the scenes that could have taken place in parallel. Seems like the guys over in BBC had the same idea.
+ Our best estimate after calculating plane speed, car speed and simultaneous action sequences is that the runway is 18.37 miles (29.6km) long. Which is still very long when you consider the longest paved runway in the world is the Qamdo Bamda airport in China, at around 3.</description>
+    </item>
+    
+  </channel>
+</rss>

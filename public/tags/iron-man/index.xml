@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iron Man on abijango</title>
+    <link>/tags/iron-man/</link>
+    <description>Recent content in Iron Man on abijango</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Jan 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/iron-man/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Is Iron Man made of Lego?</title>
+      <link>/2014/01/09/is-iron-man-made-of-lego/</link>
+      <pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/01/09/is-iron-man-made-of-lego/</guid>
+      <description>So it seems like Tony Stark is also a fan of Lego. Or his captors are? In either case it is always pretty funny when movies/series use code copied from somewhere, but in this case it looks like one of the designers had a sense of humour.
+ The code above comes from a firmware downloader for the RCX (a programmable, microcontroller-based Lego brick), written in 1998 at Stanford University by Kekoa Proudfoot.</description>
+    </item>
+    
+  </channel>
+</rss>

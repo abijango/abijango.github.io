@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on abijango</title>
+    <link>/tags/android/</link>
+    <description>Recent content in android on abijango</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Sep 2018 09:21:20 +0100</lastBuildDate>
+    
+	<atom:link href="/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Adoption Rate</title>
+      <link>/2018/09/06/android-adoption-rate/</link>
+      <pubDate>Thu, 06 Sep 2018 09:21:20 +0100</pubDate>
+      
+      <guid>/2018/09/06/android-adoption-rate/</guid>
+      <description>So many years into Android and the adoption rate of the latest OS version is still a major shit show. OEM&#39;s doing their own thing and carriers opting for their own brand of &amp;ldquo;let&#39;s see how much we can fuck with the customers&amp;rdquo;.
+ What a difference between the two platforms. The largest issue caused by this fragmentation is the inability to get critical updates out to the masses. Apple is about to release a brand new OS, and it will work on the vast majority of iPhones in the wild.</description>
+    </item>
+    
+  </channel>
+</rss>

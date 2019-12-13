@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on abijango</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on abijango</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Sep 2018 11:42:25 +0100</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>art</title>
+      <link>/tags/art/</link>
+      <pubDate>Thu, 20 Sep 2018 11:42:25 +0100</pubDate>
+      
+      <guid>/tags/art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>/tags/android/</link>
+      <pubDate>Thu, 06 Sep 2018 09:21:20 +0100</pubDate>
+      
+      <guid>/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tech</title>
+      <link>/tags/tech/</link>
+      <pubDate>Thu, 06 Sep 2018 09:21:20 +0100</pubDate>
+      
+      <guid>/tags/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gaming</title>
+      <link>/tags/gaming/</link>
+      <pubDate>Fri, 02 Jun 2017 11:43:22 +0000</pubDate>
+      
+      <guid>/tags/gaming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nostalgia</title>
+      <link>/tags/nostalgia/</link>
+      <pubDate>Fri, 02 Jun 2017 11:43:22 +0000</pubDate>
+      
+      <guid>/tags/nostalgia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sega</title>
+      <link>/tags/sega/</link>
+      <pubDate>Fri, 02 Jun 2017 11:43:22 +0000</pubDate>
+      
+      <guid>/tags/sega/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>work</title>
+      <link>/tags/work/</link>
+      <pubDate>Sun, 28 May 2017 10:38:57 +0000</pubDate>
+      
+      <guid>/tags/work/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apple</title>
+      <link>/tags/apple/</link>
+      <pubDate>Tue, 16 May 2017 14:29:54 +0000</pubDate>
+      
+      <guid>/tags/apple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comics</title>
+      <link>/tags/comics/</link>
+      <pubDate>Tue, 16 May 2017 14:23:14 +0000</pubDate>
+      
+      <guid>/tags/comics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tv</title>
+      <link>/tags/tv/</link>
+      <pubDate>Tue, 16 May 2017 14:23:14 +0000</pubDate>
+      
+      <guid>/tags/tv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>film</title>
+      <link>/tags/film/</link>
+      <pubDate>Tue, 16 May 2017 14:20:38 +0000</pubDate>
+      
+      <guid>/tags/film/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Star Wars</title>
+      <link>/tags/star-wars/</link>
+      <pubDate>Fri, 27 Nov 2015 11:29:56 +0000</pubDate>
+      
+      <guid>/tags/star-wars/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>actor</title>
+      <link>/tags/actor/</link>
+      <pubDate>Fri, 27 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/actor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>star trek</title>
+      <link>/tags/star-trek/</link>
+      <pubDate>Fri, 27 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/star-trek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Boba Fett</title>
+      <link>/tags/boba-fett/</link>
+      <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/boba-fett/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>guitar</title>
+      <link>/tags/guitar/</link>
+      <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/guitar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lego</title>
+      <link>/tags/lego/</link>
+      <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lego/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>les paul</title>
+      <link>/tags/les-paul/</link>
+      <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/les-paul/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>/tags/music/</link>
+      <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>awesome</title>
+      <link>/tags/awesome/</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/awesome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>daredevil</title>
+      <link>/tags/daredevil/</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/daredevil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>heroes</title>
+      <link>/tags/heroes/</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/heroes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>museum</title>
+      <link>/tags/museum/</link>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/museum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>canon</title>
+      <link>/tags/canon/</link>
+      <pubDate>Tue, 03 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/canon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sci-fi</title>
+      <link>/tags/sci-fi/</link>
+      <pubDate>Tue, 03 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sci-fi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>audio</title>
+      <link>/tags/audio/</link>
+      <pubDate>Fri, 30 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/audio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bond</title>
+      <link>/tags/bond/</link>
+      <pubDate>Fri, 30 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bond/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>movie</title>
+      <link>/tags/movie/</link>
+      <pubDate>Fri, 30 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/movie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zakk Wylde</title>
+      <link>/tags/zakk-wylde/</link>
+      <pubDate>Fri, 30 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/zakk-wylde/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>paintings</title>
+      <link>/tags/paintings/</link>
+      <pubDate>Thu, 29 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/paintings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>china</title>
+      <link>/tags/china/</link>
+      <pubDate>Mon, 29 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/china/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hong kong</title>
+      <link>/tags/hong-kong/</link>
+      <pubDate>Mon, 29 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hong-kong/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>politics</title>
+      <link>/tags/politics/</link>
+      <pubDate>Mon, 29 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/politics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chris avellon</title>
+      <link>/tags/chris-avellon/</link>
+      <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/chris-avellon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>India</title>
+      <link>/tags/india/</link>
+      <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/india/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mars</title>
+      <link>/tags/mars/</link>
+      <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/mars/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Space</title>
+      <link>/tags/space/</link>
+      <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/space/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wasteland2</title>
+      <link>/tags/wasteland2/</link>
+      <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/wasteland2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>censorship</title>
+      <link>/tags/censorship/</link>
+      <pubDate>Mon, 24 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/censorship/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pakistan</title>
+      <link>/tags/pakistan/</link>
+      <pubDate>Mon, 24 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pakistan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>society</title>
+      <link>/tags/society/</link>
+      <pubDate>Mon, 24 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/society/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cult-classics</title>
+      <link>/tags/cult-classics/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cult-classics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fight Club</title>
+      <link>/tags/fight-club/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/fight-club/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>movies</title>
+      <link>/tags/movies/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/movies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>/tags/blog/</link>
+      <pubDate>Fri, 21 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>/tags/design/</link>
+      <pubDate>Fri, 21 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>inspiration</title>
+      <link>/tags/inspiration/</link>
+      <pubDate>Fri, 21 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/inspiration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>awesomeness</title>
+      <link>/tags/awesomeness/</link>
+      <pubDate>Thu, 20 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/awesomeness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>house of cards</title>
+      <link>/tags/house-of-cards/</link>
+      <pubDate>Wed, 19 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/house-of-cards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>men</title>
+      <link>/tags/men/</link>
+      <pubDate>Wed, 19 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/men/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>women</title>
+      <link>/tags/women/</link>
+      <pubDate>Wed, 19 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/women/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>/tags/life/</link>
+      <pubDate>Thu, 06 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nerdlife</title>
+      <link>/tags/nerdlife/</link>
+      <pubDate>Mon, 20 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/nerdlife/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fun</title>
+      <link>/tags/fun/</link>
+      <pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/fun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>home</title>
+      <link>/tags/home/</link>
+      <pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/home/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iron Man</title>
+      <link>/tags/iron-man/</link>
+      <pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/iron-man/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Islamabad</title>
+      <link>/tags/islamabad/</link>
+      <pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/islamabad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nerd culture</title>
+      <link>/tags/nerd-culture/</link>
+      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/nerd-culture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bbc</title>
+      <link>/tags/bbc/</link>
+      <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bbc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>link</title>
+      <link>/tags/link/</link>
+      <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/link/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>useless</title>
+      <link>/tags/useless/</link>
+      <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/useless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>link post</title>
+      <link>/tags/link-post/</link>
+      <pubDate>Tue, 03 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/link-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linked</title>
+      <link>/tags/linked/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/linked/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>/tags/technology/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logic</title>
+      <link>/tags/logic/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/logic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>religion</title>
+      <link>/tags/religion/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/religion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>accounting</title>
+      <link>/tags/accounting/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/accounting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>article</title>
+      <link>/tags/article/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fraud</title>
+      <link>/tags/fraud/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/fraud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tolerance</title>
+      <link>/tags/tolerance/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tolerance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>batkid</title>
+      <link>/tags/batkid/</link>
+      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/batkid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>abuse</title>
+      <link>/tags/abuse/</link>
+      <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/abuse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>orthodox communities</title>
+      <link>/tags/orthodox-communities/</link>
+      <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/orthodox-communities/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>alcohol</title>
+      <link>/tags/alcohol/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/alcohol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>discussion</title>
+      <link>/tags/discussion/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/discussion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feedback</title>
+      <link>/tags/feedback/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/feedback/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>friends</title>
+      <link>/tags/friends/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/friends/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>funny</title>
+      <link>/tags/funny/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/funny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sin</title>
+      <link>/tags/sin/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>setup</title>
+      <link>/tags/setup/</link>
+      <pubDate>Wed, 06 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/setup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thanks</title>
+      <link>/tags/thanks/</link>
+      <pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/thanks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>labour</title>
+      <link>/tags/labour/</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/labour/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>memories</title>
+      <link>/tags/memories/</link>
+      <pubDate>Fri, 25 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/memories/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stupidity</title>
+      <link>/tags/stupidity/</link>
+      <pubDate>Tue, 22 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/stupidity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writing</title>
+      <link>/tags/writing/</link>
+      <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/writing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>drama</title>
+      <link>/tags/drama/</link>
+      <pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/drama/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>media</title>
+      <link>/tags/media/</link>
+      <pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/media/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>issues</title>
+      <link>/tags/issues/</link>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/issues/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
