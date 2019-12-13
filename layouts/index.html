@@ -1,0 +1,26 @@
+{{ partial "top.html" . }}
+
+  <article class="posts">
+
+    {{ range site.RegularPages.GroupByDate "2006" -}}
+    <section>
+      <h2>{{ .Key }}</h2>
+
+      <ol>
+        {{ range .Pages -}}
+        <li>
+          <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "Jan 02"}}</time>
+          {{ if isset .Params "externalurl" }}
+            <a href="{{ .Permalink }}">{{ .Title }}</a><span>&#8594;</span>
+          {{else}}
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          {{ end }}
+        </li>
+        {{- end }}
+      </ol>
+    </section>
+    {{ end }}
+
+  </article>
+
+{{ partial "bottom.html" . }}

@@ -1,0 +1,11 @@
+{
+    "name": "Naufal Mir",
+    "bio": "Naufal Mir is a robot.",
+    "image": "/media/authors/naufalmir.png",
+    "weight": 1,
+    "social": {
+        "twitter": "abijango",
+        "github": "https://www.github.com/abijango",
+        "website": "https://www.abijango.com"
+    }
+}
