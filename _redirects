@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://abijango.netlify.com/* https://www.abijango.com/:splat 301!
