@@ -2,6 +2,7 @@ baseURL = "https://abijango.github.io"
 languageCode = "en-us"
 title = "Abijango"
 enableRobotsTXT = true
+# site config
 
 [permalinks]
   post = "/:year/:month/:day/:title/"
