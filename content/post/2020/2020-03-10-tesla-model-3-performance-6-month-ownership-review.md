@@ -1,0 +1,104 @@
+---
+title: Tesla Model 3 Performance, 6 month ownership review
+date: 2020-03-10T16:43:32+0100
+categories:
+- 
+tags:
+- 
+slug: 
+---
+This started of as an initial first impressions piece, and as I did not publish it over the weeks leading to months, it turned into a full blown review, though a very casual one, no feeds and speeds comparisons found here. If you are interested in that, I am sure there are many, many posts online comparing this car to every possible car out there.
+
+This is just my experience and impressions of how and where my obsession with Tesla started, a short history down memory lane, and how I found the process of buying and owning this in a daily capacity.
+
+# Origin Story
+
+I think I became aware of Tesla in late 2009 if I am not mistaken. I read online about the Roaster and what a joke that product is. Article after article was blasting this little adorable car. They said everything from this is a flop product, to it’s too expensive to ‘OK great so they made it work for an expensive toy car, they will never get it to work for anything real for everyone else’.
+
+The idea intrigued me, at first I dismissed it myself, I thought, ‘The fun about cars is the sound, the raw visceral energy’ and so on. Hey I did grow up on Top Gear and other such shows. 🤷🏽‍♂️
+
+But the science behind it intrigued me. How is it even possible that this car can do 200+ miles, and yea 200 miles doesn’t sound like a lot but, it was fast, could go a decent distance, yea was expensive, but I lusted after Ferraris and such at the time, so they were all unattainable dreams.
+
+I put it out of my mind for a few years at that point, then around 2010-11 I ran across Elon’s Master Plan, and at the end of that post it all clicked, what I (and many others had been missing all this time):
+
+> - Build sports car
+> - Use that money to build an affordable car
+> - Use that money to build an even more affordable car
+> - While doing above, also provide zero emission electric power generation options
+> And since that day I have been dreaming of that affordable Tesla that one day I could own.
+
+Fast forward to 2012 when the first Model S was revealed and holy shit did I want it bad. I tried over the years to justify the cost to myself, but never could bring myself to afford it. Then they revealed the Model 3, and people queued to give Tesla $1000 equivalents in currency to reserve their spot for a car that would not even be theirs for years to come. I did not immediately reserve, but I did soon afterwards. I had to get in line.
+
+But the worst thing I did to myself, was back in August of 2018, I went for a test drive in a Tesla Model S. My fate was sealed the day I drove this car, when I felt that instant torque, when I saw AutoPilot (and yes it was the older EAP, Enhanced Auto Pilot on the old hardware) in action. It was done, there was no question about it, my next car would be a Tesla.
+
+# Initial Ordering
+
+The Model 3 opened up orders for UK (Right Hand Drive) orders on May 1 2019. I placed my order on May 1 2019.
+
+The order process took 5 minutes total, I cannot stress how amazing the order experience was, 3 options of models, few options of paint, and 2 options of AutoPilot, that’s pretty much it. I already knew what I wanted, an SR+ in the multi-coat red paint and FSD [Full Self Driving]. I had seen this in the Tesla Store in Kent Bluewater and after seeing it in person that is the colour I had wanted.
+
+I obviously ended up with a completely different car. At the time of ordering there were 3 options.
+
+SR+ RWD - 240 mile range
+LR AWD - 310 mile range
+Performance - 310 mile range
+Originally I wanted the LR AWD for the extra oomph and the extra range, as I thought I’d have issues in the UK with the colder weather, but after a lot of researching and watching videos and reading Tesla Motor Club forums of European owners who had the car for over 6 months at that point, I decided that a SR+ will be more than enough for me, even with the winters in the UK.
+
+A few weeks after ordering, I saw that they took away the LR AWD option, and instead what became known online affectionately as the P3- (stealth performance offering) was the only other option from SR+. This was essentially the Performance Model 3 without the Performance upgrades (bigger wheels, no spoiler or metal pedals, and slightly lower speed than the Performance Model 3, still more than the LR AWD). The price difference was also a little lower than the LR AWD so I decided to change my order to this. All it took was one email and my order was changed within the hour.
+
+A week or so later, I saw that the Performance Model 3 was being offered again, and the price difference between it and the one I had ordered was only £500. Essentially they had dropped the price on the Performance Model 3 by nearly £5000 from when orders first opened up. I asked to be changed to this order, and it was done again within the hour.
+
+All this order changing delayed my original delivery (estimated to be end of July to mid August), but in the end I got the car of my dreams and an extra half a month wait was really of no consequence.
+
+# Delivery Experience
+
+I have never bought a new car before this so I can not speak to delivery experience compared to another company. But with Tesla it could not be easier.
+
+I had opted to trade-in my previous car, so the part exchange price had been agreed at time of order, back in May, and the price was locked in. I also drove my previous car till the day delivery and drove it to the delivery centre on delivery day, they took possession of my car after giving it a quick once over, and handed me my new car. The process could not have been smoother. If other companies do this, great, if not, they can learn something from this.
+
+On the day, you arrive at the centre, they make you wait till your delivery specialist is free, which for us took maybe 15-30 minutes, and that was with an issue with the finance as the numbers did not line up (the finance company had messed up, and the Tesla guys spent the next hour or so making sure everything was in order, these guys did not leave anything to chance).
+
+While the Tesla guys were sorting out the issue with the finance, we got to see our car, do the initial delivery tour, the delivery specialist walked us through the options and different settings etc. This was as detailed as we wanted, or as little as we wanted. Since we knew most of the things already, he skipped some things. The mandatory things like showing us how the key worked they went over. For someone who has no clue how this car works, this can be a very detailed experience if they want.
+
+They were doing this walkthrough 3 cars at a time, and ours only took some time because the manager was sorting out the issue with the finance, which all worked out in the end.
+
+# Daily driving
+As a daily driver, I drive around 40 miles to and from work on the weekdays, this car is perfect. AutoPilot is seriously impressive. I had experienced it multiple times in test drives before, so I knew what I was expecting, but even then I eased into it. For someone not familiar with this car or how AutoPilot behaves, I suggest taking it very very slow, and letting yourself become comfortable with 'something else' driving the car for you.
+
+I only had maybe 1-2 incidents of uneasiness in the first month during bumper to bumper rush our traffic where someone cut in front of me and I disabled AutoPilot before it reacted. This changed as I got more and more confidence in the system. Spoiler alert for later, I have not disabled AP maybe in months.
+
+# Range Anxiety
+A lot of people talk about range anxiety as the main issue for not buying an electric car. I understand that concern to some extent. And sadly you are not going to like the answer. The cure for range anxiety about electric cars, is owning an electric car. Daily driving for most people is generally <80 miles a day, even if you are driving longer, like I did for a little over a month for work (130+ miles/day), the car handles it like a champ. You come home, plug in like you would plug in your phone overnight, and start the day with a ‘full tank of gas’ so to speak.
+
+The car has some neat features like overnight charging at specific times to take advantage of lower tariffs at night, or scheduled departure, where you set a time in the morning when you usually set of (say 7 AM) and the car starts the charge and warms up the batteries to be ready to go at your set time.
+
+# Road trips and Supercharging
+We have taken one road trip since I have picked up the car, mostly due to being busy with work and some other vacations that were abroad. I do plan on taking the car on more road trips, and potentially to Europe in the coming year. AP makes road trips a breeze. Superchargers make you never ever think about range. And they are so seamlessly integrated into the experience of using the car, that you never have to think about it.
+
+Planning going somewhere? Plug in the address, let’s say you are driving to Sheffield from London, you type in Sheffield in Tesla’s navigation as shown below. The car calculates the route using a slightly modified Google Maps interface, maps the route and along the way plugs in all the points you need to stop for supercharging.
+
+Few things to note:
+
+a) Supercharging usually can be planned around normal planned stops for restroom breaks or food. My back can handle maybe 150 miles of driving in a stretch before I need a break for 5-10 minutes anyway. b) Charging is insanely fast already, and will soon be even faster with the upgrades to the network Tesla is doing.
+
+And the next point is cost, supercharging costs a lot less than petrol or diesel. Though that kind of cost differential totally depends on the amount of driving you do, if you do a lot maybe a Tesla Model S with free supercharging with life as some current promotions go, might be a better fit.
+
+# Issues
+On delivery I had one issue, 3 tiny small paint imperfections, that seriously and I will admit, which took me a few minutes to locate a few weeks later when I took the car in for service to fix the paint. Tesla service fixed it in 4 days. They gave me a loaner Model S Performance for those days.
+
+The one other issue I had was there was a sort of whistling noise coming from the passenger side window, and after taking it in for service it took them 2 days to fix this issue as well. Again they gave me a loaner while they were fixing my car.
+
+Other minor software issues were mostly fixed pretty quickly, which brings me to the next section.
+
+# Software Updates
+It’s crazy to me that a so called ‘car’ company has figured out software upgrades so well. I have worked in software industry for the past decade and not even the massive investment banks that I worked for, or trading houses have any idea how to do software as smoothly as Tesla does it. They are a software company happening to sell an amazing electric car.
+
+From releasing what many would consider useless features like ‘fart sounds’, games and Netflix, YouTube and Twitch to the car (Yes you can watch Netflix, YouTube or Twitch in the car while it is in Park, for now) to amazing upgrades to AutoPilot and I think the most impressive of all, is the 2 updates that both offered 5% increases in performance to the car.
+
+# Performance
+Any Tesla would blow anyone away after coming from ICE (Internal Combustion Engine) cars with their ramp up and gearing vs the instant torque provided by the electric motors in Teslas, but the Performance Models go just a bit further. Though the Model 3 Performance is not as fast as the Tesla Model S Performance which I have driven a few times, it somehow ‘feels’ faster. It’s most likely a trick due to the lighter weight of the Model 3, plus my own bias since I own one 😛.
+
+When I bought the car it had 0-60 numbers of 3.2 seconds. After two upgrades of 5% each, the car tested by others online has posted numbers of sub 3 seconds. That is just bonkers. At 3.2 the car used to scare me, now it’s even scarier 😂. This is more performance in a car that anyone ever needs, this is clearly in the want category.
+
+# Conclusion
+Is this car for everyone? No. It doesn’t fit some current needs and realities. If you live in an apartment and don’t have off street parking to install a charger for overnight charging and drive a decent amount, this car won’t fit your needs, yet. Charging infrastructure is getting there, and getting there fast. Non-Tesla chargers, though slow, are popping up everywhere. Some employers offer charging at work though limited and the experience of using those chargers is horrendous.

@@ -1,21 +1,18 @@
-# The URL the site will be built for
-base_url = "https://abijango.com"
+baseURL = "https://abijango.github.io"
+languageCode = "en-us"
+title = "Abijango"
+enableRobotsTXT = true
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+[permalinks]
+  post = "/:year/:month/:day/:title/"
 
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+[params]
+  description = "Random nonsense of one guy."
+  githubUsername = "abijango"
+  twitterUsername = "abijango"
+  tagline = "Random crap since 2013."
 
-theme = "slim"
-taxonomies = [
-    {name = "tags", paginate_by = 5, rss = true}
-]
-
-[markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
-
-[extra]
-# Put all your custom variables here
+[module]
+  [[module.imports]]
+    path = 'github.com/abijango/hugo-journal'
+    # project theme
