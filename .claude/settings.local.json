@@ -12,7 +12,12 @@
       "Bash(git describe:*)",
       "Bash(hugo:*)",
       "Bash(git push:*)",
-      "Bash(dir \"C:\\Users\\naufa\\work\\hugo\\abijango.github.io\\content\\posts\")"
+      "Bash(dir \"C:\\Users\\naufa\\work\\hugo\\abijango.github.io\\content\\posts\")",
+      "Bash(dir \"C:\\Users\\naufa\\work\\hugo\\abijango.github.io\\static\\images\")",
+      "Bash(dir \"C:\\Users\\naufa\\work\\hugo\\abijango.github.io\")",
+      "Bash(dir \"C:\\Users\\naufa\\work\\hugo\\abijango.github.io\\images\")",
+      "Bash(copy:*)",
+      "Bash(powershell -Command:*)"
     ],
     "deny": [],
     "ask": []

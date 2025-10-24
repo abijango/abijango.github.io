@@ -1,6 +1,6 @@
 +++
 date = '2025-10-24T12:27:42+01:00'
-draft = false
+draft = true
 title = 'Testing'
 description = 'A sample post to demonstrate the Hugo blog setup'
 tags = ['sample', 'test']
