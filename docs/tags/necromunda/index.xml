@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Necromunda on abijango</title>
-    <link>http://localhost:1313/tags/necromunda/</link>
+    <link>https://abijango.github.io/tags/necromunda/</link>
     <description>Recent content in Necromunda on abijango</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/necromunda/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://abijango.github.io/tags/necromunda/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test Post</title>
-      <link>http://localhost:1313/posts/2025-10-24-example-post/</link>
+      <link>https://abijango.github.io/posts/2025-10-24-example-post/</link>
       <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-10-24-example-post/</guid>
+      <guid>https://abijango.github.io/posts/2025-10-24-example-post/</guid>
       <description>&lt;p&gt;Test post.&lt;/p&gt;</description>
     </item>
   </channel>

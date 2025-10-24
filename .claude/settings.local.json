@@ -10,7 +10,9 @@
       "Bash(git submodule:*)",
       "WebFetch(domain:github.com)",
       "Bash(git describe:*)",
-      "Bash(hugo:*)"
+      "Bash(hugo:*)",
+      "Bash(git push:*)",
+      "Bash(dir \"C:\\Users\\naufa\\work\\hugo\\abijango.github.io\\content\\posts\")"
     ],
     "deny": [],
     "ask": []

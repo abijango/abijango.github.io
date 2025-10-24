@@ -8,6 +8,7 @@ Create a new blog post with the title: $ARGUMENTS
    - draft: true
    - The description
    - Author: abijango
+   - Tags: tags = ['']
 4. Show me the command to serve the site locally so I can preview it
 
 Ensure all formatting follows US English standards.

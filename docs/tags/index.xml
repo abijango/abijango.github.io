@@ -6,20 +6,27 @@
     <description>Recent content in Tags on abijango</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Apr 2025 02:01:58 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 24 Oct 2025 12:27:42 +0100</lastBuildDate>
     <atom:link href="https://abijango.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Primer</title>
-      <link>https://abijango.github.io/tags/primer/</link>
-      <pubDate>Tue, 01 Apr 2025 02:01:58 +0530</pubDate>
-      <guid>https://abijango.github.io/tags/primer/</guid>
+      <title>Sample</title>
+      <link>https://abijango.github.io/tags/sample/</link>
+      <pubDate>Fri, 24 Oct 2025 12:27:42 +0100</pubDate>
+      <guid>https://abijango.github.io/tags/sample/</guid>
       <description></description>
     </item>
     <item>
-      <title>Todo</title>
-      <link>https://abijango.github.io/tags/todo/</link>
-      <pubDate>Tue, 01 Apr 2025 02:01:58 +0530</pubDate>
-      <guid>https://abijango.github.io/tags/todo/</guid>
+      <title>Test</title>
+      <link>https://abijango.github.io/tags/test/</link>
+      <pubDate>Fri, 24 Oct 2025 12:27:42 +0100</pubDate>
+      <guid>https://abijango.github.io/tags/test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Necromunda</title>
+      <link>https://abijango.github.io/tags/necromunda/</link>
+      <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://abijango.github.io/tags/necromunda/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sample on abijango</title>
-    <link>http://localhost:1313/tags/sample/</link>
+    <link>https://abijango.github.io/tags/sample/</link>
     <description>Recent content in Sample on abijango</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Oct 2025 12:27:42 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/sample/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://abijango.github.io/tags/sample/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testing</title>
-      <link>http://localhost:1313/posts/testing/</link>
+      <link>https://abijango.github.io/posts/reference-post/</link>
       <pubDate>Fri, 24 Oct 2025 12:27:42 +0100</pubDate>
-      <guid>http://localhost:1313/posts/testing/</guid>
+      <guid>https://abijango.github.io/posts/reference-post/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is a sample post created to test the Hugo blog setup. It demonstrates the basic structure and formatting of a blog post.&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-example&#34;&gt;Code Example&lt;/h2&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a simple code block:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello from Hugo!&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;lists&#34;&gt;Lists&lt;/h2&gt;&#xA;&lt;h3 id=&#34;unordered-list&#34;&gt;Unordered List&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Item one&lt;/li&gt;&#xA;&lt;li&gt;Item two&lt;/li&gt;&#xA;&lt;li&gt;Item three&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;ordered-list&#34;&gt;Ordered List&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;First step&lt;/li&gt;&#xA;&lt;li&gt;Second step&lt;/li&gt;&#xA;&lt;li&gt;Third step&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;callouts&#34;&gt;Callouts&lt;/h2&gt;&#xA;&#xD;&#xA;&lt;div class=&#39;callout callout-tip&#39; style=&#39;&#39;&gt;&#xD;&#xA;  &lt;div class=&#34;callout-inner&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    🔎 &lt;u&gt;Tip&lt;/u&gt;&#xD;&#xA;    &lt;br /&gt;&#xD;&#xA;    This is a helpful tip for readers.&#xD;&#xA;    &#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&#xD;&#xA;&lt;div class=&#39;callout callout-warning&#39; style=&#39;&#39;&gt;&#xD;&#xA;  &lt;div class=&#34;callout-inner&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    ⚠️  &lt;u&gt;Warning&lt;/u&gt;&#xD;&#xA;    &lt;br /&gt;&#xD;&#xA;    Make sure to test your content before publishing!&#xD;&#xA;    &#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;&#xA;&lt;p&gt;You&amp;rsquo;re all set to start writing blog posts with Hugo and the Archie theme!&lt;/p&gt;</description>
     </item>
   </channel>
