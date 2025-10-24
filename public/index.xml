@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>abijango</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on abijango</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Oct 2025 12:27:42 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing</title>
+      <link>http://localhost:1313/posts/testing/</link>
+      <pubDate>Fri, 24 Oct 2025 12:27:42 +0100</pubDate>
+      <guid>http://localhost:1313/posts/testing/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is a sample post created to test the Hugo blog setup. It demonstrates the basic structure and formatting of a blog post.&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-example&#34;&gt;Code Example&lt;/h2&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a simple code block:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello from Hugo!&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;lists&#34;&gt;Lists&lt;/h2&gt;&#xA;&lt;h3 id=&#34;unordered-list&#34;&gt;Unordered List&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Item one&lt;/li&gt;&#xA;&lt;li&gt;Item two&lt;/li&gt;&#xA;&lt;li&gt;Item three&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;ordered-list&#34;&gt;Ordered List&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;First step&lt;/li&gt;&#xA;&lt;li&gt;Second step&lt;/li&gt;&#xA;&lt;li&gt;Third step&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;callouts&#34;&gt;Callouts&lt;/h2&gt;&#xA;&#xD;&#xA;&lt;div class=&#39;callout callout-tip&#39; style=&#39;&#39;&gt;&#xD;&#xA;  &lt;div class=&#34;callout-inner&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    🔎 &lt;u&gt;Tip&lt;/u&gt;&#xD;&#xA;    &lt;br /&gt;&#xD;&#xA;    This is a helpful tip for readers.&#xD;&#xA;    &#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&#xD;&#xA;&lt;div class=&#39;callout callout-warning&#39; style=&#39;&#39;&gt;&#xD;&#xA;  &lt;div class=&#34;callout-inner&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    ⚠️  &lt;u&gt;Warning&lt;/u&gt;&#xD;&#xA;    &lt;br /&gt;&#xD;&#xA;    Make sure to test your content before publishing!&#xD;&#xA;    &#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;&#xA;&lt;p&gt;You&amp;rsquo;re all set to start writing blog posts with Hugo and the Archie theme!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Example Post</title>
+      <link>http://localhost:1313/posts/2025-10-24-example-post/</link>
+      <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-10-24-example-post/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Primer: When You Have Too Much to Do</title>
+      <link>http://localhost:1313/posts/post-1/</link>
+      <pubDate>Tue, 01 Apr 2025 02:01:58 +0530</pubDate>
+      <guid>http://localhost:1313/posts/post-1/</guid>
+      <description>&lt;p&gt;You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.&lt;/p&gt;&#xA;&lt;p&gt;It all keeps piling up, and it can feel overwhelming.&lt;/p&gt;&#xA;&lt;p&gt;How do you keep up with it all? How do you find focus and peace and get stuff accomplished when you have too much on your plate?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/archives/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/archives/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;&gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;&#xA;&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/yuin/goldmark&#34;&gt;https://github.com/yuin/goldmark&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/alecthomas/chroma&#34;&gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/muesli/smartcrop&#34;&gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/homepage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/homepage/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

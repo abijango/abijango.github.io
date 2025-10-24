@@ -1,0 +1,5 @@
+baseURL = 'http://localhost'
+languageCode = 'en-us'
+title = 'abijango'
+theme = "archie"
+publishDir = "docs"
