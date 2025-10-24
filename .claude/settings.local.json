@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(hugo version:*)",
-      "Bash(hugo new:*)"
+      "Bash(hugo new:*)",
+      "Bash(git submodule add:*)",
+      "Bash(git rm:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
