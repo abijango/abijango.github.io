@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="intro">
+  <h1>{{ config.title }}</h1>
+  <p class="lede">Notes on painting, Necromunda, and whatever else sticks.</p>
+</section>
+
+<section class="post-list" aria-label="Recent posts">
+  <h2>Recent posts</h2>
+  <ul>
+    {% set section = get_section(path="posts/_index.md") %}
+    {% for page in section.pages %}
+      <li>
+        <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+        <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+      </li>
+    {% else %}
+      <li class="empty">No published posts yet.</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock content %}

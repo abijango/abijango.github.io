@@ -1,11 +1,9 @@
-I want to publish the draft post: $ARGUMENTS
+Publish the draft post: $ARGUMENTS
 
-1. Use the View tool to read the current post
-2. Change 'draft: true' to 'draft: false' in the front matter
-3. Verify all images and links with appropriate tools
-4. Perform a final check for UK English spelling and grammar
-5. Stage the changes with git add
-6. Commit the changes with a descriptive message
-7. Push to GitHub
+1. Read the post under content/posts/
+2. Set draft = false in the front matter
+3. Check images exist under static/ and that Markdown links look sane
+4. Run `zola build` (no drafts) and confirm it succeeds
+5. Stage content and docs/, commit with a clear message, push
 
-This automates the publishing workflow for new posts.
+Do not invent extra site-wide refactors.

@@ -1,5 +1,0 @@
-baseURL = 'https://abijango.github.io'
-languageCode = 'en-us'
-title = 'abijango'
-theme = "archie"
-publishDir = "docs"
