@@ -1,10 +1,9 @@
 Deploy the site to GitHub Pages.
 
-1. Run a final build with `hugo` (no draft content)
-2. Verify the build completed successfully
-3. Clean up generated content
-4. Stage all changes with git
-5. Commit with a message describing the deployment, include the date of publish, and number of posts published.
-6. Push to GitHub to trigger the GitHub Pages deployment
+1. Run `zola build` (no draft content)
+2. Confirm docs/ looks correct (index, posts, main.css, neon assets if referenced)
+3. Stage changes (content + docs + templates/config as needed)
+4. Commit with a deploy message including the date and how many posts are published
+5. Push to GitHub so Pages can pick up /docs
 
-Provide a confirmation when complete and estimate when the changes will be live.
+Confirm when done.

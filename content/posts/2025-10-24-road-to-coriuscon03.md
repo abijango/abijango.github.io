@@ -2,9 +2,12 @@
 title = "Road to CoriusCon03"
 date = 2025-10-24T13:18:44+01:00
 draft = false
-description = ""
-author = "abijango"
+description = "Neon Shrikes progress for CoriusCon03"
+aliases = ["posts/2025-10-24-road-to-coriuscon03"]
+[taxonomies]
 tags = ["necromunda"]
+[extra]
+author = "abijango"
 +++
 
 The first part of the gang for CoriusCon03 has been built and painted, needs a little bit more work on weathering and bases.

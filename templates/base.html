@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{% block description %}{{ config.description | default(value=config.title) }}{% endblock description %}">
+  <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
+  {% block head %}{% endblock head %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="{{ get_url(path='@/_index.md') }}">{{ config.title }}</a>
+      <nav class="nav" aria-label="Main">
+        <a href="{{ get_url(path='@/posts/_index.md') }}">posts</a>
+        <a href="{{ get_url(path='@/about.md') }}">about</a>
+        <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}">feed</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      {% block content %}{% endblock content %}
+    </main>
+
+    <footer class="site-footer">
+      <p>{{ config.extra.author }} · built with <a href="https://www.getzola.org/">Zola</a></p>
+    </footer>
+  </div>
+</body>
+</html>

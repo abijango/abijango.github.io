@@ -1,13 +1,5 @@
-Check if updates are available for:
+Check whether Zola or useful themes need updates.
 
-1. The Hugo version we're currently using
-2. The Congo theme version we're currently using
-
-For each:
-- Determine the current version
-- Check for the latest available version
-- Advise if an update is recommended
-- Suggest commands to perform the update safely
-- If major version changes are available, note potential compatibility issues
-
-Then run a test build to verify compatibility if updates are available.
+1. Compare installed/local Zola version guidance in CLAUDE.md with https://github.com/getzola/zola/releases
+2. Summarize any breaking config notes from the changelog that affect this repo
+3. Do not upgrade automatically unless asked

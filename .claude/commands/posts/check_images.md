@@ -1,15 +1,8 @@
-Verify all image references exist in the filesystem for post(s): $ARGUMENTS
+Verify all image references exist for post(s): $ARGUMENTS
 
-1. Use the View tool to read the specified post(s)
-2. Extract all image references (both Markdown format ![alt](path) and Hugo shortcode format)
-3. For each image reference:
-   - Check if the path is absolute or relative
-   - If relative, convert to the correct absolute path (considering the static/ directory for standard references)
-   - Use GlobTool to verify the image exists
-4. Report:
-   - Total number of image references found
-   - Number of images successfully verified
-   - List of any missing images with their references
-   - Suggestions for fixing missing images
+1. Read the specified post(s)
+2. Extract Markdown image references: `![alt](path)`
+3. Paths starting with `/` map to `static/` (e.g. `/neon-shrikes.jpg` → `static/neon-shrikes.jpg`)
+4. Report totals, verified paths, and any missing files with a fix suggestion
 
-This ensures all images referenced in posts are available and prevents broken image links.
+Keeps posts from shipping broken image links.

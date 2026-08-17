@@ -1,14 +1,14 @@
 Create a new blog post with the title: $ARGUMENTS
 
-1. Generate the proper kebab-case filename with today's date (YYYY-MM-DD-title-slug.md)
-2. Create the file with Hugo's 'hugo new content' command
-3. Update the front matter to include:
-   - The title properly formatted
-   - Today's date
-   - draft: true
-   - The description
-   - Author: abijango
-   - Tags: tags = ['']
-4. Show me the command to serve the site locally so I can preview it
+1. Generate a kebab-case filename with today's date: `YYYY-MM-DD-title-slug.md`
+2. Create `content/posts/YYYY-MM-DD-title-slug.md` with TOML front matter:
+   - title
+   - date (RFC3339 or YYYY-MM-DD)
+   - draft = true
+   - description
+   - [taxonomies] tags = ["..."]
+   - [extra] author = "abijango"
+3. Leave a short body placeholder
+4. Show how to preview: `zola serve --drafts`
 
-Ensure all formatting follows US English standards.
+US English. Do not run a production deploy.
