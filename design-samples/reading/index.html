@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reading journal · design samples</title>
+  <meta name="description" content="Three design directions for a reading journal page. Example data only.">
+  <meta name="robots" content="noindex">
+  <style>
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Light.woff2") format("woff2"); font-weight: 300; font-display: swap; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+    :root { --bg: #1a1b26; --panel: #1f2335; --line: rgba(65, 72, 104, 0.8); --ink: #c0caf5; --dim: #565f89; --blue: #7aa2f7; --cyan: #7dcfff; --green: #9ece6a; --warn: #e0af68; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { color-scheme: dark; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: "JetBrains Mono", ui-monospace, monospace; font-weight: 300; line-height: 1.65; font-size: 0.9rem; }
+    a { color: var(--cyan); text-underline-offset: 0.18em; }
+    a:hover { color: #fff; }
+    :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+    .shell { width: min(100% - 2rem, 70rem); margin: 0 auto; padding: 2.5rem 0 3rem; }
+    header { border-bottom: 1px solid var(--line); padding-bottom: 1.25rem; margin-bottom: 2rem; }
+    .brand { font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; color: var(--ink); text-decoration: none; }
+    .kick { margin: 1.5rem 0 0.2rem; font-size: 0.75rem; color: var(--dim); }
+    h1 { margin: 0 0 0.75rem; font-size: clamp(1.8rem, 5vw, 2.8rem); line-height: 1.1; letter-spacing: -0.03em; color: #fff; }
+    .lede { color: var(--blue); max-width: 46rem; margin: 0 0 0.75rem; }
+    .warn { display: inline-block; background: var(--warn); color: var(--bg); font-weight: 700; padding: 0 0.5rem; font-size: 0.74rem; border-radius: 2px; margin-right: 0.4rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .card { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 2px; background: var(--panel); min-width: 0; }
+    .card .pv { display: block; border-bottom: 1px solid var(--line); background: #000; }
+    .card .pv img { display: block; width: 100%; height: auto; }
+    .card .body { padding: 1.1rem 1.15rem 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; flex: 1; }
+    .card h2 { margin: 0; font-size: 1.15rem; color: #fff; line-height: 1.25; }
+    .card h2 span { color: var(--dim); font-weight: 400; margin-right: 0.4rem; }
+    .card p { margin: 0; font-size: 0.82rem; }
+    .meta { display: grid; grid-template-columns: 4.2rem 1fr; gap: 0.2rem 0.6rem; font-size: 0.76rem; margin: 0; }
+    .meta dt { color: var(--dim); }
+    .meta dd { margin: 0; }
+    .sw { display: inline-flex; gap: 3px; vertical-align: middle; margin-right: 0.4rem; }
+    .sw i { width: 0.8rem; height: 0.8rem; border-radius: 2px; border: 1px solid rgba(255, 255, 255, 0.15); }
+    .links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.5rem; padding-top: 0.5rem; }
+    .links a { text-decoration: none; border: 1px solid var(--line); border-radius: 2px; padding: 0.2rem 0.7rem; font-size: 0.78rem; font-weight: 700; }
+    .links a:first-child { background: var(--blue); border-color: var(--blue); color: var(--bg); }
+    .links a:hover { border-color: var(--blue); color: #fff; }
+    .links a:first-child:hover { color: var(--bg); background: #9ab8fa; }
+    .notes { margin-top: 2.5rem; border-top: 1px solid var(--line); padding-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.5rem; font-size: 0.82rem; }
+    .notes h3 { margin: 0 0 0.4rem; font-size: 0.9rem; color: #fff; }
+    .notes p, .notes ul { margin: 0; color: #a9b1d6; }
+    .notes ul { padding-left: 1.1rem; }
+    code { color: #b4f9f8; }
+    @media (max-width: 920px) { .grid { grid-template-columns: 1fr; } .notes { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="brand" href="index.html">abijango</a>
+      <p class="kick">// design-samples/reading</p>
+      <h1>Reading journal: three directions</h1>
+      <p class="lede">Static design exploration for a future reading-year page. Pick the mood you like; nothing here is wired to anything.</p>
+      <p><span class="warn">sample data</span> All titles, numbers and charts are invented. Covers are generated placeholders. No API, no Worker, no secrets. Not linked from the live site.</p>
+    </header>
+
+    <main>
+      <div class="grid">
+        <article class="card">
+          <a class="pv" href="direction-a.html" tabindex="-1" aria-hidden="true"><img src="assets/og-a.png" width="1200" height="630" alt=""></a>
+          <div class="body">
+            <h2><span>A</span>Terminal ledger</h2>
+            <p>The reading log as another page of the existing site: monospace everything, hairline borders, blocky progress bars and a GitHub-style heat calendar. The most &ldquo;already yours&rdquo; option.</p>
+            <dl class="meta">
+              <dt>palette</dt><dd><span class="sw"><i style="background:#1a1b26"></i><i style="background:#7aa2f7"></i><i style="background:#9ece6a"></i><i style="background:#bb9af7"></i><i style="background:#e0af68"></i></span>Tokyo Night, read = green, heard = purple</dd>
+              <dt>type</dt><dd>JetBrains Mono only</dd>
+            </dl>
+            <div class="links"><a href="direction-a.html">Main page</a><a href="book-a.html">Book page</a><a href="og-a.html">Year card</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="pv" href="direction-b.html" tabindex="-1" aria-hidden="true"><img src="assets/og-b.png" width="1200" height="630" alt=""></a>
+          <div class="body">
+            <h2><span>B</span>Warm library</h2>
+            <p>The blackCodex mood in Tokyo Night colours: deep green-black, cream serif numerals, covers as the hero, progress rings, a reading clock and a month calendar. Quiet, bookish, a bit cosy.</p>
+            <dl class="meta">
+              <dt>palette</dt><dd><span class="sw"><i style="background:#0a1511"></i><i style="background:#f1e8d2"></i><i style="background:#9ece6a"></i><i style="background:#e0af68"></i><i style="background:#bb9af7"></i></span>Green-black, cream, moss, amber, lavender</dd>
+              <dt>type</dt><dd>Fraunces (numerals, titles) + JetBrains Mono small caps</dd>
+            </dl>
+            <div class="links"><a href="direction-b.html">Main page</a><a href="book-b.html">Book page</a><a href="og-b.html">Year card</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="pv" href="direction-c.html" tabindex="-1" aria-hidden="true"><img src="assets/og-c.png" width="1200" height="630" alt=""></a>
+          <div class="body">
+            <h2><span>C</span>Annual report</h2>
+            <p>A bold editorial take: a giant year, thick rules, numbered chapters, a cream paper band for goals and a pixel-per-day year chart. Loud covers on near-black, orange as the single hot accent.</p>
+            <dl class="meta">
+              <dt>palette</dt><dd><span class="sw"><i style="background:#0d0e14"></i><i style="background:#ece4d0"></i><i style="background:#ff9e64"></i><i style="background:#bb9af7"></i><i style="background:#f7768e"></i></span>Ink, paper, Tokyo orange, lavender, pink</dd>
+              <dt>type</dt><dd>Fraunces 900 / 300 italic + JetBrains Mono labels</dd>
+            </dl>
+            <div class="links"><a href="direction-c.html">Main page</a><a href="book-c.html">Book page</a><a href="og-c.html">Year card</a></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="notes">
+        <div>
+          <h3>What each page has</h3>
+          <ul>
+            <li>Year header with switcher (2026, 2025, all time) and headline stats</li>
+            <li>Currently reading, yearly goals, finished-books wall</li>
+            <li>Titles per month, daily heat calendar, peak hours, favourite days, session length and pace</li>
+            <li>A per-book share page mock (try <code>book-a.html?b=dune</code>) and a 1200&times;630 year card</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Notes</h3>
+          <ul>
+            <li>Plain HTML, CSS and JS. Shared example data and the cover generator live in <code>assets/data.js</code>.</li>
+            <li>Fonts: JetBrains Mono is bundled (OFL, same files as the site). Fraunces comes from Google Fonts, with Georgia as fallback.</li>
+            <li>Motion is limited to fades and bar, ring and chart fills, and is switched off under <code>prefers-reduced-motion</code>.</li>
+            <li>Year card PNGs in <code>assets/og-*.png</code> are screenshots of the matching <code>og-*.html</code>.</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

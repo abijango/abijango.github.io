@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The reading year 2026 · Direction B · Warm library</title>
+  <meta name="description" content="Design sample: a warm, bookish reading journal. Example data.">
+  <meta name="robots" content="noindex">
+  <meta property="og:image" content="assets/og-b.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap">
+  <link rel="stylesheet" href="assets/b.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="sample-bar" aria-label="Design samples">
+    <a href="index.html">&larr; design samples</a>
+    <span class="sb-title">Direction B &middot; Warm library</span>
+    <span class="sb-links"><a href="direction-a.html">A</a><a href="direction-b.html" aria-current="page">B</a><a href="direction-c.html">C</a></span>
+  </nav>
+
+  <div class="app">
+    <header class="top">
+      <div class="top-l">
+        <p class="kicker">abijango &middot; reading journal</p>
+        <h1 id="page-title">The reading year</h1>
+      </div>
+      <div class="pills" role="tablist" aria-label="Year" id="year-switch"></div>
+    </header>
+
+    <nav class="tabs" aria-label="Sections">
+      <a href="#overview" class="on">Overview</a>
+      <a href="#shelf">Shelf</a>
+      <a href="#stats">Stats</a>
+      <a href="#share">Share</a>
+    </nav>
+
+    <main id="main">
+      <section id="overview" class="year-head" aria-label="Year at a glance">
+        <div class="yh-title">
+          <p class="kicker">Reading year</p>
+          <p class="yh-year serif" id="yh-year">2026</p>
+          <p class="yh-sub" id="yh-sub"></p>
+        </div>
+        <div class="yh-stats" id="headline"></div>
+      </section>
+
+      <section aria-labelledby="now-h">
+        <p class="kicker">Right now</p>
+        <h2 class="serif sh" id="now-h">Currently on the nightstand</h2>
+        <div class="now-row" id="now"></div>
+      </section>
+
+      <section class="panel goals" aria-labelledby="goals-h">
+        <p class="kicker" id="goals-k">Yearly goals 2026</p>
+        <h2 class="serif sh" id="goals-h">How the year is going</h2>
+        <div class="rings" id="rings"></div>
+        <p class="strip" id="goals-strip"></p>
+      </section>
+
+      <section aria-labelledby="kpi-h">
+        <p class="kicker">Reading &amp; listening</p>
+        <h2 class="serif sh" id="kpi-h">The numbers, split in two</h2>
+        <div class="tiles" id="tiles"></div>
+      </section>
+
+      <section id="shelf" aria-labelledby="shelf-h">
+        <div class="sh-row">
+          <div>
+            <p class="kicker">Finished</p>
+            <h2 class="serif sh" id="shelf-h">The shelf <span class="count" id="shelf-count"></span></h2>
+          </div>
+          <div class="ctrl">
+            <div class="seg" role="group" aria-label="Filter" id="filters">
+              <button type="button" data-f="all" aria-pressed="true">All</button>
+              <button type="button" data-f="read" aria-pressed="false">Read</button>
+              <button type="button" data-f="listen" aria-pressed="false">Heard</button>
+            </div>
+            <div class="seg" role="group" aria-label="Sort" id="sorts">
+              <button type="button" data-o="date" aria-pressed="true">Newest</button>
+              <button type="button" data-o="rating" aria-pressed="false">Top rated</button>
+            </div>
+          </div>
+        </div>
+        <div class="wall" id="wall"></div>
+      </section>
+
+      <section id="stats" aria-labelledby="stats-h">
+        <p class="kicker">Patterns &amp; milestones</p>
+        <h2 class="serif sh" id="stats-h">Statistics</h2>
+
+        <div class="panel">
+          <div class="ph"><h3>Titles finished per month</h3><span class="legend"><i class="lg r"></i>Books <i class="lg l"></i>Audiobooks</span></div>
+          <div id="months"></div>
+        </div>
+
+        <div class="panel">
+          <div class="ph"><h3>Pages &amp; listening minutes</h3><span class="legend"><i class="lg pg"></i>Pages <i class="lg l"></i>Minutes</span></div>
+          <div id="areas"></div>
+        </div>
+
+        <div class="panel">
+          <div class="ph"><h3 id="cal-title">Calendar</h3>
+            <div class="cal-nav"><button type="button" id="cal-prev" aria-label="Previous month">&lsaquo;</button><button type="button" id="cal-today">Latest</button><button type="button" id="cal-next" aria-label="Next month">&rsaquo;</button></div>
+          </div>
+          <div class="cal-head"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+          <div class="cal" id="cal"></div>
+          <p class="legend cal-leg"><i class="lg r"></i>Reading <i class="lg l"></i>Listening <i class="lg both"></i>Both <span id="cal-sum"></span></p>
+        </div>
+
+        <div class="two">
+          <div class="panel">
+            <div class="ph"><h3>The reading clock</h3></div>
+            <div class="clock-wrap" id="clock"></div>
+            <p class="note" id="clock-note"></p>
+          </div>
+          <div class="panel">
+            <div class="ph"><h3>Favourite days</h3></div>
+            <div id="dows"></div>
+            <p class="note" id="dows-note"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="share" aria-labelledby="share-h">
+        <p class="kicker">Keepsakes</p>
+        <h2 class="serif sh" id="share-h">Share the year, share a book</h2>
+        <div class="share-grid">
+          <a class="share-card" href="og-b.html">
+            <img src="assets/og-b.png" width="1200" height="630" alt="Year share card for 2026, Direction B" loading="lazy">
+            <span class="share-cap"><b>Year card</b> &middot; 1200&times;630 for link previews</span>
+          </a>
+          <a class="share-card" href="book-b.html">
+            <span class="mini" id="share-mini"></span>
+            <span class="share-cap"><b>A single book</b><br>Cover, dates, rating, a few lines of my own, and the reading timeline.</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><span class="tag-sample">Sample data</span> Every title, number and chart on this page is invented for design exploration. Covers are generated placeholders. No API calls, no tracking.</p>
+      <p class="dim">abijango &middot; design sample, not part of the live site</p>
+    </footer>
+  </div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/b.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Year card 2026 · Direction B · 1200×630</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap">
+  <style>
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Light.woff2") format("woff2"); font-weight: 300; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Regular.woff2") format("woff2"); font-weight: 400; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Bold.woff2") format("woff2"); font-weight: 700; }
+    html, body { margin: 0; background: #050b08; }
+    body { font-family: "JetBrains Mono", monospace; --cover-mono: "JetBrains Mono", monospace; --cover-serif: "Fraunces", Georgia, serif; }
+    .og-stage { width: 1200px; max-width: 100%; }
+    .og { position: relative; width: 1200px; height: 630px; overflow: hidden; box-sizing: border-box; padding: 60px 70px; color: #cfd8c9; display: grid; grid-template-columns: 1fr 500px; gap: 50px;
+      background: radial-gradient(900px 560px at 15% -10%, #174633 0%, transparent 62%), radial-gradient(700px 500px at 100% 100%, rgba(80, 50, 110, 0.35), transparent 60%), #0a1511; }
+    .og::after { content: ""; position: absolute; inset: 18px; border: 1px solid rgba(232, 201, 138, 0.35); border-radius: 6px; pointer-events: none; }
+    .l { display: flex; flex-direction: column; justify-content: center; }
+    .kick { margin: 0; font-size: 17px; letter-spacing: 6px; text-transform: uppercase; color: #e0af68; }
+    .year { font-family: "Fraunces", Georgia, serif; font-weight: 300; font-size: 232px; line-height: 0.95; letter-spacing: -10px; color: #f1e8d2; margin: 10px 0 24px -8px; font-variation-settings: "opsz" 144; }
+    .stats { display: flex; gap: 46px; }
+    .stats div { border-left: 1px solid rgba(170, 214, 150, 0.35); padding-left: 18px; }
+    .stats b { display: block; font-family: "Fraunces", Georgia, serif; font-weight: 400; font-size: 58px; line-height: 1; color: #f1e8d2; letter-spacing: -1px; }
+    .stats b i { font-style: normal; font-family: "JetBrains Mono", monospace; font-size: 22px; color: #86998b; margin-left: 4px; letter-spacing: 0; }
+    .stats span { display: block; margin-top: 8px; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: #86998b; }
+    .covers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-content: center; transform: rotate(-3deg); }
+    .oc { display: block; aspect-ratio: 2 / 3; border-radius: 6px; overflow: hidden; box-shadow: 0 22px 34px -14px #000; }
+    .oc:nth-child(even) { transform: translateY(26px); }
+    .oc svg { display: block; width: 100%; height: 100%; }
+    .foot { position: absolute; left: 70px; bottom: 42px; font-size: 15px; letter-spacing: 3px; text-transform: uppercase; color: #86998b; }
+    .sample { position: absolute; right: 40px; top: 34px; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #e0af68; }
+  </style>
+</head>
+<body data-v="b">
+  <div class="og-stage">
+    <div class="og">
+      <div class="l">
+        <p class="kick">Reading year</p>
+        <div class="year" data-s="year">2026</div>
+        <div class="stats">
+          <div><b data-s="titles"></b><span>Titles</span></div>
+          <div><b data-s="pages"></b><span>Pages</span></div>
+          <div><b><span data-s="hours" style="display:inline;margin:0;font-size:inherit;color:inherit;letter-spacing:inherit;text-transform:none"></span><i>h</i></b><span>Hours</span></div>
+        </div>
+      </div>
+      <div class="covers" data-covers></div>
+      <div class="foot">abijango &middot; reading journal</div>
+      <div class="sample">sample data</div>
+    </div>
+  </div>
+  <script src="assets/data.js"></script>
+  <script src="assets/og.js"></script>
+</body>
+</html>

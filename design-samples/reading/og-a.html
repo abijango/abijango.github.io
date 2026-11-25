@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Year card 2026 · Direction A · 1200×630</title>
+  <meta name="robots" content="noindex">
+  <style>
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Light.woff2") format("woff2"); font-weight: 300; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Regular.woff2") format("woff2"); font-weight: 400; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Bold.woff2") format("woff2"); font-weight: 700; }
+    html, body { margin: 0; background: #0f0f17; }
+    body { font-family: "JetBrains Mono", monospace; --cover-mono: "JetBrains Mono", monospace; }
+    .og-stage { width: 1200px; max-width: 100%; }
+    .og { position: relative; width: 1200px; height: 630px; overflow: hidden; background: #1a1b26; color: #c0caf5; display: grid; grid-template-columns: 1fr 520px; padding: 56px 64px 0 64px; gap: 40px; box-sizing: border-box; }
+    .og::before { content: ""; position: absolute; inset: 0; background: radial-gradient(900px 500px at 85% 20%, rgba(122, 162, 247, 0.12), transparent 60%), radial-gradient(600px 400px at 0% 100%, rgba(158, 206, 106, 0.08), transparent 60%); }
+    .og > * { position: relative; }
+    .l { display: flex; flex-direction: column; }
+    .prompt { font-size: 22px; color: #565f89; margin: 0; }
+    .prompt b { color: #7aa2f7; font-weight: 400; } .prompt i { color: #9ece6a; font-style: normal; }
+    .year { font-size: 150px; font-weight: 700; color: #fff; letter-spacing: -8px; line-height: 1; margin: 22px 0 0 -6px; }
+    .log { font-size: 26px; color: #7aa2f7; margin: 6px 0 34px; }
+    .stats { display: grid; gap: 14px; margin: 0; }
+    .stats div { display: flex; align-items: baseline; gap: 18px; }
+    .stats dd { margin: 0; font-size: 46px; font-weight: 700; color: #fff; min-width: 190px; letter-spacing: -2px; }
+    .stats dt { font-size: 22px; color: #a9b1d6; }
+    .stats .g { color: #9ece6a; } .stats .p { color: #bb9af7; }
+    .covers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-content: center; padding-bottom: 76px; }
+    .oc { display: block; aspect-ratio: 2 / 3; border: 1px solid rgba(65, 72, 104, 0.9); box-shadow: 0 18px 30px -14px rgba(0, 0, 0, 0.8); overflow: hidden; }
+    .oc svg { display: block; width: 100%; height: 100%; }
+    .foot { position: absolute !important; left: 64px; right: 64px; bottom: 28px; display: flex; justify-content: space-between; font-size: 20px; color: #565f89; }
+    .foot b { color: #c0caf5; }
+    .bar { position: absolute !important; left: 0; right: 0; bottom: 0; height: 10px; background: linear-gradient(90deg, #9ece6a 0 45%, #bb9af7 45% 70%, #7aa2f7 70%); }
+    .sample { position: absolute !important; top: 18px; right: 24px; font-size: 13px; color: #e0af68; }
+  </style>
+</head>
+<body data-v="a">
+  <div class="og-stage">
+    <div class="og">
+      <div class="l">
+        <p class="prompt"><b>~/reading</b> <i>$</i> cat 2026.log</p>
+        <div class="year" data-s="year">2026</div>
+        <p class="log">reading log</p>
+        <dl class="stats">
+          <div><dd class="g" data-s="titles"></dd><dt>titles finished</dt></div>
+          <div><dd data-s="pages"></dd><dt>pages read</dt></div>
+          <div><dd class="p"><span data-s="hours"></span> h</dd><dt>reading + listening</dt></div>
+        </dl>
+      </div>
+      <div class="covers" data-covers></div>
+      <div class="foot"><span><b>abijango</b> / reading</span><span>abijango.github.io</span></div>
+      <span class="sample">sample data</span>
+      <div class="bar"></div>
+    </div>
+  </div>
+  <script src="assets/data.js"></script>
+  <script src="assets/og.js"></script>
+</body>
+</html>

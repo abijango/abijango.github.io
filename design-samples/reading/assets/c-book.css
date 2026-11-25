@@ -1,0 +1,45 @@
+.bk-top { padding: clamp(1.5rem, 4vw, 3rem) var(--pad) 0; }
+.bk-top .kick { margin-bottom: 1rem; }
+.bk-title { margin: 0; font-family: var(--serif); font-weight: 900; font-size: clamp(2.9rem, 10.5vw, 9.5rem); line-height: 0.88; letter-spacing: -0.055em; color: var(--cream); font-variation-settings: "opsz" 144; overflow-wrap: anywhere; }
+.bk-title em { font-weight: 300; }
+.bk-main { display: grid; grid-template-columns: minmax(13rem, 22rem) 1fr; gap: 2rem clamp(1.5rem, 5vw, 5rem); padding: clamp(1.5rem, 4vw, 3rem) var(--pad) 0; align-items: start; }
+.bk-main .cv { border: 3px solid var(--cream); box-shadow: 14px 14px 0 var(--orange); }
+.bk-main .cvw { position: sticky; top: 1.5rem; }
+.verdict { display: flex; align-items: flex-end; gap: 1.2rem; margin: 0 0 1.5rem; }
+.verdict .big { font-family: var(--serif); font-weight: 900; font-size: clamp(5rem, 14vw, 10rem); line-height: 0.8; letter-spacing: -0.06em; color: var(--orange); }
+.verdict .of { font-size: 0.8rem; color: var(--text); padding-bottom: 0.4rem; }
+.verdict .of b { display: block; color: var(--cream); font-size: 1.1rem; letter-spacing: 0.12em; }
+.rows { margin: 0; border-top: 3px solid var(--rule); }
+.rows > div { display: grid; grid-template-columns: 10rem 1fr; gap: 1rem; padding: 0.65rem 0; border-bottom: 1px solid rgba(243, 236, 219, 0.22); }
+.rows dt { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: var(--dim); align-self: center; }
+.rows dd { margin: 0; font-family: var(--serif); font-weight: 800; font-size: 1.35rem; letter-spacing: -0.02em; color: var(--cream); font-variant-numeric: lining-nums; }
+.rows dd small { font-family: var(--mono); font-weight: 400; font-size: 0.6em; color: var(--text); letter-spacing: 0; margin-left: 0.3em; }
+.bk-paper { margin-top: clamp(2rem, 6vw, 5rem); }
+.take { margin: 0; font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(1.5rem, 3.6vw, 2.9rem); line-height: 1.2; letter-spacing: -0.02em; max-width: 52rem; }
+.take::first-letter { font-weight: 900; font-style: normal; color: #c4501a; }
+.take-by { margin: 1.2rem 0 0; font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; }
+.timeline { margin-top: clamp(2rem, 5vw, 3rem); padding: 0 var(--pad); }
+.tbars { display: flex; align-items: flex-end; gap: 3px; height: 8rem; }
+.tbars i { flex: 1; background: var(--orange); transform-origin: bottom; min-width: 2px; }
+.tbars.l i { background: var(--lav); }
+.tax { display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.72rem; color: var(--dim); }
+.bk-share { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: clamp(2rem, 5vw, 4rem) var(--pad) 3rem; align-items: start; }
+.btns { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.btn { background: none; border: 3px solid var(--cream); padding: 0.55rem 1.1rem; font-weight: 700; font-size: 0.8rem; color: var(--cream); cursor: pointer; text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; }
+.btn:hover { background: var(--cream); color: var(--ink); }
+.btn.primary { background: var(--orange); border-color: var(--orange); color: var(--ink); }
+.btn.primary:hover { background: var(--cream); border-color: var(--cream); }
+.unf { border: 3px solid var(--cream); }
+.unf .img { aspect-ratio: 1200 / 630; background: var(--orange); color: var(--ink); display: flex; align-items: center; gap: 1.2rem; padding: 6%; }
+.unf .img .cv { width: 22%; flex: none; border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); }
+.unf .img b { font-family: var(--serif); font-weight: 900; font-size: clamp(1.3rem, 3vw, 2rem); line-height: 0.95; letter-spacing: -0.04em; display: block; }
+.unf .img span { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; }
+.unf .t { padding: 0.7rem 0.9rem; font-size: 0.72rem; color: var(--dim); }
+.unf .t b { display: block; color: var(--cream); font-weight: 700; }
+@media (prefers-reduced-motion: no-preference) { .tbars i { animation: growY 0.8s both cubic-bezier(0.2, 0.7, 0.2, 1); animation-delay: calc(var(--i) * 20ms); } }
+@media (max-width: 800px) {
+  .bk-main { grid-template-columns: 1fr; }
+  .bk-main .cvw { position: relative; top: 0; width: 55%; max-width: 14rem; }
+  .bk-share { grid-template-columns: 1fr; }
+  .rows > div { grid-template-columns: 7.5rem 1fr; }
+}

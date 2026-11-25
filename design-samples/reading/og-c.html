@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Year card 2026 · Direction C · 1200×630</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap">
+  <style>
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Regular.woff2") format("woff2"); font-weight: 400; }
+    @font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Bold.woff2") format("woff2"); font-weight: 700; }
+    html, body { margin: 0; background: #000; }
+    body { font-family: "JetBrains Mono", monospace; --cover-mono: "JetBrains Mono", monospace; --cover-serif: "Fraunces", Georgia, serif; }
+    .og-stage { width: 1200px; max-width: 100%; }
+    .og { position: relative; width: 1200px; height: 630px; overflow: hidden; background: #0d0e14; color: #f3ecdb; box-sizing: border-box; padding: 40px 52px 0; }
+    .rule { position: absolute; left: 52px; right: 52px; top: 40px; height: 4px; background: #f3ecdb; }
+    .year { position: absolute; left: 40px; top: 52px; font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 340px; line-height: 0.84; letter-spacing: -20px; font-variation-settings: "opsz" 144; color: #f3ecdb; }
+    .side { position: absolute; right: 52px; top: 74px; width: 250px; }
+    .side p { margin: 0; }
+    .kick { font-size: 14px; letter-spacing: 5px; text-transform: uppercase; color: #ff9e64; font-weight: 700; }
+    .side dl { margin: 22px 0 0; display: grid; gap: 14px; }
+    .side dd { margin: 0; font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 62px; line-height: 0.95; letter-spacing: -3px; color: #f3ecdb; }
+    .side dd i { font-style: normal; font-family: "JetBrains Mono", monospace; font-weight: 400; font-size: 20px; color: #ff9e64; margin-left: 4px; letter-spacing: 0; }
+    .side dt { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: #c7cbe3; font-weight: 700; margin-top: 4px; }
+    .side div { display: flex; flex-direction: column-reverse; }
+    .covers { position: absolute; left: 52px; right: 52px; bottom: -34px; display: grid; grid-template-columns: repeat(8, 1fr); gap: 12px; }
+    .oc { display: block; aspect-ratio: 2 / 3; overflow: hidden; border: 3px solid #f3ecdb; box-sizing: border-box; box-shadow: 0 -6px 0 #ff9e64; }
+    .oc svg { display: block; width: 100%; height: 100%; }
+    .brand { position: absolute; right: 52px; bottom: 198px; font-size: 14px; letter-spacing: 3px; color: #6c7298; text-transform: uppercase; }
+    .sample { position: absolute; left: 52px; bottom: 198px; font-size: 12px; letter-spacing: 3px; color: #14121a; background: #ff9e64; padding: 1px 8px; font-weight: 700; text-transform: uppercase; }
+    .deck { position: absolute; left: 54px; top: 350px; margin: 0; font-family: "Fraunces", Georgia, serif; font-style: italic; font-weight: 300; font-size: 30px; line-height: 1.15; white-space: nowrap; color: #f3ecdb; }
+    .deck em { color: #ff9e64; }
+  </style>
+</head>
+<body data-v="c">
+  <div class="og-stage">
+    <div class="og">
+      <div class="rule"></div>
+      <div class="year" data-s="year">2026</div>
+      <p class="deck">The year in <em>books</em>. One doorstop, many commutes.</p>
+      <div class="side">
+        <p class="kick">Reading year</p>
+        <dl>
+          <div><dt>Titles</dt><dd data-s="titles"></dd></div>
+          <div><dt>Pages</dt><dd data-s="pages"></dd></div>
+          <div><dt>Hours</dt><dd><span data-s="hours"></span><i>h</i></dd></div>
+        </dl>
+      </div>
+      <div class="sample">sample data</div>
+      <div class="brand">abijango / reading</div>
+      <div class="covers" data-covers></div>
+    </div>
+  </div>
+  <script src="assets/data.js"></script>
+  <script src="assets/og.js"></script>
+</body>
+</html>
