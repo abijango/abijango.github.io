@@ -1,0 +1,50 @@
+/* goal-setting page. Extends reading.css. */
+.gtools { display: flex; align-items: center; gap: 0.75rem 1rem; margin-top: 0.25rem; }
+.gtools .back { margin-left: 0; text-decoration: none; padding: 0.1rem 0.7rem; font-size: 0.72rem; }
+.gtools .saved { margin-left: auto; font-size: 0.72rem; color: var(--read); min-height: 1.2em; }
+.gtools .tool { margin-left: 0; }
+.gdash { margin-top: 2rem; }
+.gmain { gap: 2.5rem; }
+.gmain section { margin-top: 0; }
+.gside { top: 0.5rem; }
+
+.glist { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 2px; background: var(--panel); }
+.grow { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr) 11rem 5.5rem 8.2rem; gap: 0.75rem; align-items: center; padding: 0.95rem 1.1rem 0.95rem 0.6rem; border-bottom: 1px solid var(--line-soft); }
+.grow:last-child { border-bottom: 0; }
+.grow:not(.on) { color: var(--dim); }
+.grow:not(.on) .gname b { color: var(--sub); font-weight: 400; }
+.gname { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.gname b { color: var(--heading); font-size: 0.9rem; }
+.tag { display: inline-block; font-style: normal; font-size: 0.64rem; color: var(--dim); border: 1px solid var(--line); border-radius: 2px; padding: 0 0.45rem; width: max-content; line-height: 1.5; }
+.tag.sync { color: var(--cyan); border-color: rgba(125, 207, 255, 0.35); }
+.tag.per { justify-self: start; }
+.sw { background: transparent; border: 1px solid var(--line); border-radius: 2px; width: 2.6rem; height: 2.1rem; cursor: pointer; font: 700 0.85rem var(--font); color: var(--dim); padding: 0; }
+.sw:hover { border-color: var(--blue); color: #fff; }
+.grow.on .sw { color: var(--read); border-color: rgba(158, 206, 106, 0.55); }
+.gin { display: flex; align-items: center; gap: 0.5rem; }
+.tin { width: 100%; min-width: 0; background: #171926; color: var(--heading); border: 1px solid var(--line); border-radius: 2px; padding: 0.4rem 0.6rem; font: 700 0.95rem var(--font); font-variant-numeric: tabular-nums; caret-color: var(--read); }
+.tin::placeholder { color: var(--dim); font-weight: 300; }
+.tin:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+.tin:disabled { color: var(--sub); border-style: dashed; background: transparent; }
+.unit { font-size: 0.72rem; color: var(--dim); min-width: 1.6rem; }
+.ord { display: inline-flex; align-items: center; gap: 0.3rem; justify-self: end; }
+.pos { font-size: 0.8rem; font-weight: 700; color: var(--blue); margin-right: 0.2rem; }
+.mv { background: transparent; border: 1px solid var(--line); border-radius: 2px; color: var(--sub); cursor: pointer; font: 700 0.85rem var(--font); width: 1.9rem; height: 1.9rem; padding: 0; }
+.mv:hover:not(:disabled) { color: #fff; border-color: var(--blue); }
+.mv:disabled { opacity: 0.3; cursor: default; }
+.gnone { padding: 1rem 1.1rem; font-size: 0.78rem; color: var(--dim); }
+
+@media (max-width: 1080px) {
+  .gdash { display: flex; flex-direction: column; gap: 2rem; }
+  .gside { order: -1; }
+}
+@media (max-width: 760px) {
+  .grow { grid-template-columns: 2.6rem minmax(0, 1fr) auto; grid-template-areas: "sw name ord" "sw in per"; gap: 0.6rem 0.75rem; padding: 0.85rem 0.8rem; }
+  .grow > .sw { grid-area: sw; align-self: start; }
+  .grow > .gname { grid-area: name; }
+  .grow > .gin { grid-area: in; }
+  .grow > .per { grid-area: per; justify-self: end; }
+  .grow > .ord { grid-area: ord; }
+  .grow:not(.on) { grid-template-areas: "sw name name" "sw in per"; }
+  .gtools { flex-wrap: wrap; }
+}
