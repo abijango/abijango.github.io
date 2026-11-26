@@ -2,7 +2,7 @@
   'use strict';
   var R = window.RJ, $ = function (id) { return document.getElementById(id); };
   var KEYS = [['2026', '2026'], ['2025', '2025'], ['all', 'all-time']];
-  var state = { key: '2026', heat: 'read', filter: 'all' };
+  var state = { key: '2026', filter: 'all' };
 
   function cover(b) { return R.coverSVG(b); }
   function bookHref(b) { return 'book.html?b=' + b.slug; }
@@ -86,36 +86,71 @@
     }).join('');
   }
 
-  function quartiles(vals) {
-    var v = vals.filter(function (x) { return x > 0; }).sort(function (a, b) { return a - b; });
-    if (!v.length) return [1, 2, 3];
-    return [v[Math.floor(v.length * 0.25)], v[Math.floor(v.length * 0.5)], v[Math.floor(v.length * 0.8)]];
-  }
+  var MIN_STEPS = [1, 15, 30, 45, 60, 90];
+  function lvlMin(v) { var n = 0; for (var i = 0; i < MIN_STEPS.length; i++) if (v >= MIN_STEPS[i]) n = i + 1; return n; }
+  function shortDate(iso) { var d = R.parseDate(iso); return d.getUTCDate() + ' ' + R.MONTHS[d.getUTCMonth()]; }
 
   function renderHeat(Y) {
-    var mode = state.heat, f = mode === 'read' ? 'r' : 'l';
-    var map = {}; Y.days.forEach(function (d) { map[d.date] = d; });
+    var map = {}, months = {}, best = null;
+    Y.days.forEach(function (d) {
+      map[d.date] = d;
+      var k = d.date.slice(0, 7); months[k] = (months[k] || 0) + d.r;
+      if (!best || d.r > best.r) best = d;
+    });
     var first, last;
     if (Y.key === 'all') { first = R.parseDate(Y.days[0].date); last = R.parseDate(Y.days[Y.days.length - 1].date); }
     else { first = new Date(Date.UTC(Y.year, 0, 1)); last = new Date(Date.UTC(Y.year, 11, 31)); }
-    var q = quartiles(Y.days.map(function (d) { return d[f]; }));
-    var offset = first.getUTCDay(), cells = '', labels = '', i = 0, lastMonth = -1, total = 0, active = 0, todayCol = 0;
+    var offset = first.getUTCDay(), cells = '', labels = '', i = 0, lastMonth = -1, lastCol = 2;
     for (var t = first.getTime(); t <= last.getTime(); t += 864e5, i++) {
       var dt = new Date(t), iso = dt.toISOString().slice(0, 10), col = Math.floor((i + offset) / 7) + 2, row = dt.getUTCDay() + 2, d = map[iso];
-      if (dt.getUTCMonth() !== lastMonth && dt.getUTCDate() <= 7) { labels += '<span class="mo" style="grid-column:' + col + '">' + R.MONTHS[dt.getUTCMonth()].toLowerCase() + '</span>'; lastMonth = dt.getUTCMonth(); }
-      if (!d) { cells += '<i class="cell fut" style="grid-column:' + col + ';grid-row:' + row + '" title="' + iso + '"></i>'; continue; }
-      var v = d[f], lv = v <= 0 ? 0 : (v < q[0] ? 1 : v < q[1] ? 2 : v < q[2] ? 3 : 4);
-      total += v; if (v > 0) active++;
-      todayCol = col;
-      cells += '<i class="cell l' + lv + '" style="grid-column:' + col + ';grid-row:' + row + ';--c:' + (col - 2) + '" title="' + iso + ' · ' + Math.round(d.r) + ' min read · ' + Math.round(d.l) + ' min heard"></i>';
+      lastCol = col;
+      if (dt.getUTCMonth() !== lastMonth && dt.getUTCDate() <= 7) {
+        var mh = months[iso.slice(0, 7)];
+        labels += '<span class="mo" style="grid-column:' + col + '">' + R.MONTHS[dt.getUTCMonth()].toLowerCase() + (mh != null ? '<em>' + Math.round(mh / 60) + ' h</em>' : '') + '</span>';
+        lastMonth = dt.getUTCMonth();
+      }
+      if (!d) { cells += '<i class="cell fut" style="grid-column:' + col + ';grid-row:' + row + '"></i>'; continue; }
+      cells += '<i class="cell s' + lvlMin(d.r) + (d === best ? ' best' : '') + '" data-d="' + iso + '" style="grid-column:' + col + ';grid-row:' + row + ';--c:' + (col - 2) + '"></i>';
     }
-    var cols = Math.floor((i - 1 + offset) / 7) + 1;
     var dl = '<span class="dl" style="grid-row:3">mon</span><span class="dl" style="grid-row:5">wed</span><span class="dl" style="grid-row:7">fri</span>';
     var el = $('heat');
-    el.innerHTML = '<div class="heat" data-mode="' + mode + '" style="grid-template-columns:1.9rem repeat(' + cols + ',0.8rem)">' + labels + dl + cells + '</div>';
-    $('heat-sum').textContent = R.int(total / 60) + ' h across ' + active + ' days';
-    el.scrollLeft = Y.key === '2025' ? 0 : todayCol * 14;
-    $('heat-modes').innerHTML = '<button type="button" class="mode" data-m="read" aria-pressed="' + (mode === 'read') + '">reading</button><button type="button" class="mode" data-m="listen" aria-pressed="' + (mode === 'listen') + '">listening</button>';
+    el.innerHTML = '<div class="heat" style="grid-template-columns:1.9rem repeat(' + (lastCol - 1) + ',minmax(0,1fr));min-width:calc(1.9rem + ' + (lastCol - 1) + ' * (0.7rem + 3px))">' + labels + dl + cells + '</div>';
+    $('heat-best').innerHTML = 'best day <b style="color:var(--hot)">' + shortDate(best.date) + '</b> &middot; ' + R.hm(best.r) + ' h';
+    $('heat-legend').innerHTML = '<span class="lbl">minutes</span><i></i><span class="lbl">0</span><i class="s1"></i><span class="lbl">1+</span><i class="s2"></i><span class="lbl">15</span><i class="s3"></i><span class="lbl">30</span><i class="s4"></i><span class="lbl">45</span><i class="s5"></i><span class="lbl">60</span><i class="s6"></i><span class="lbl">90+</span><span class="mk"></span><span class="lbl">best day</span>';
+    hideTip();
+    el.scrollLeft = Y.key === '2025' ? 0 : el.scrollWidth;
+  }
+
+  /* tooltip: pointer hover, or tap on touch. Pages are an estimate (minutes x year pace). */
+  var tip = $('tip'), tipOn = null;
+  function tipHtml(iso) {
+    var Y = R.get(state.key), d = null;
+    Y.days.some(function (x) { if (x.date === iso) { d = x; return true; } });
+    var dt = R.parseDate(iso), head = R.DOWS[dt.getUTCDay()] + ' ' + dt.getUTCDate() + ' ' + R.MONTHS[dt.getUTCMonth()] + ' ' + dt.getUTCFullYear();
+    if (!d || (d.r <= 0 && d.l <= 0)) return '<b>' + head + '</b>no reading';
+    return '<b>' + head + '</b>' + (d.r > 0 ? '<span class="r">' + Math.round(d.r) + ' min read</span> &middot; <span class="p">~' + Math.round(d.p) + ' pages</span>' : 'no reading') + (d.l > 0 ? '<br><span class="l">' + Math.round(d.l) + ' min heard</span>' : '');
+  }
+  function placeTip(x, y) {
+    var w = tip.offsetWidth, h = tip.offsetHeight, nx = Math.min(window.innerWidth - w - 8, Math.max(8, x + 14)), ny = y - h - 12 < 8 ? y + 18 : y - h - 12;
+    tip.style.left = nx + 'px'; tip.style.top = ny + 'px';
+  }
+  function showTip(c) { if (tipOn) tipOn.classList.remove('sel'); tipOn = c; c.classList.add('sel'); tip.innerHTML = tipHtml(c.getAttribute('data-d')); tip.hidden = false; }
+  function hideTip() { tip.hidden = true; if (tipOn) tipOn.classList.remove('sel'); tipOn = null; }
+  function bindHeat() {
+    var root = $('heat');
+    root.addEventListener('pointermove', function (e) {
+      if (e.pointerType === 'touch') return;
+      var c = e.target.closest('[data-d]'); if (!c) { hideTip(); return; }
+      if (tipOn !== c) showTip(c);
+      placeTip(e.clientX, e.clientY);
+    });
+    root.addEventListener('pointerleave', function (e) { if (e.pointerType !== 'touch') hideTip(); });
+    root.addEventListener('scroll', hideTip);
+    root.addEventListener('click', function (e) {
+      var c = e.target.closest('[data-d]'); if (!c || window.matchMedia('(hover: hover)').matches) return;
+      if (tipOn === c) { hideTip(); return; }
+      showTip(c); var r = c.getBoundingClientRect(); placeTip(r.left + r.width / 2, r.top);
+    });
   }
 
   function renderHours(Y) {
@@ -191,15 +226,14 @@
   }
 
   document.addEventListener('click', function (e) {
-    var k = e.target.closest('[data-k]'), f = e.target.closest('[data-f]'), m = e.target.closest('[data-m]');
+    var k = e.target.closest('[data-k]'), f = e.target.closest('[data-f]');
     if (k) { state.key = k.getAttribute('data-k'); renderAll(); }
     if (f) {
       state.filter = f.getAttribute('data-f');
       [].forEach.call(document.querySelectorAll('#filters button'), function (b) { b.setAttribute('aria-pressed', b === f); });
       $('shelf').setAttribute('data-filter', state.filter);
     }
-    if (m) { state.heat = m.getAttribute('data-m'); renderHeat(R.get(state.key)); }
   });
 
-  renderAll(); renderShare(); bindShelf();
+  renderAll(); renderShare(); bindShelf(); bindHeat();
 })();
