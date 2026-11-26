@@ -169,13 +169,21 @@
     days.forEach(function (d) { if (d.r > 0) { run++; if (run > longest) longest = run; } else run = 0; });
     cur = run;
 
+    var cumul = 0, goalBooks = GOALS[y].books;
+    var trajectory = months.map(function (m, i) {
+      cumul += m.read + m.listen;
+      return { month: i + 1, actualCumulative: cumul, targetCumulative: Math.round(goalBooks * (i + 1) / 12 * 10) / 10 };
+    });
+    for (i = months.length; i < 12; i++) trajectory.push({ month: i + 1, actualCumulative: null, targetCumulative: Math.round(goalBooks * (i + 1) / 12 * 10) / 10 });
+    var funnel = { completed: books.length, reached75: books.length + 1, reached50: books.length + 3, reached25: books.length + 5, started: books.length + 7 + current.length };
+
     var rated = books.filter(function (b) { return b.rating; });
     var avgRating = rated.reduce(function (a, b) { return a + b.rating; }, 0) / (rated.length || 1);
 
     return {
       key: String(y), label: String(y), year: y, books: books, current: current, days: days, months: months,
       hoursR: hoursR, hoursL: hoursL, dowR: dowR, dowL: dowL,
-      goals: GOALS[y],
+      goals: GOALS[y], trajectory: trajectory, funnel: funnel,
       totals: {
         titles: books.length, read: read, listen: listen, pages: pages,
         readH: readMin / 60, listenH: listenMin / 60, readMin: readMin, listenMin: listenMin,
@@ -203,6 +211,7 @@
         key: 'all', label: 'All time', year: null, books: b.books.concat(a.books), current: b.current, days: last, months: months,
         hoursR: a.hoursR.map(function (v, i) { return v + b.hoursR[i]; }), hoursL: a.hoursL.map(function (v, i) { return v + b.hoursL[i]; }),
         dowR: a.dowR.map(function (v, i) { return v + b.dowR[i]; }), dowL: a.dowL.map(function (v, i) { return v + b.dowL[i]; }),
+        trajectory: null, funnel: { completed: sum(function (x) { return x.funnel.completed; }), reached75: sum(function (x) { return x.funnel.reached75; }), reached50: sum(function (x) { return x.funnel.reached50; }), reached25: sum(function (x) { return x.funnel.reached25; }), started: sum(function (x) { return x.funnel.started; }) },
         goals: { books: sum(function (x) { return x.goals.books; }), pages: sum(function (x) { return x.goals.pages; }), audiobooks: sum(function (x) { return x.goals.audiobooks; }), listenHours: sum(function (x) { return x.goals.listenHours; }) },
         totals: {
           titles: sum(function (x) { return x.totals.titles; }), read: sum(function (x) { return x.totals.read; }), listen: sum(function (x) { return x.totals.listen; }),
@@ -243,8 +252,6 @@
 
   /* ---------- placeholder covers ---------- */
   var TOKYO = ['#7aa2f7', '#bb9af7', '#7dcfff', '#9ece6a', '#e0af68', '#f7768e', '#ff9e64', '#73daca'];
-  var JEWEL = [['#1c4a3a', '#0a1f19'], ['#5a2433', '#26101a'], ['#233461', '#0d1226'], ['#5e4616', '#261b07'], ['#195158', '#0a2226'], ['#473463', '#1a1228'], ['#4d3822', '#1c140c'], ['#355a30', '#122014']];
-  var POP = ['#ff9e64', '#f7768e', '#ece4d0', '#7aa2f7', '#bb9af7', '#9ece6a', '#e0af68', '#7dcfff'];
   var coverN = 0;
 
   function coverTitle(t) {
@@ -282,14 +289,13 @@
     return o;
   }
 
-  function coverSVG(book, v) {
-    v = v || 'a';
+  function coverSVG(book) {
     var h = hash(book.title), id = 'cv' + (++coverN), m = h % 6, ci = (h >>> 3) % 8;
-    var t = coverTitle(book.title), listen = book.kind === 'listen', out = '', fz, ln, y, i;
+    var t = coverTitle(book.title), listen = book.kind === 'listen', out = '', fz, ln, i;
     var author = book.author.length > 22 ? book.author.split(' ').slice(-1)[0] : book.author;
     var head = '<svg class="cover-svg" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder cover: ' + esc(book.title) + '" preserveAspectRatio="xMidYMid slice">';
 
-    if (v === 'a') {
+    {
       var ac = TOKYO[ci];
       fz = fit(t, 150, 0.61, 5, 24, 11);
       out += '<defs><linearGradient id="' + id + '" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2f47"/><stop offset="1" stop-color="#16161e"/></linearGradient></defs>';
@@ -298,27 +304,6 @@
       out += '<text x="26" y="34" font-size="9" fill="' + ac + '" style="font-family:var(--cover-mono,monospace)" letter-spacing="1.5">' + (listen ? '♪ AUDIO' : '▤ BOOK') + '</text>';
       for (i = 0; i < fz.lines.length; i++) out += '<text x="26" y="' + (68 + i * fz.size * 1.22) + '" font-size="' + fz.size + '" font-weight="700" fill="#c0caf5" style="font-family:var(--cover-mono,monospace)">' + esc(fz.lines[i]) + '</text>';
       out += '<text x="26" y="282" font-size="10" fill="#a9b1d6" style="font-family:var(--cover-mono,monospace)">' + esc(author) + '</text>';
-    } else if (v === 'b') {
-      var jp = JEWEL[ci];
-      fz = fit(t, 138, 0.52, 5, 23, 13);
-      out += '<defs><linearGradient id="' + id + '" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="' + jp[0] + '"/><stop offset="1" stop-color="' + jp[1] + '"/></linearGradient></defs>';
-      out += '<rect width="200" height="300" fill="url(#' + id + ')"/>' + motif(m, '#e8c98a', 0.22);
-      out += '<rect x="9" y="9" width="182" height="282" rx="2" fill="none" stroke="#e8c98a" stroke-opacity=".55" stroke-width="1"/>';
-      out += '<rect x="14" y="14" width="172" height="272" rx="1" fill="none" stroke="#e8c98a" stroke-opacity=".25" stroke-width=".7"/>';
-      y = 60;
-      out += '<text x="100" y="42" text-anchor="middle" font-size="8" fill="#e8c98a" letter-spacing="3" style="font-family:var(--cover-mono,monospace)">' + (listen ? 'AUDIO' : '· · ·') + '</text>';
-      for (i = 0; i < fz.lines.length; i++) out += '<text x="100" y="' + (y + 12 + i * fz.size * 1.18) + '" text-anchor="middle" font-size="' + fz.size + '" font-weight="600" fill="#f4ead2" style="font-family:var(--cover-serif,Georgia,serif)">' + esc(fz.lines[i]) + '</text>';
-      out += '<line x1="70" y1="258" x2="130" y2="258" stroke="#e8c98a" stroke-opacity=".6"/>';
-      out += '<text x="100" y="274" text-anchor="middle" font-size="8.5" fill="#e8c98a" letter-spacing="1.6" style="font-family:var(--cover-mono,monospace)">' + esc(author.toUpperCase()) + '</text>';
-    } else {
-      var pc = POP[ci], ink = '#14121a';
-      fz = fit(t, 168, 0.58, 5, 40, 15);
-      out += '<rect width="200" height="300" fill="' + pc + '"/>' + motif(m, ink, 0.2);
-      out += '<rect y="0" width="200" height="300" fill="none" stroke="' + ink + '" stroke-width="0"/>';
-      for (i = 0; i < fz.lines.length; i++) out += '<text x="16" y="' + (50 + i * fz.size * 1.0) + '" font-size="' + fz.size + '" font-weight="900" fill="' + ink + '" style="font-family:var(--cover-serif,Georgia,serif)" letter-spacing="-0.5">' + esc(fz.lines[i]) + '</text>';
-      out += '<rect x="16" y="262" width="26" height="3" fill="' + ink + '"/>';
-      out += '<text x="16" y="282" font-size="9.5" font-weight="700" fill="' + ink + '" letter-spacing="1" style="font-family:var(--cover-mono,monospace)">' + esc(author.toUpperCase()) + '</text>';
-      if (listen) out += '<g><rect x="150" y="12" width="40" height="16" rx="8" fill="' + ink + '"/><text x="170" y="23.5" text-anchor="middle" font-size="8" fill="' + pc + '" font-weight="700" style="font-family:var(--cover-mono,monospace)">AUDIO</text></g>';
     }
     return head + out + '</svg>';
   }

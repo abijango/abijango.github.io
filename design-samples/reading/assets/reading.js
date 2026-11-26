@@ -4,8 +4,8 @@
   var KEYS = [['2026', '2026'], ['2025', '2025'], ['all', 'all-time']];
   var state = { key: '2026', heat: 'read', filter: 'all' };
 
-  function cover(b) { return R.coverSVG(b, 'a'); }
-  function bookHref(b) { return 'book-a.html?b=' + b.slug; }
+  function cover(b) { return R.coverSVG(b); }
+  function bookHref(b) { return 'book.html?b=' + b.slug; }
   function pctText(n) { return Math.round(n) + '%'; }
 
   function renderSwitch() {
@@ -155,6 +155,30 @@
     $('pace').innerHTML = items.map(function (it) { return '<div class="kv"><p class="k">' + it[0] + '</p><p class="v">' + it[1] + it[2] + '</p><p class="s">' + it[3] + '</p></div>'; }).join('');
   }
 
+  function renderTraj(Y) {
+    var panel = $('traj-panel'), tr = Y.trajectory;
+    if (!tr) { $('traj').innerHTML = '<p class="note" style="margin:0">Trajectory is per year. Pick 2026 or 2025.</p>'; return; }
+    var W = 600, H = 140, max = Math.max.apply(null, tr.map(function (p) { return Math.max(p.targetCumulative, p.actualCumulative || 0); })) * 1.08;
+    function xy(p, v) { return ((p.month - 1) / 11 * W).toFixed(1) + ' ' + (H - 6 - v / max * (H - 14)).toFixed(1); }
+    var tgt = tr.map(function (p, i) { return (i ? 'L' : 'M') + xy(p, p.targetCumulative); }).join(' ');
+    var act = tr.filter(function (p) { return p.actualCumulative != null; }), last = act[act.length - 1];
+    var line = act.map(function (p, i) { return (i ? 'L' : 'M') + xy(p, p.actualCumulative); }).join(' ');
+    var grid = [0.25, 0.5, 0.75, 1].map(function (f) { var y = (H - 6 - f * (H - 14) / 1.08).toFixed(1); return '<line class="grid" x1="0" x2="' + W + '" y1="' + y + '" y2="' + y + '"/>'; }).join('');
+    var diff = last.actualCumulative - last.targetCumulative;
+    $('traj').className = 'traj';
+    $('traj').innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="Cumulative titles finished against a straight-line target">' + grid + '<path class="tgt" d="' + tgt + '"/><path class="act" d="' + line + '"/></svg>' +
+      '<div class="axis">' + R.MONTHS.map(function (m) { return '<span>' + m.toLowerCase() + '</span>'; }).join('') + '</div>' +
+      '<p class="read-out"><b>' + last.actualCumulative + '</b> finished vs <b style="color:var(--blue)">' + last.targetCumulative.toFixed(1) + '</b> on target pace: ' + (diff >= 0 ? Math.round(diff * 10) / 10 + ' ahead' : Math.abs(Math.round(diff * 10) / 10) + ' behind') + ' by ' + R.MONTHS[last.month - 1].toLowerCase() + '.</p>';
+  }
+
+  function renderFunnel(Y) {
+    var f = Y.funnel, rows = [['started', f.started], ['reached 25%', f.reached25], ['reached 50%', f.reached50], ['reached 75%', f.reached75], ['completed', f.completed]];
+    $('funnel-note').textContent = 'of ' + f.started + ' books started';
+    $('funnel').innerHTML = rows.map(function (r, i) {
+      return '<div class="fun"><span>' + r[0] + '</span><div class="t"><i style="--w:' + (r[1] / f.started * 100) + '%;--i:' + i + '"></i></div><span class="n"><b>' + r[1] + '</b> &middot; ' + Math.round(r[1] / f.started * 100) + '%</span></div>';
+    }).join('');
+  }
+
   function renderShare() {
     var b = R.find('the-way-of-kings');
     $('share-mini').innerHTML = '<span class="cv">' + cover(b) + '</span>';
@@ -173,7 +197,7 @@
   function renderAll() {
     var Y = R.get(state.key);
     $('hero-file').textContent = state.key === 'all' ? 'all-time' : state.key;
-    renderSwitch(); renderHeadline(Y); renderNow(Y); renderGoals(Y); renderShelf(Y); renderMonths(Y); renderHeat(Y); renderHours(Y); renderDows(Y); renderPace(Y);
+    renderSwitch(); renderHeadline(Y); renderNow(Y); renderGoals(Y); renderShelf(Y); renderMonths(Y); renderHeat(Y); renderHours(Y); renderDows(Y); renderPace(Y); renderTraj(Y); renderFunnel(Y);
   }
 
   document.addEventListener('click', function (e) {
