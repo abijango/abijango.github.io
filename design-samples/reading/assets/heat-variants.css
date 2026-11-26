@@ -1,0 +1,60 @@
+/* Heatmap comparison page. Extends reading.css. */
+.vsec { margin-top: 2.25rem; }
+.vdesc { margin: -0.4rem 0 1rem; font-size: 0.8rem; color: var(--sub); max-width: 52rem; }
+.vsec .panel { margin-top: 0; }
+
+/* 7-step green ramp (v1) and split ramps (v3) */
+.cell.s1 { background: #2a4636; } .cell.s2 { background: #35603f; } .cell.s3 { background: #4a7a45; }
+.cell.s4 { background: #6a9a4c; } .cell.s5 { background: #85b85a; } .cell.s6 { background: #a8e07a; }
+.heat.big { grid-auto-columns: 1rem; grid-template-rows: 1.4rem repeat(7, 1rem); gap: 3px; }
+.heat.big .dl { line-height: 1rem; }
+.heat .mo b { color: var(--sub); font-weight: 400; }
+.heat .mo { line-height: 1.1; }
+.heat .mo em { display: block; font-style: normal; color: var(--dim); font-size: 0.56rem; }
+.cell.best { outline: 2px solid var(--hot); outline-offset: 1px; position: relative; z-index: 1; }
+.cell.sel { outline: 2px solid #fff; outline-offset: 1px; position: relative; z-index: 2; }
+.cell { cursor: crosshair; }
+
+.heat-legend.steps i.s1 { background: #2a4636; } .heat-legend.steps i.s2 { background: #35603f; } .heat-legend.steps i.s3 { background: #4a7a45; }
+.heat-legend.steps i.s4 { background: #6a9a4c; } .heat-legend.steps i.s5 { background: #85b85a; } .heat-legend.steps i.s6 { background: #a8e07a; }
+.heat-legend .lbl { font-size: 0.62rem; color: var(--dim); margin-right: 0.35rem; }
+.heat-legend .mk { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 2px; margin: 0 0.3rem 0 0.8rem; }
+.mk.best { outline: 2px solid var(--hot); outline-offset: 1px; background: var(--panel-2); }
+.mk.longest { background: var(--panel-2); box-shadow: inset 0 -3px 0 var(--hot); }
+.mk.current { background: var(--panel-2); box-shadow: inset 0 -3px 0 var(--blue); }
+
+/* floating tooltip */
+.tip { position: fixed; z-index: 30; pointer-events: none; background: #0f1019; color: var(--ink); border: 1px solid var(--blue); border-radius: 2px; padding: 0.45rem 0.65rem; font-size: 0.72rem; line-height: 1.45; box-shadow: 0 10px 24px -8px #000; max-width: 15rem; }
+.tip[hidden] { display: none; }
+.tip b { color: var(--heading); display: block; font-size: 0.76rem; }
+.tip .r { color: var(--read); } .tip .l { color: var(--listen); } .tip .p { color: var(--warn); }
+
+/* v2: month blocks */
+.months-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr)); gap: 1.1rem 1.25rem; }
+.mblock { min-width: 0; }
+.mblock h4 { margin: 0 0 0.45rem; font-size: 0.78rem; font-weight: 700; color: var(--ink); display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+.mblock h4 span { font-weight: 300; font-size: 0.66rem; color: var(--dim); white-space: nowrap; }
+.mdays { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+.md { aspect-ratio: 1; border-radius: 2px; background: #171926; font-size: 0.56rem; color: rgba(255, 255, 255, 0.55); display: flex; align-items: flex-start; justify-content: flex-start; padding: 1px 3px; font-variant-numeric: tabular-nums; position: relative; cursor: crosshair; min-width: 0; }
+.md.o { background: transparent; cursor: default; }
+.md.fut { background: transparent; outline: 1px dashed rgba(65, 72, 104, 0.5); outline-offset: -1px; color: var(--dim); }
+.md.l1 { background: #2f4a3b; } .md.l2 { background: #46703f; } .md.l3 { background: #6a9a4c; color: rgba(10, 20, 10, 0.75); } .md.l4 { background: #9ece6a; color: rgba(10, 20, 10, 0.8); }
+.md.longest { box-shadow: inset 0 -3px 0 var(--hot); }
+.md.current { box-shadow: inset 0 -3px 0 var(--blue); }
+.md.longest.current { box-shadow: inset 0 -3px 0 var(--hot), inset 0 -6px 0 var(--blue); }
+.mdow { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; margin-bottom: 3px; font-size: 0.5rem; color: var(--dim); text-align: center; }
+
+/* v3: split cells */
+.heat.split { grid-auto-columns: 1.05rem; grid-template-rows: 1.7rem repeat(7, 1.05rem) 0.7rem; gap: 3px; }
+.heat.split .dl { line-height: 1.05rem; }
+.cell.sp { background: linear-gradient(var(--rc) 0 46%, transparent 46% 54%, var(--lc) 54% 100%); }
+.cell.sp.fut { background: transparent; }
+.perfect { width: 5px; height: 5px; border-radius: 50%; background: var(--hot); justify-self: center; align-self: center; }
+.lg.perfect { width: 0.45rem; height: 0.45rem; background: var(--hot); }
+
+@media (max-width: 520px) {
+  .months-grid { grid-template-columns: 1fr 1fr; gap: 1rem 0.8rem; }
+  .md { font-size: 0.5rem; padding: 1px 2px; }
+  .mblock h4 { flex-direction: column; gap: 0; }
+  .vdesc { font-size: 0.76rem; }
+}

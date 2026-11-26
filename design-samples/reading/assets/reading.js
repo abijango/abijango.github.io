@@ -23,13 +23,12 @@
       ['listening time', R.int(t.listenH), '<small>h</small>', R.int(t.listenDays) + ' listening days']
     ];
     $('headline').innerHTML = items.map(function (it, i) {
-      return '<div class="stat fade" style="--i:' + i + '"><p class="k">' + it[0] + '</p><p class="v">' + it[1] + it[2] + '</p><p class="s">' + it[3] + '</p></div>';
+      return '<div class="stat fade" style="--i:' + i + '"><p class="k">' + it[0] + '</p><p class="v">' + it[1] + it[2] + '</p>' + (it[3] ? '<p class="s">' + it[3] + '</p>' : '') + '</div>';
     }).join('');
   }
 
   function renderNow(Y) {
     var cur = Y.current;
-    $('now-note').textContent = cur.length ? cur.length + ' in progress' : '';
     if (!cur.length) {
       $('now').innerHTML = '<div class="now" style="grid-column:1/-1"><p class="dim" style="margin:0">Nothing in progress for this view. Switch back to 2026.</p></div>';
       return;
@@ -48,15 +47,12 @@
 
   function renderGoals(Y) {
     var rows = R.goalRows(Y);
-    $('goals-note').textContent = Y.key === 'all' ? 'sum of yearly goals' : 'set 1 jan ' + Y.year;
     $('goals').innerHTML = rows.map(function (g, i) {
       var capped = Math.min(100, g.pct), over = g.pct > 100;
-      return '<div class="goal fade" style="--i:' + (i + 1) + '"><div class="gl">' + g.label + '<span>' + (g.id === 'pages' ? 'pages read' : g.id === 'hours' ? 'time in audio' : g.id === 'audio' ? 'finished' : 'finished, read + listened') + '</span></div>' +
+      return '<div class="goal fade" style="--i:' + (i + 1) + '"><div class="gl">' + g.label + '</div>' +
         '<div class="bar" role="progressbar" aria-valuenow="' + Math.round(g.pct) + '" aria-valuemin="0" aria-valuemax="100" aria-label="' + g.label + ' goal"><i style="--w:' + capped + '%;--c:' + (over ? 'var(--read)' : 'var(--blue)') + ';--i:' + i + '"></i></div>' +
         '<div class="gv"><b>' + g.fmt(g.value) + '</b> / ' + g.fmt(g.goal) + g.unit + ' &nbsp;' + (over ? '<span class="over">+' + Math.round(g.pct - 100) + '%</span>' : '<span class="dim">' + pctText(g.pct) + '</span>') + '</div></div>';
     }).join('');
-    var hit = rows.filter(function (g) { return g.pct >= 100; }).length;
-    $('goals-foot').textContent = hit + ' of ' + rows.length + ' goals met' + (Y.key === '2026' ? ' with 36 days to go.' : '.');
   }
 
   function renderShelf(Y) {
@@ -67,7 +63,6 @@
       groups[k].push(b);
     });
     var n = 0;
-    $('shelf-note').textContent = Y.books.length + ' finished';
     $('shelf').setAttribute('data-filter', state.filter);
     $('shelf').innerHTML = order.map(function (k) {
       var list = groups[k], d = R.parseDate(k + '-01');
@@ -130,7 +125,6 @@
         '<i class="l" style="height:' + (Y.hoursL[i] / v * 100) + '%"></i><i style="height:' + (Y.hoursR[i] / v * 100) + '%"></i></div>';
     }).join('') + '</div><div class="haxis"><span>00</span><span>06</span><span>12</span><span>18</span><span>23</span></div>';
     var pr = Y.hoursR.indexOf(R.max(Y.hoursR)), pl = Y.hoursL.indexOf(R.max(Y.hoursL));
-    $('hours-note').innerHTML = 'Reading peaks at <b class="c-read">' + R.pad(pr) + ':00</b>, listening at <b class="c-listen">' + R.pad(pl) + ':00</b> (commute).';
   }
 
   function renderDows(Y) {
@@ -139,20 +133,19 @@
     $('dows').innerHTML = order.map(function (d, i) {
       return '<div class="dow' + (d === top ? ' top' : '') + '"><span class="d">' + R.DOWS[d].toLowerCase() + '</span><div class="t" style="width:' + (tot[d] / max * 100) + '%;min-width:0"><i style="--w:' + (Y.dowR[d] / tot[d] * 100) + '%;width:' + (Y.dowR[d] / tot[d] * 100) + '%;--i:' + i + '"></i><i class="l" style="width:' + (Y.dowL[d] / tot[d] * 100) + '%;--i:' + i + '"></i></div><span class="n">' + Math.round(tot[d] / 60) + ' h</span></div>';
     }).join('');
-    $('dows-note').innerHTML = R.DOW_LONG[top] + ' is the long one: ' + Math.round(tot[top] / 60) + ' h combined.';
   }
 
   function renderPace(Y) {
     var t = Y.totals;
     var items = [
       ['avg reading session', Math.round(t.avgSession), '<small>min</small>', 'about ' + Math.round(t.avgSession * t.pace / 60) + ' pages'],
-      ['reading pace', Math.round(t.pace), '<small>pages/h</small>', 'paperback and e-book blend'],
+      ['reading pace', Math.round(t.pace), '<small>pages/h</small>', ''],
       ['listening speed', t.speed.toFixed(2).replace(/0$/, ''), '<small>&times;</small>', 'avg ' + Math.round(t.avgListenSession) + ' min on listening days'],
-      ['current streak', t.streak, '<small>days</small>', 'reading days in a row'],
-      ['longest streak', t.longestStreak, '<small>days</small>', 'best run of the period'],
+      ['current streak', t.streak, '<small>days</small>', ''],
+      ['longest streak', t.longestStreak, '<small>days</small>', ''],
       ['avg rating', t.avgRating.toFixed(1), '<small>/ 5</small>', R.stars(Math.round(t.avgRating * 2) / 2)]
     ];
-    $('pace').innerHTML = items.map(function (it) { return '<div class="kv"><p class="k">' + it[0] + '</p><p class="v">' + it[1] + it[2] + '</p><p class="s">' + it[3] + '</p></div>'; }).join('');
+    $('pace').innerHTML = items.map(function (it) { return '<div class="kv"><p class="k">' + it[0] + '</p><p class="v">' + it[1] + it[2] + '</p>' + (it[3] ? '<p class="s">' + it[3] + '</p>' : '') + '</div>'; }).join('');
   }
 
   function renderTraj(Y) {
@@ -164,16 +157,13 @@
     var act = tr.filter(function (p) { return p.actualCumulative != null; }), last = act[act.length - 1];
     var line = act.map(function (p, i) { return (i ? 'L' : 'M') + xy(p, p.actualCumulative); }).join(' ');
     var grid = [0.25, 0.5, 0.75, 1].map(function (f) { var y = (H - 6 - f * (H - 14) / 1.08).toFixed(1); return '<line class="grid" x1="0" x2="' + W + '" y1="' + y + '" y2="' + y + '"/>'; }).join('');
-    var diff = last.actualCumulative - last.targetCumulative;
     $('traj').className = 'traj';
     $('traj').innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="Cumulative titles finished against a straight-line target">' + grid + '<path class="tgt" d="' + tgt + '"/><path class="act" d="' + line + '"/></svg>' +
-      '<div class="axis">' + R.MONTHS.map(function (m) { return '<span>' + m.toLowerCase() + '</span>'; }).join('') + '</div>' +
-      '<p class="read-out"><b>' + last.actualCumulative + '</b> finished vs <b style="color:var(--blue)">' + last.targetCumulative.toFixed(1) + '</b> on target pace: ' + (diff >= 0 ? Math.round(diff * 10) / 10 + ' ahead' : Math.abs(Math.round(diff * 10) / 10) + ' behind') + ' by ' + R.MONTHS[last.month - 1].toLowerCase() + '.</p>';
+      '<div class="axis">' + R.MONTHS.map(function (m) { return '<span>' + m.toLowerCase() + '</span>'; }).join('') + '</div>';
   }
 
   function renderFunnel(Y) {
     var f = Y.funnel, rows = [['started', f.started], ['reached 25%', f.reached25], ['reached 50%', f.reached50], ['reached 75%', f.reached75], ['completed', f.completed]];
-    $('funnel-note').textContent = 'of ' + f.started + ' books started';
     $('funnel').innerHTML = rows.map(function (r, i) {
       return '<div class="fun"><span>' + r[0] + '</span><div class="t"><i style="--w:' + (r[1] / f.started * 100) + '%;--i:' + i + '"></i></div><span class="n"><b>' + r[1] + '</b> &middot; ' + Math.round(r[1] / f.started * 100) + '%</span></div>';
     }).join('');

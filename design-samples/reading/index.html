@@ -15,7 +15,7 @@
 
   <nav class="sample-bar" aria-label="Design samples">
     <span class="sb-title">Design sample &middot; Terminal ledger &middot; example data</span>
-    <span class="sb-links"><a href="index.html" aria-current="page">page</a><a href="book.html">book</a><a href="og.html">og</a></span>
+    <span class="sb-links"><a href="index.html" aria-current="page">page</a><a href="book.html">book</a><a href="og.html">og</a><a href="heatmap-variants.html">heatmaps</a><a href="layout-b.html">layout b</a><a href="layout-c.html">layout c</a></span>
   </nav>
 
   <div class="shell">
@@ -35,7 +35,6 @@
         <div class="hero-row">
           <div>
             <h1 id="h1">Reading log</h1>
-            <p class="lede">Every book I finish, every audiobook I live in. Pages, hours and the odd night shift with a paperback.</p>
           </div>
           <div class="switch" role="tablist" aria-label="Year" id="year-switch"></div>
         </div>
@@ -43,14 +42,13 @@
       </section>
 
       <section aria-labelledby="now-h">
-        <h2 class="sec" id="now-h"><span class="hash">##</span> now reading <span class="sec-note" id="now-note"></span></h2>
+        <h2 class="sec" id="now-h"><span class="hash">##</span> now reading</h2>
         <div class="now-grid" id="now"></div>
       </section>
 
       <section aria-labelledby="goals-h">
-        <h2 class="sec" id="goals-h"><span class="hash">##</span> goals <span class="sec-note" id="goals-note"></span></h2>
+        <h2 class="sec" id="goals-h"><span class="hash">##</span> goals</h2>
         <div class="goals" id="goals"></div>
-        <p class="note" id="goals-foot"></p>
         <div class="panel" id="traj-panel">
           <h3 class="ph">goal trajectory <span class="legend"><i class="lg read"></i>finished <i class="lg tgt"></i>target pace</span></h3>
           <div id="traj"></div>
@@ -58,7 +56,7 @@
       </section>
 
       <section aria-labelledby="shelf-h">
-        <h2 class="sec" id="shelf-h"><span class="hash">##</span> shelf <span class="sec-note" id="shelf-note"></span></h2>
+        <h2 class="sec" id="shelf-h"><span class="hash">##</span> shelf</h2>
         <div class="shelf-bar">
           <div class="chips" role="group" aria-label="Filter shelf" id="filters">
             <button type="button" data-f="all" aria-pressed="true">all</button>
@@ -84,26 +82,24 @@
           <div class="heat-legend"><span>less</span><i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><span>more</span><span class="heat-sum" id="heat-sum"></span></div>
         </div>
 
-        <div class="two">
-          <div class="panel">
-            <h3 class="ph">when I read <span class="legend"><i class="lg read"></i>read <i class="lg listen"></i>listened</span></h3>
-            <div id="hours"></div>
-            <p class="note" id="hours-note"></p>
-          </div>
-          <div class="panel">
-            <h3 class="ph">favourite days</h3>
-            <div id="dows"></div>
-            <p class="note" id="dows-note"></p>
-          </div>
-        </div>
-
-        <div class="panel">
+        <div class="panel panel-attached">
           <h3 class="ph">pace &amp; sessions</h3>
           <div class="kv-grid" id="pace"></div>
         </div>
 
+        <div class="two">
+          <div class="panel">
+            <h3 class="ph">when I read <span class="legend"><i class="lg read"></i>read <i class="lg listen"></i>listened</span></h3>
+            <div id="hours"></div>
+          </div>
+          <div class="panel">
+            <h3 class="ph">favourite days</h3>
+            <div id="dows"></div>
+          </div>
+        </div>
+
         <div class="panel">
-          <h3 class="ph">progress funnel <span class="legend" id="funnel-note"></span></h3>
+          <h3 class="ph">progress funnel </h3>
           <div id="funnel"></div>
         </div>
       </section>
@@ -117,7 +113,7 @@
           </a>
           <a class="share-card book" href="book.html">
             <span class="mini" id="share-mini"></span>
-            <span class="share-cap"><b>per-book page</b> &rarr; <code>/reading/books/the-way-of-kings</code><br><span class="dim">cover, finish date, rating, my take, reading timeline</span></span>
+            <span class="share-cap"><b>per-book page</b> &rarr; <code>/reading/books/the-way-of-kings</code></span>
           </a>
         </div>
       </section>

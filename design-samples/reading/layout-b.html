@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reading log 2026 · layout B (dashboard grid) · design sample</title>
+  <meta name="description" content="Design sample: alternative arrangement of the Terminal ledger page. Example data.">
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="Reading log 2026 · abijango">
+  <meta property="og:image" content="assets/og.png">
+  <link rel="stylesheet" href="assets/reading.css">
+  <link rel="stylesheet" href="assets/layout.css">
+</head>
+<body class="layout-b">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="sample-bar" aria-label="Design samples">
+    <span class="sb-title">Design sample &middot; Layout B &middot; dashboard grid &middot; example data</span>
+    <span class="sb-links"><a href="index.html">page</a><a href="book.html">book</a><a href="og.html">og</a><a href="heatmap-variants.html">heatmaps</a><a href="layout-b.html" aria-current="page">layout b</a><a href="layout-c.html">layout c</a></span>
+  </nav>
+
+  <div class="shell shell-wide">
+    <header class="site-header">
+      <a class="brand" href="index.html">abijango</a>
+      <nav class="nav" aria-label="Main (mock)">
+        <a href="#main">posts</a>
+        <a href="#main">about</a>
+        <a href="#main" aria-current="page" class="on">reading</a>
+        <a href="#main">feed</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="h1">
+        <p class="prompt"><span class="ps">~/reading</span> <span class="dollar">$</span> cat <span id="hero-file">2026</span>.log<span class="cursor" aria-hidden="true"></span></p>
+        <div class="hero-row">
+          <div>
+            <h1 id="h1">Reading log</h1>
+          </div>
+          <div class="switch" role="tablist" aria-label="Year" id="year-switch"></div>
+        </div>
+        <div class="stats4" id="headline" aria-live="polite"></div>
+      </section>
+
+      <div class="dash">
+        <div class="dash-main">
+      <div class="panel d-heat">
+          <h3 class="ph">daily reading <span class="legend" id="heat-modes"></span></h3>
+          <div class="heat-scroll" id="heat" tabindex="0" aria-label="Daily reading heat calendar"></div>
+          <div class="heat-legend"><span>less</span><i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><span>more</span><span class="heat-sum" id="heat-sum"></span></div>
+        </div>
+      <div class="panel panel-attached d-pace">
+          <h3 class="ph">pace &amp; sessions</h3>
+          <div class="kv-grid" id="pace"></div>
+        </div>
+      <div class="panel d-months">
+          <h3 class="ph">titles finished per month <span class="legend"><i class="lg read"></i>read <i class="lg listen"></i>listened</span></h3>
+          <div id="months"></div>
+        </div>
+        <div class="two d-two">
+      <div class="panel d-hours">
+            <h3 class="ph">when I read <span class="legend"><i class="lg read"></i>read <i class="lg listen"></i>listened</span></h3>
+            <div id="hours"></div>
+          </div>
+      <div class="panel d-dows">
+            <h3 class="ph">favourite days</h3>
+            <div id="dows"></div>
+          </div>
+        </div>
+      <div class="panel d-funnel">
+          <h3 class="ph">progress funnel </h3>
+          <div id="funnel"></div>
+        </div>
+        </div>
+        <aside class="dash-side" aria-label="Progress">
+      <section class="d-now" aria-labelledby="now-h">
+        <h2 class="sec" id="now-h"><span class="hash">##</span> now reading</h2>
+        <div class="now-grid" id="now"></div>
+      </section>
+      <section class="d-goals" aria-labelledby="goals-h">
+        <h2 class="sec" id="goals-h"><span class="hash">##</span> goals</h2>
+        <div class="goals" id="goals"></div>
+        <div class="panel" id="traj-panel">
+          <h3 class="ph">goal trajectory <span class="legend"><i class="lg read"></i>finished <i class="lg tgt"></i>target pace</span></h3>
+          <div id="traj"></div>
+        </div>
+      </section>
+        </aside>
+      </div>
+
+      <section aria-labelledby="shelf-h">
+        <h2 class="sec" id="shelf-h"><span class="hash">##</span> shelf</h2>
+        <div class="shelf-bar">
+          <div class="chips" role="group" aria-label="Filter shelf" id="filters">
+            <button type="button" data-f="all" aria-pressed="true">all</button>
+            <button type="button" data-f="read" aria-pressed="false">read</button>
+            <button type="button" data-f="listen" aria-pressed="false">listened</button>
+          </div>
+          <p class="status" id="shelf-status" aria-live="polite">hover or focus a cover</p>
+        </div>
+        <div id="shelf"></div>
+      </section>
+
+      <section aria-labelledby="share-h">
+        <h2 class="sec" id="share-h"><span class="hash">##</span> share</h2>
+        <div class="share-grid">
+          <a class="share-card" href="og.html">
+            <img src="assets/og.png" width="1200" height="630" alt="Year share card for 2026" loading="lazy">
+            <span class="share-cap"><b>year card</b> 1200&times;630 &rarr; <code>/reading/2026/og.png</code></span>
+          </a>
+          <a class="share-card book" href="book.html">
+            <span class="mini" id="share-mini"></span>
+            <span class="share-cap"><b>per-book page</b> &rarr; <code>/reading/books/the-way-of-kings</code></span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><span class="tag-sample">sample data</span> Every title, number and chart on this page is invented for design exploration. Covers are generated placeholders. No API, no tracking.</p>
+      <p class="dim">abijango &middot; design sample, not part of the live site</p>
+    </footer>
+  </div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/reading.js"></script>
+</body>
+</html>
