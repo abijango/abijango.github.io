@@ -33,66 +33,66 @@
   function hm(min) { var h = Math.floor(min / 60), m = Math.round(min % 60); return h + ':' + pad(m); }
 
   /* ---------- books (EXAMPLE DATA) ---------- */
-  // [title, author, kind, size(pages | hours), rating, finished, genre, format]
+  // [title, author, kind, size(pages | hours), rating, finished]
   var RAW = [
-    ['The Left Hand of Darkness', 'Ursula K. Le Guin', 'read', 304, 5, '2026-01-09', 'Science fiction', 'Paperback'],
-    ["Harry Potter and the Philosopher's Stone", 'J.K. Rowling', 'listen', 8.6, 5, '2026-01-17', 'Fantasy', 'Full-cast audiobook'],
-    ['Piranesi', 'Susanna Clarke', 'read', 272, 5, '2026-01-28', 'Fantasy', 'E-book'],
-    ['Project Hail Mary', 'Andy Weir', 'read', 476, 4.5, '2026-02-10', 'Science fiction', 'E-book'],
-    ['Full Moon Coffee Shop', 'Mai Mochizuki', 'read', 304, 4, '2026-02-22', 'Cozy fantasy', 'Paperback'],
-    ['Harry Potter and the Chamber of Secrets', 'J.K. Rowling', 'listen', 9.7, 4.5, '2026-02-27', 'Fantasy', 'Full-cast audiobook'],
-    ['The Name of the Wind', 'Patrick Rothfuss', 'read', 662, 4, '2026-03-19', 'Fantasy', 'Paperback'],
-    ['Convenience Store Woman', 'Sayaka Murata', 'read', 163, 4.5, '2026-03-24', 'Literary fiction', 'E-book'],
-    ['Klara and the Sun', 'Kazuo Ishiguro', 'read', 303, 4, '2026-03-31', 'Literary fiction', 'Hardcover'],
-    ['A Memory Called Empire', 'Arkady Martine', 'read', 462, 4.5, '2026-04-12', 'Science fiction', 'E-book'],
-    ['Harry Potter and the Prisoner of Azkaban', 'J.K. Rowling', 'listen', 12.1, 5, '2026-04-20', 'Fantasy', 'Full-cast audiobook'],
-    ['Braiding Sweetgrass', 'Robin Wall Kimmerer', 'read', 391, 5, '2026-04-29', 'Nature writing', 'Paperback'],
-    ['In Other Rooms, Other Wonders', 'Daniyal Mueenuddin', 'read', 256, 4, '2026-05-11', 'Short stories', 'Paperback'],
-    ['Station Eleven', 'Emily St. John Mandel', 'read', 333, 4.5, '2026-05-23', 'Literary fiction', 'E-book'],
-    ['Exhalation', 'Ted Chiang', 'read', 350, 5, '2026-05-30', 'Science fiction', 'E-book'],
-    ['Hyperion', 'Dan Simmons', 'read', 482, 3.5, '2026-06-21', 'Science fiction', 'Paperback'],
-    ['The Remains of the Day', 'Kazuo Ishiguro', 'read', 258, 4.5, '2026-06-29', 'Literary fiction', 'Paperback'],
-    ['The Way of Kings', 'Brandon Sanderson', 'read', 1007, 5, '2026-07-14', 'Epic fantasy', 'Hardcover'],
-    ['Spinning Silver', 'Naomi Novik', 'read', 465, 4, '2026-07-30', 'Fantasy', 'E-book'],
-    ['Harry Potter and the Goblet of Fire', 'J.K. Rowling', 'listen', 19.8, 4.5, '2026-08-09', 'Fantasy', 'Full-cast audiobook'],
-    ['Circe', 'Madeline Miller', 'read', 393, 4.5, '2026-08-18', 'Mythology', 'Paperback'],
-    ['The Dispossessed', 'Ursula K. Le Guin', 'read', 387, 4.5, '2026-08-27', 'Science fiction', 'Paperback'],
-    ['Kafka on the Shore', 'Haruki Murakami', 'read', 467, 4, '2026-09-08', 'Magical realism', 'Paperback'],
-    ['Babel', 'R.F. Kuang', 'read', 545, 4, '2026-09-19', 'Historical fantasy', 'E-book'],
-    ['The Hobbit', 'J.R.R. Tolkien', 'listen', 11, 5, '2026-09-26', 'Fantasy', 'Audiobook'],
-    ['Tomorrow, and Tomorrow, and Tomorrow', 'Gabrielle Zevin', 'read', 416, 4.5, '2026-10-06', 'Literary fiction', 'E-book'],
-    ['Dune', 'Frank Herbert', 'listen', 21, 5, '2026-10-16', 'Science fiction', 'Full-cast audiobook'],
-    ['The Ministry for the Future', 'Kim Stanley Robinson', 'read', 563, 3.5, '2026-10-28', 'Climate fiction', 'E-book'],
-    ['Before the Coffee Gets Cold', 'Toshikazu Kawaguchi', 'read', 213, 4, '2026-11-04', 'Cozy fiction', 'Paperback'],
-    ['All Systems Red', 'Martha Wells', 'read', 144, 4.5, '2026-11-19', 'Science fiction', 'E-book'],
+    ['The Left Hand of Darkness', 'Ursula K. Le Guin', 'read', 304, 5, '2026-01-09'],
+    ["Harry Potter and the Philosopher's Stone", 'J.K. Rowling', 'listen', 8.6, 5, '2026-01-17'],
+    ['Piranesi', 'Susanna Clarke', 'read', 272, 5, '2026-01-28'],
+    ['Project Hail Mary', 'Andy Weir', 'read', 476, 4.5, '2026-02-10'],
+    ['Full Moon Coffee Shop', 'Mai Mochizuki', 'read', 304, 4, '2026-02-22'],
+    ['Harry Potter and the Chamber of Secrets', 'J.K. Rowling', 'listen', 9.7, 4.5, '2026-02-27'],
+    ['The Name of the Wind', 'Patrick Rothfuss', 'read', 662, 4, '2026-03-19'],
+    ['Convenience Store Woman', 'Sayaka Murata', 'read', 163, 4.5, '2026-03-24'],
+    ['Klara and the Sun', 'Kazuo Ishiguro', 'read', 303, 4, '2026-03-31'],
+    ['A Memory Called Empire', 'Arkady Martine', 'read', 462, 4.5, '2026-04-12'],
+    ['Harry Potter and the Prisoner of Azkaban', 'J.K. Rowling', 'listen', 12.1, 5, '2026-04-20'],
+    ['Braiding Sweetgrass', 'Robin Wall Kimmerer', 'read', 391, 5, '2026-04-29'],
+    ['In Other Rooms, Other Wonders', 'Daniyal Mueenuddin', 'read', 256, 4, '2026-05-11'],
+    ['Station Eleven', 'Emily St. John Mandel', 'read', 333, 4.5, '2026-05-23'],
+    ['Exhalation', 'Ted Chiang', 'read', 350, 5, '2026-05-30'],
+    ['Hyperion', 'Dan Simmons', 'read', 482, 3.5, '2026-06-21'],
+    ['The Remains of the Day', 'Kazuo Ishiguro', 'read', 258, 4.5, '2026-06-29'],
+    ['The Way of Kings', 'Brandon Sanderson', 'read', 1007, 5, '2026-07-14'],
+    ['Spinning Silver', 'Naomi Novik', 'read', 465, 4, '2026-07-30'],
+    ['Harry Potter and the Goblet of Fire', 'J.K. Rowling', 'listen', 19.8, 4.5, '2026-08-09'],
+    ['Circe', 'Madeline Miller', 'read', 393, 4.5, '2026-08-18'],
+    ['The Dispossessed', 'Ursula K. Le Guin', 'read', 387, 4.5, '2026-08-27'],
+    ['Kafka on the Shore', 'Haruki Murakami', 'read', 467, 4, '2026-09-08'],
+    ['Babel', 'R.F. Kuang', 'read', 545, 4, '2026-09-19'],
+    ['The Hobbit', 'J.R.R. Tolkien', 'listen', 11, 5, '2026-09-26'],
+    ['Tomorrow, and Tomorrow, and Tomorrow', 'Gabrielle Zevin', 'read', 416, 4.5, '2026-10-06'],
+    ['Dune', 'Frank Herbert', 'listen', 21, 5, '2026-10-16'],
+    ['The Ministry for the Future', 'Kim Stanley Robinson', 'read', 563, 3.5, '2026-10-28'],
+    ['Before the Coffee Gets Cold', 'Toshikazu Kawaguchi', 'read', 213, 4, '2026-11-04'],
+    ['All Systems Red', 'Martha Wells', 'read', 144, 4.5, '2026-11-19'],
 
-    ['Dune Messiah', 'Frank Herbert', 'read', 331, 3.5, '2025-01-12', 'Science fiction', 'Paperback'],
-    ['The Fellowship of the Ring', 'J.R.R. Tolkien', 'read', 423, 5, '2025-01-30', 'Fantasy', 'Paperback'],
-    ['Flowers for Algernon', 'Daniel Keyes', 'read', 311, 4.5, '2025-02-08', 'Science fiction', 'Paperback'],
-    ['Neuromancer', 'William Gibson', 'read', 271, 3.5, '2025-02-21', 'Cyberpunk', 'E-book'],
-    ['The Lies of Locke Lamora', 'Scott Lynch', 'read', 752, 4.5, '2025-03-17', 'Fantasy', 'E-book'],
-    ['Never Let Me Go', 'Kazuo Ishiguro', 'read', 288, 4.5, '2025-03-28', 'Literary fiction', 'Paperback'],
-    ['The Martian', 'Andy Weir', 'read', 369, 4.5, '2025-04-09', 'Science fiction', 'E-book'],
-    ['Mistborn: The Final Empire', 'Brandon Sanderson', 'read', 541, 4.5, '2025-05-14', 'Epic fantasy', 'Paperback'],
-    ['Sapiens', 'Yuval Noah Harari', 'listen', 15.5, 4, '2025-05-30', 'History', 'Audiobook'],
-    ['The Road', 'Cormac McCarthy', 'read', 287, 4, '2025-06-10', 'Literary fiction', 'Paperback'],
-    ['Solaris', 'Stanisław Lem', 'read', 204, 4, '2025-06-24', 'Science fiction', 'Paperback'],
-    ['The Three-Body Problem', 'Liu Cixin', 'read', 400, 4, '2025-07-15', 'Science fiction', 'E-book'],
-    ['The Midnight Library', 'Matt Haig', 'listen', 8.8, 3.5, '2025-07-29', 'Fiction', 'Audiobook'],
-    ['Pachinko', 'Min Jin Lee', 'read', 496, 4.5, '2025-08-19', 'Historical fiction', 'Paperback'],
-    ['Anxious People', 'Fredrik Backman', 'read', 336, 4, '2025-09-02', 'Fiction', 'E-book'],
-    ["The Hitchhiker's Guide to the Galaxy", 'Douglas Adams', 'listen', 5.5, 5, '2025-09-14', 'Comic sci-fi', 'Audiobook'],
-    ['Gideon the Ninth', 'Tamsyn Muir', 'read', 448, 4, '2025-10-03', 'Science fantasy', 'E-book'],
-    ['Atomic Habits', 'James Clear', 'listen', 5.6, 3.5, '2025-10-12', 'Self-improvement', 'Audiobook'],
-    ['Rendezvous with Rama', 'Arthur C. Clarke', 'read', 243, 4, '2025-10-22', 'Science fiction', 'Paperback'],
-    ['The Secret History', 'Donna Tartt', 'read', 559, 4.5, '2025-11-18', 'Literary fiction', 'Paperback'],
-    ['Small Things Like These', 'Claire Keegan', 'read', 116, 4.5, '2025-11-30', 'Literary fiction', 'Hardcover'],
-    ['A Psalm for the Wild-Built', 'Becky Chambers', 'read', 160, 5, '2025-12-14', 'Cozy sci-fi', 'E-book']
+    ['Dune Messiah', 'Frank Herbert', 'read', 331, 3.5, '2025-01-12'],
+    ['The Fellowship of the Ring', 'J.R.R. Tolkien', 'read', 423, 5, '2025-01-30'],
+    ['Flowers for Algernon', 'Daniel Keyes', 'read', 311, 4.5, '2025-02-08'],
+    ['Neuromancer', 'William Gibson', 'read', 271, 3.5, '2025-02-21'],
+    ['The Lies of Locke Lamora', 'Scott Lynch', 'read', 752, 4.5, '2025-03-17'],
+    ['Never Let Me Go', 'Kazuo Ishiguro', 'read', 288, 4.5, '2025-03-28'],
+    ['The Martian', 'Andy Weir', 'read', 369, 4.5, '2025-04-09'],
+    ['Mistborn: The Final Empire', 'Brandon Sanderson', 'read', 541, 4.5, '2025-05-14'],
+    ['Sapiens', 'Yuval Noah Harari', 'listen', 15.5, 4, '2025-05-30'],
+    ['The Road', 'Cormac McCarthy', 'read', 287, 4, '2025-06-10'],
+    ['Solaris', 'Stanisław Lem', 'read', 204, 4, '2025-06-24'],
+    ['The Three-Body Problem', 'Liu Cixin', 'read', 400, 4, '2025-07-15'],
+    ['The Midnight Library', 'Matt Haig', 'listen', 8.8, 3.5, '2025-07-29'],
+    ['Pachinko', 'Min Jin Lee', 'read', 496, 4.5, '2025-08-19'],
+    ['Anxious People', 'Fredrik Backman', 'read', 336, 4, '2025-09-02'],
+    ["The Hitchhiker's Guide to the Galaxy", 'Douglas Adams', 'listen', 5.5, 5, '2025-09-14'],
+    ['Gideon the Ninth', 'Tamsyn Muir', 'read', 448, 4, '2025-10-03'],
+    ['Atomic Habits', 'James Clear', 'listen', 5.6, 3.5, '2025-10-12'],
+    ['Rendezvous with Rama', 'Arthur C. Clarke', 'read', 243, 4, '2025-10-22'],
+    ['The Secret History', 'Donna Tartt', 'read', 559, 4.5, '2025-11-18'],
+    ['Small Things Like These', 'Claire Keegan', 'read', 116, 4.5, '2025-11-30'],
+    ['A Psalm for the Wild-Built', 'Becky Chambers', 'read', 160, 5, '2025-12-14']
   ];
 
   var BOOKS = RAW.map(function (r) {
     var b = {
-      title: r[0], author: r[1], kind: r[2], rating: r[4], finished: r[5], genre: r[6], format: r[7],
+      title: r[0], author: r[1], kind: r[2], rating: r[4], finished: r[5],
       slug: slug(r[0]), status: 'finished'
     };
     if (r[2] === 'read') b.pages = r[3]; else b.hours = r[3];
@@ -100,16 +100,14 @@
   });
 
   var CURRENT = [
-    { title: 'Words of Radiance', author: 'Brandon Sanderson', kind: 'read', pages: 1087, pct: 38, genre: 'Epic fantasy', format: 'Paperback', status: 'reading' },
-    { title: 'Harry Potter and the Order of the Phoenix', author: 'J.K. Rowling', kind: 'listen', hours: 25.7, pct: 64, genre: 'Fantasy', format: 'Full-cast audiobook', status: 'listening' },
-    { title: 'The Fifth Season', author: 'N.K. Jemisin', kind: 'read', pages: 468, pct: 12, genre: 'Fantasy', format: 'E-book', status: 'reading' },
-    { title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman', kind: 'read', pages: 499, pct: 41, genre: 'Non-fiction', format: 'Paperback', status: 'paused' }
+    { title: 'Words of Radiance', author: 'Brandon Sanderson', kind: 'read', pages: 1087, pct: 38, status: 'reading' },
+    { title: 'Harry Potter and the Order of the Phoenix', author: 'J.K. Rowling', kind: 'listen', hours: 25.7, pct: 64, status: 'listening' },
+    { title: 'The Fifth Season', author: 'N.K. Jemisin', kind: 'read', pages: 468, pct: 12, status: 'reading' },
+    { title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman', kind: 'read', pages: 499, pct: 41, status: 'paused' }
   ].map(function (b) { b.slug = slug(b.title); return b; });
 
-  var GOALS = {
-    2026: { books: 32, pages: 9000, audiobooks: 5, listenHours: 100 },
-    2025: { books: 24, pages: 7000, audiobooks: 3, listenHours: 40 }
-  };
+  // BookOrbit-shaped: /reading-history/summary -> goal{target, reached, metOn}. Titles are the only goal BookOrbit holds.
+  var GOALS = { 2026: { books: 32 }, 2025: { books: 24 } };
 
   /* ---------- derived stats ---------- */
   var HOUR_READ = [3, 1, 0.5, 0.2, 0.2, 0.6, 2, 5, 3.5, 2, 2, 3, 4.5, 3.5, 2.5, 2.5, 3, 4, 5, 6, 8, 10.5, 12, 7];
@@ -119,6 +117,11 @@
 
   function norm(arr) { var s = arr.reduce(function (a, b) { return a + b; }, 0); return arr.map(function (v) { return v / s; }); }
   HOUR_READ = norm(HOUR_READ); HOUR_LISTEN = norm(HOUR_LISTEN);
+
+  function goalFor(y, books) {
+    var target = GOALS[y].books, ordered = books.slice().sort(function (p, q) { return p.finished < q.finished ? -1 : 1; });
+    return { target: target, reached: books.length, metOn: books.length >= target ? ordered[target - 1].finished : null };
+  }
 
   function buildYear(y) {
     var rand = mulberry32(y * 7919 + 13);
@@ -183,7 +186,7 @@
     return {
       key: String(y), label: String(y), year: y, books: books, current: current, days: days, months: months,
       hoursR: hoursR, hoursL: hoursL, dowR: dowR, dowL: dowL,
-      goals: GOALS[y], trajectory: trajectory, funnel: funnel,
+      goal: goalFor(y, books), trajectory: trajectory, funnel: funnel,
       totals: {
         titles: books.length, read: read, listen: listen, pages: pages,
         readH: readMin / 60, listenH: listenMin / 60, readMin: readMin, listenMin: listenMin,
@@ -212,7 +215,7 @@
         hoursR: a.hoursR.map(function (v, i) { return v + b.hoursR[i]; }), hoursL: a.hoursL.map(function (v, i) { return v + b.hoursL[i]; }),
         dowR: a.dowR.map(function (v, i) { return v + b.dowR[i]; }), dowL: a.dowL.map(function (v, i) { return v + b.dowL[i]; }),
         trajectory: null, funnel: { completed: sum(function (x) { return x.funnel.completed; }), reached75: sum(function (x) { return x.funnel.reached75; }), reached50: sum(function (x) { return x.funnel.reached50; }), reached25: sum(function (x) { return x.funnel.reached25; }), started: sum(function (x) { return x.funnel.started; }) },
-        goals: { books: sum(function (x) { return x.goals.books; }), pages: sum(function (x) { return x.goals.pages; }), audiobooks: sum(function (x) { return x.goals.audiobooks; }), listenHours: sum(function (x) { return x.goals.listenHours; }) },
+        goal: { target: sum(function (x) { return x.goal.target; }), reached: sum(function (x) { return x.goal.reached; }), metOn: null },
         totals: {
           titles: sum(function (x) { return x.totals.titles; }), read: sum(function (x) { return x.totals.read; }), listen: sum(function (x) { return x.totals.listen; }),
           pages: sum(function (x) { return x.totals.pages; }), readH: readMin / 60, listenH: listenMin / 60, readMin: readMin, listenMin: listenMin,
@@ -225,16 +228,6 @@
       };
     } else out = buildYear(+key);
     cache[key] = out; return out;
-  }
-
-  function goalRows(Y) {
-    var g = Y.goals, t = Y.totals;
-    return [
-      { id: 'books', label: 'Titles', value: t.titles, goal: g.books, unit: '', fmt: int },
-      { id: 'pages', label: 'Pages', value: t.pages, goal: g.pages, unit: '', fmt: int },
-      { id: 'audio', label: 'Audiobooks', value: t.listen, goal: g.audiobooks, unit: '', fmt: int },
-      { id: 'hours', label: 'Hours listened', value: t.listenH, goal: g.listenHours, unit: 'h', fmt: int }
-    ].map(function (r) { r.pct = r.value / r.goal * 100; return r; });
   }
 
   function eta(b) {
@@ -310,34 +303,18 @@
 
 
   /* ---------- per-book detail (EXAMPLE DATA) ---------- */
-  var TAKES = {
-    'the-way-of-kings': 'A thousand pages that never felt like it. Kaladin\u2019s chapters carried the first half, Dalinar\u2019s visions took over the second, and the last 150 pages were a one-sitting job on a rainy Sunday.',
-    'full-moon-coffee-shop': 'Small, warm and a little melancholy. Exactly the right size for a week when everything else was loud.',
-    'in-other-rooms-other-wonders': 'Quiet, patient stories about money, land and who owns whom. I read one a night and let each of them settle.',
-    'harry-potter-and-the-chamber-of-secrets': 'The full cast makes the corridors feel lived-in. Best walked home to, headphones in, a little too slowly.'
-  };
-  var GENERIC = {
-    5: 'One of those rare books I wanted to start again the moment it ended.',
-    4.5: 'Close to perfect. A few slow stretches, a lot of pages I underlined in my head.',
-    4: 'Solid and absorbing. Not life-changing, but I was sad to leave it.',
-    3.5: 'Good ideas, uneven delivery. I am glad I finished it, and I would not push it on anyone.'
-  };
   function detail(b) {
     var r = mulberry32(hash(b.title) ^ 0x9e37), listen = b.kind === 'listen';
     var size = listen ? b.hours : b.pages;
     var n = Math.max(3, Math.round(listen ? b.hours / (0.8 + r() * 0.8) : b.pages / (26 + r() * 22)));
-    var w = [], tot = 0, i;
-    for (i = 0; i < n; i++) { var v = 0.25 + r() * 1.4 + (i > n - 4 ? 0.8 : 0); w.push(v); tot += v; }
-    var daily = w.map(function (v) { return v / tot * size; });
     var calendarDays = Math.round(n * (1.2 + r() * 0.4));
     var fin = b.finished ? parseDate(b.finished) : TODAY;
     var started = new Date(fin.getTime() - calendarDays * 864e5);
     var minutes = listen ? b.hours * 60 : size / 44 * 60;
     var sessions = n + Math.floor(n * 0.35);
     return {
-      days: calendarDays, started: isoDate(started), activeDays: n, daily: daily, sessions: sessions,
-      avgSession: minutes / sessions, minutes: minutes, perDay: size / calendarDays,
-      take: TAKES[b.slug] || GENERIC[b.rating] || GENERIC[4]
+      days: calendarDays, started: isoDate(started), sessions: sessions,
+      seconds: minutes * 60, avgSession: minutes / sessions, perDay: listen ? null : size / calendarDays
     };
   }
 
@@ -349,7 +326,7 @@
 
   window.RJ = {
     TODAY: TODAY, MONTHS: MONTHS, DOWS: DOWS, DOW_LONG: DOW_LONG,
-    detail: detail, get: get, goalRows: goalRows, eta: eta, find: find, coverSVG: coverSVG, coverTitle: coverTitle,
+    detail: detail, get: get, eta: eta, find: find, coverSVG: coverSVG, coverTitle: coverTitle,
     int: int, pad: pad, esc: esc, hm: hm, longDate: longDate, parseDate: parseDate, stars: stars, slug: slug,
     reduced: function () { return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; },
     max: function (arr) { return Math.max.apply(null, arr); },

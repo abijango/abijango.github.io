@@ -15,7 +15,7 @@
 
   <nav class="sample-bar" aria-label="Design samples">
     <span class="sb-title">Design sample &middot; Terminal ledger &middot; example data</span>
-    <span class="sb-links"><a href="index.html" aria-current="page">page</a><a href="book.html">book</a><a href="og.html">og</a></span>
+    <span class="sb-links"><a href="index.html" aria-current="page">page</a><a href="goals.html">goals</a><a href="book.html">book</a><a href="og.html">og</a></span>
   </nav>
 
   <div class="shell">
@@ -40,30 +40,35 @@
         <div class="stats4" id="headline" aria-live="polite"></div>
       </section>
 
+      <div class="dash-tools">
+        <button type="button" class="tool" id="reset-layout" disabled>reset layout</button>
+      </div>
+
       <div class="dash">
-        <div class="dash-main">
-          <div class="panel d-heat">
-            <h3 class="ph">daily reading <span class="legend" id="heat-best"></span></h3>
-            <div class="heat-scroll" id="heat" tabindex="0" aria-label="Daily reading heat calendar"></div>
-            <div class="heat-legend steps" id="heat-legend"></div>
+        <div class="dash-main" data-zone="main">
+          <div class="widget" data-w="heat" data-name="daily reading">
+            <div class="panel d-heat">
+              <h3 class="ph">daily reading <span class="legend" id="heat-best"></span></h3>
+              <div class="heat-scroll" id="heat" tabindex="0" aria-label="Daily reading heat calendar"></div>
+              <div class="heat-legend steps" id="heat-legend"></div>
+            </div>
+            <div class="panel panel-attached d-pace">
+              <h3 class="ph">pace &amp; sessions</h3>
+              <div class="kv-grid" id="pace"></div>
+            </div>
           </div>
 
-          <div class="panel panel-attached d-pace">
-            <h3 class="ph">pace &amp; sessions</h3>
-            <div class="kv-grid" id="pace"></div>
-          </div>
-
-          <div class="panel d-months">
+          <div class="widget panel" data-w="months" data-name="titles per month">
             <h3 class="ph">titles finished per month <span class="legend"><i class="lg read"></i>read <i class="lg listen"></i>listened</span></h3>
             <div id="months"></div>
           </div>
 
-          <div class="panel d-traj" id="traj-panel">
+          <div class="widget panel" data-w="traj" data-name="goal trajectory" id="traj-panel">
             <h3 class="ph">goal trajectory <span class="legend"><i class="lg read"></i>finished <i class="lg tgt"></i>target pace</span></h3>
             <div id="traj"></div>
           </div>
 
-          <div class="two d-two">
+          <div class="widget two" data-w="patterns" data-name="when I read and favourite days">
             <div class="panel">
               <h3 class="ph">when I read <span class="legend"><i class="lg read"></i>read <i class="lg listen"></i>listened</span></h3>
               <div id="hours"></div>
@@ -74,23 +79,24 @@
             </div>
           </div>
 
-          <div class="panel d-funnel">
+          <div class="widget panel" data-w="funnel" data-name="progress funnel">
             <h3 class="ph">progress funnel</h3>
             <div id="funnel"></div>
           </div>
         </div>
 
-        <aside class="dash-side" aria-label="Progress">
-          <section class="d-now" aria-labelledby="now-h">
+        <aside class="dash-side" aria-label="Progress" data-zone="side">
+          <section class="widget" data-w="now" data-name="now reading" aria-labelledby="now-h">
             <h2 class="sec" id="now-h"><span class="hash">##</span> now reading</h2>
             <div class="now-grid" id="now"></div>
           </section>
-          <section class="d-goals" aria-labelledby="goals-h">
-            <h2 class="sec" id="goals-h"><span class="hash">##</span> goals</h2>
+          <section class="widget" data-w="goals" data-name="goals" aria-labelledby="goals-h">
+            <h2 class="sec" id="goals-h"><span class="hash">##</span> goals <a class="edit-goals" href="goals.html">edit goals</a></h2>
             <div class="goals" id="goals"></div>
           </section>
         </aside>
       </div>
+      <p class="sr" id="layout-live" aria-live="polite"></p>
 
       <section aria-labelledby="shelf-h">
         <h2 class="sec" id="shelf-h"><span class="hash">##</span> shelf</h2>
@@ -129,6 +135,8 @@
   <div class="tip" id="tip" role="tooltip" hidden></div>
 
   <script src="assets/data.js"></script>
+  <script src="assets/goals-store.js"></script>
   <script src="assets/reading.js"></script>
+  <script src="assets/reorder.js"></script>
 </body>
 </html>

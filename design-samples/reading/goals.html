@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Goals · reading log · design sample</title>
+  <meta name="description" content="Design sample: the owner-only goal setting page of the reading log. Example data.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="assets/reading.css">
+  <link rel="stylesheet" href="assets/goals.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="sample-bar" aria-label="Design samples">
+    <span class="sb-title">Design sample &middot; goals &middot; owner-only in the real build &middot; example data</span>
+    <span class="sb-links"><a href="index.html">page</a><a href="goals.html" aria-current="page">goals</a><a href="book.html">book</a><a href="og.html">og</a></span>
+  </nav>
+
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">abijango</a>
+      <nav class="nav" aria-label="Main (mock)">
+        <a href="#main">posts</a>
+        <a href="#main">about</a>
+        <a href="index.html" aria-current="page" class="on">reading</a>
+        <a href="#main">feed</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="h1">
+        <p class="prompt"><span class="ps">~/reading</span> <span class="dollar">$</span> edit goals<span class="cursor" aria-hidden="true"></span></p>
+        <div class="hero-row">
+          <h1 id="h1">Goals</h1>
+          <div class="switch" role="tablist" aria-label="Year" id="year-switch"></div>
+        </div>
+        <div class="gtools">
+          <a class="edit-goals back" href="index.html">&larr; reading log</a>
+          <span class="saved" id="saved" aria-live="polite"></span>
+          <button type="button" class="tool" id="reset-goals">reset to defaults</button>
+        </div>
+      </section>
+
+      <div class="dash gdash">
+        <div class="dash-main gmain">
+          <section aria-labelledby="picked-h">
+            <h2 class="sec" id="picked-h"><span class="hash">##</span> picked</h2>
+            <ol class="glist" id="picked"></ol>
+          </section>
+          <section aria-labelledby="menu-h">
+            <h2 class="sec" id="menu-h"><span class="hash">##</span> menu</h2>
+            <ol class="glist" id="menu"></ol>
+          </section>
+        </div>
+
+        <aside class="dash-side gside" aria-label="Preview">
+          <section aria-labelledby="prev-h">
+            <h2 class="sec" id="prev-h"><span class="hash">##</span> goals</h2>
+            <div class="goals" id="preview"></div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p><span class="tag-sample">sample data</span> Choices are saved in this browser (localStorage). Defaults come from <code>goals.json</code>. Titles are synced from BookOrbit and cannot be edited here.</p>
+      <p class="dim">abijango &middot; design sample, not part of the live site</p>
+    </footer>
+  </div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/goals-store.js"></script>
+  <script src="assets/goals.js"></script>
+</body>
+</html>

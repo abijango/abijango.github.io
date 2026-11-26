@@ -12,7 +12,10 @@ Naufal reviewed the Terminal ledger, three heatmap treatments and three arrangem
 - **Layout B**, the dashboard: a main column and a sticky sidebar. The other two arrangements (shelf first with a contents rail, and the single column) were dropped.
 - Thick progress bars (now-reading about 1.35rem, goals about 1.9rem, weekdays about 1.35rem, funnel about 1.5rem) and headings only, no descriptive subtitles.
 - Pace & sessions stays directly under the heatmap, joined to it as one block.
-- Pages shown in the heatmap tooltip are an **estimate** (minutes x year pace), not a BookOrbit field. See the data map (section 10) and the gaps list (section 11).
+- **Goals are user-chosen.** Titles come from BookOrbit; every other goal type (pages, hours reading, hours listening, days read, longest streak, average minutes per day) is a target he sets himself on a goal-setting page (`goals.html`). Only picked goals show on the goals card, in the order chosen. Defaults are seeded from `goals.json`. See section 9.
+- **Widgets are rearrangeable** in the dashboard (main column and sidebar, each within its own column): drag handle, keyboard, reset, order saved per browser. See section 10.
+- **Dropped for lack of a data source:** physical format and genre labels, the per-book quote, the per-book pages-per-day sparkline. `book.html` was reworked so nothing is left empty.
+- Pages shown in the heatmap tooltip are an **estimate** (minutes x year pace), not a BookOrbit field. See the data map (section 11) and the gaps list (section 12).
 
 Data sources below come from `discovery.md` (BookOrbit v3.8.0 read-only key). Endpoint paths are relative to `/api/v1`. Nothing is added beyond what that file lists. Where a section has no listed source, it says **No source**.
 
@@ -31,18 +34,21 @@ Order on desktop (>= 1081px):
 | Area | Contents |
 |---|---|
 | Header | Site brand + nav (`reading` highlighted green) |
+| Dashboard toolbar | A right-aligned `reset layout` button above the dashboard (disabled while the order is the default) |
 | Hero | Prompt line, `h1` "Reading log" (heading only), year switcher (`2026`, `2025`, `all-time`), 4 headline stat blocks |
-| Dashboard, main column (`minmax(0,1fr)`) | 1. Daily reading heatmap (v1) with its legend. 2. **Pace & sessions**, joined directly under the heatmap. 3. Titles finished per month. 4. Goal trajectory. 5. "When I read" beside "favourite days". 6. Progress funnel |
-| Dashboard, sidebar (23rem, sticky) | `## now reading` (compact cards), `## goals` (compact rows) |
+| Dashboard, main column (`minmax(0,1fr)`) | Five widgets, default order: **heatmap** (daily reading v1 with **pace & sessions** joined directly under it, one widget), titles per month, goal trajectory, **patterns** ("when I read" beside "favourite days", one widget), progress funnel |
+| Dashboard, sidebar (23rem, sticky) | Two widgets, default order: `## now reading` (compact cards), `## goals` (compact rows, with an `edit goals` control) |
 | `## shelf` | Filter chips, hover status line, finished covers grouped by month (2 columns of months) |
 | `## share` | Year card preview (links to `og.html`), per-book page teaser (links to `book.html`) |
 | Footer | Sample-data note (production: "updated N min ago") |
 
-Sidebar behaviour: `position: sticky; top: 1rem`, `gap 1.25rem`. Its content is about 900px tall and the main column is about 1650px, so it stays in view while the heatmap and charts scroll past. On viewports shorter than its content it scrolls inside itself (`max-height: calc(100vh - 2rem)`, thin scrollbar) instead of being cut off. The sidebar uses compact variants: now-reading cards show a 3.6rem cover, title, author, bar and percent (the format tagline is hidden), and goal rows put label and value on the first line with the full-width bar below.
+Sidebar behaviour: `position: sticky; top: 0.5rem`, `gap 1.25rem`. Its content is about 900px tall and the main column is about 1650px, so it stays in view while the heatmap and charts scroll past. On viewports shorter than its content it scrolls inside itself (`max-height: calc(100vh - 2rem)`, thin scrollbar) instead of being cut off. The sidebar uses compact variants: now-reading cards show a 3.6rem cover, title, author, bar and percent (the format tagline is hidden), and goal rows put label and value on the first line with the full-width bar below.
 
-Collapse (<= 1080px): the sidebar stops being sticky and the grid becomes a single column. Both wrappers use `display: contents` and the blocks are re-ordered with `order`, so nothing is duplicated in the markup:
+Collapse (<= 1080px): the sidebar stops being sticky and the grid becomes a single column. Both wrappers use `display: contents`, so the widgets of both columns become siblings of one flex column. Sidebar widgets get `order: -1`, which puts them first; within each column the DOM order (which is also the saved user order) decides. Default result:
 
-1. now reading, 2. goals, 3. heatmap, 4. pace & sessions, 5. months, 6. goal trajectory, 7. when I read + favourite days, 8. funnel, then shelf and share (which are outside the grid and follow in source order).
+1. now reading, 2. goals, 3. heatmap + pace & sessions, 4. months, 5. goal trajectory, 6. when I read + favourite days, 7. funnel, then shelf and share (which are outside the grid and follow in source order).
+
+On phones a viewer can still reorder sidebar widgets among themselves and main widgets among themselves (not across the two groups).
 
 Further breakpoints:
 - <= 860px: headline stats 2 x 2; goal rows keep label + value on the first line with the bar full width below; hour and weekday panels stack; pace tiles 2 across; shelf months in one column; share cards stack.
@@ -104,9 +110,11 @@ Radius is 2px everywhere (matches the site). Borders are 1px. No shadows except 
 
 **Progress bars** (`.bar`, thick). 1.35rem tall in now-reading cards, 1.9rem in goal rows (was 0.7rem and 0.9rem), 1px border, `--bg-deep` track. The fill is a solid colour; a repeating-gradient overlay cuts it into 20 blocks (each 5%, 2px gaps), which gives the terminal look at any width. Colours: green = read or goal met, purple = listening, blue = goal in progress. Values over 100% fill the bar and show an orange `+N%` instead of the percent.
 
-**Now-reading card** (`.now`). Grid: cover 5.5rem + text column. Text: `reading | listening | paused` in the status colour, a format label, bold title, author, bar, `NN%` left and ETA right. Hover tints the card background to `--panel`. In the sidebar the card is compact: cover 3.6rem and the status/format line is hidden (the bar colour carries read vs listened; `paused` shows in the percent line).
+**Now-reading card** (`.now`). Grid: cover 5.5rem + text column. Text: `reading | listening | paused` in the status colour (no format label: BookOrbit has no physical format), bold title, author, bar, `NN%` left and ETA right. Hover tints the card background to `--panel`. In the sidebar the card is compact: cover 3.6rem and the status line is hidden (the bar colour carries read vs listened; `paused` shows in the percent line).
 
-**Goal row** (`.goal`). Label (no sub-label), 1.9rem bar, value `30 / 32` (bold current), percent or overshoot. Rows have 1.1rem vertical padding in the page and 0.6rem in the sidebar. The goal-trajectory panel (`.traj`, in the main column under the months chart) is an SVG line chart 10rem tall: dashed blue = straight-line target pace, solid green = cumulative titles finished, month axis `jan..dec`. No prose read-out.
+**Goal row** (`.goal`). Label (no sub-label), 1.9rem segmented bar, value `30 / 32 unit` (bold current), percent or an orange `+N%` overshoot. A goal card lists only the goals the owner picked, in the order chosen. A picked goal with no target for the viewed year shows its value and a `set target` link instead of a bar. With no goals picked the card shows `no goals picked` and the `edit goals` link. The heading carries a small `edit goals` control (1px border, cyan text) that links to `goals.html`; in the real build it is rendered only for the owner. Rows have 1.1rem vertical padding in a full-width card and 0.6rem in the sidebar. The goal-trajectory panel (`.traj`, in the main column under the months chart) is an SVG line chart 10rem tall: dashed blue = straight-line target pace, solid green = cumulative titles finished, month axis `jan..dec`. No prose read-out.
+
+**Drag handle** (`.grip`). A small bordered `::` button at the right end of a widget's heading (after the legend or the `edit goals` control): mono bold, `--dim`, 1px `--line` border, 2px radius; hover, focus and drag turn it blue; `cursor: grab`; `touch-action: none` so a finger on the handle drags instead of scrolling. It is the only drag start point, so the rest of every widget scrolls and selects normally.
 
 **Cover wall** (`.wall`). Grid `repeat(auto-fill, minmax(5.6rem, 6.6rem))`, gap 0.75rem (0.55rem on phones). Covers are 2:3 with a 1px border. A 3px bar at the bottom edge marks the kind (green read, purple listened). Hover or keyboard focus lifts the cover 4px, turns its border blue and writes `title . author . finished date . stars` into the status line above the wall (no tooltip, no popover). Touch has no hover; a tap navigates straight to the book page. Click or Enter opens `book.html?b=<slug>`. The chips dim non-matching covers to 14% opacity rather than removing them, so the layout never jumps. Months are headed `nov 2026` with `2 read . 1 heard` (a count, not a blurb). Each cover links to the per-book page. Production covers are the 400x600 thumbnails in the same 2:3 box (the placeholder's left spine and title text are part of the placeholder, not the layout).
 
@@ -139,16 +147,24 @@ All motion lives inside `@media (prefers-reduced-motion: no-preference)`. Reduce
 | Trajectory line | clip-path wipe left to right, 1.5s |
 | Prompt cursor | block cursor blinks, `steps(1)` 1.1s |
 | Hover | cover lifts 4px, 0.2s; card background tint |
+| Widget moved | a 0.9s blue ring fades out around the moved widget (no-preference only). Reduced motion gets the new order and the announcement, no ring |
 
 Only `transform` and `opacity` are animated (plus `clip-path` once). Nothing loops except the cursor.
 
 ## 7. Per-book share page (`book.html`)
 
-Route in production would be `/reading/books/<slug>`. The page uses the same dashboard grid as the main page so the two feel like one product: a main column (`minmax(0,1fr)`) and a 23rem sticky sidebar.
+Route in production would be `/reading/books/<slug>`. The page uses the same dashboard grid as the main page so the two feel like one product: a main column (`minmax(0,1fr)`) and a 23rem sticky sidebar. Everything on it has a source in the data map; there is no genre, format label, quote or sparkline.
 
-- Main column: prompt line `~/reading/2026 $ open the-way-of-kings`, title (`h1`), `author . genre . stars`, an 8-cell fact grid (finished, started, length, time to finish, sessions, average session, pages/day, format), a panel with the "take" as a left-ruled blockquote (same style as `.prose blockquote` on the site), and a panel with a bar sparkline of pages per active day and start/finish dates.
-- Sidebar: cover (max 16rem, with a `read` / `listened` badge), actions (`copy link`, `year card`, `all books`), and a "link preview" box that imitates a chat unfurl (cover + title + stars + URL).
-- Collapse (<= 1080px): single column ordered cover (11rem), title, facts, take, sparkline, actions, link preview. Facts go 2 across at <= 520px.
+Finished book (from one `/reading-history` attempt):
+- Main column: prompt line `~/reading/2026 $ open the-way-of-kings`, title (`h1`), `author . stars`, a fact grid, and a thick-bar panel `vs your 2026 average`.
+- Facts, 8 cells for a book (finished, started, time to finish, sessions, time spent, avg session, pages, pages/day) and 6 for an audiobook (no page count); the grid is 4 across for 8 cells, 3 across for 6 and 3 for in-progress pages, so there is never a hole. 2 across at <= 520px.
+- Comparison panel: three 1.35rem bars (days to finish, sessions, time spent). Fill = this book, white tick = the average of that year's finished books, value text `32 d . avg 15 d`. The averages come from the same history list.
+
+In-progress book (from `continue-reading`): facts are progress %, started, days reading (or listening) and, for books, pages; the panel is one thick progress bar with the ETA in its heading. No sessions or time spent, because `continue-reading` does not carry them.
+
+Sidebar: cover (max 16rem, with a `read` / `listened` badge), actions (`copy link`, `year card`, `all books`), and a "link preview" box that imitates a chat unfurl (cover + title + stars + author + date + URL).
+
+Collapse (<= 1080px): single column ordered cover (11rem), title, facts, comparison panel, actions, link preview.
 
 `<meta og:*>` for this page would point at a per-book image, not the year card.
 
@@ -156,14 +172,69 @@ Route in production would be `/reading/books/<slug>`. The page uses the same das
 
 Fixed 1200x630 canvas, Tokyo Night background with two faint radial glows. Left: prompt `~/reading $ cat 2026.log`, the year at 150px bold (-8px tracking), `reading log` in blue, then three stats (titles in green, pages in white, hours in purple) with labels. Right: 4 x 2 grid of eight covers. Footer: `abijango / reading` and the domain. A 10px three-colour strip (green / purple / blue) closes the bottom edge. A `sample data` tag sits top right (removed in production). `og.html?raw` renders at exact size for screenshotting; without `raw` it scales down to fit narrow viewports. Safe area: keep text 56-64px from the edges so crops by chat apps do not cut it.
 
-## 9. Interaction
+## 9. Goals
+
+### Which goals exist
+
+| Goal type | Unit | Where the value comes from | Target comes from |
+|---|---|---|---|
+| Titles finished | titles | `/reading-history/summary` -> `goal.reached` (or `books`) | **BookOrbit** (`goal.target`; the same number feeds `goal-trajectory` `goalBooks`). Read-only on the goal page, tagged `synced from BookOrbit` |
+| Pages | pages | `/reading-history/summary` -> `pages` | site config |
+| Hours reading | h | `/reading-history/summary` -> `seconds` / 3600 | site config |
+| Hours listening | h | `/reading-history/summary` -> `formats[]` seconds (only if audio is a format, see gaps) | site config |
+| Days read | days | `/reading-history/summary` -> `daysRead` (or `daily-reading` days with `readingSeconds` > 0) | site config |
+| Longest streak | days | derived from `daily-reading` (longest run of `readingSeconds` > 0) | site config |
+| Avg minutes per day | min | derived: reading seconds / calendar days elapsed in the period (`summary.seconds`, or the mean of `daily-reading`) | site config |
+
+All periods are one year. Targets are stored per year (`2026`, `2025`). In the all-time view a target is the sum of the yearly targets (days, pages, hours, titles), the maximum (longest streak) or the mean (average minutes per day); if any year has no target the row shows `set target`.
+
+### Config and seed
+
+`goals.json` is the seed: the default picked goals (in order) and the yearly targets for the non-BookOrbit goals.
+
+```json
+{ "version": 1, "period": "year",
+  "enabled": ["titles", "pages", "hoursReading", "hoursListening"],
+  "targets": { "pages": { "2026": 9000, "2025": 7000 }, "hoursReading": { "2026": 250 }, "...": {} } }
+```
+
+Titles never appear under `targets`. `assets/goals-store.js` (`RG`) holds the goal type definitions, loads `goals.json` over HTTP, and falls back to an identical embedded copy when the page is opened from `file://` (browsers block `fetch` there). If you change one, change both; a test compares them.
+
+### Goal-setting page (`goals.html`)
+
+Owner-only in the real build. Same shell and header as the reading log, prompt `~/reading $ edit goals`, year switcher (`2026`, `2025`) that selects which year's targets are edited, a `<- reading log` link, a `saved` flash and `reset to defaults`.
+
+- Dashboard grid like the main page: main column and a sticky `## goals` preview (the real goals card, thick bars, updating as you type); below 1080px the preview moves above the editor.
+- `## picked`: the picked goals in the order chosen. Each row: a terminal switch (`[x]`), the goal name, a target input with its unit, a `per year` tag, the position number and up/down buttons.
+- `## menu`: the goal types not picked, each with `[ ]`, its target input (so it can be prefilled) and the `per year` tag. Toggling a goal on appends it to the end of the picked list; toggling off sends it back to the menu. Titles carries the `synced from BookOrbit` tag and a disabled input showing BookOrbit's target.
+- Changes save immediately; there is no save button. Empty or negative targets are treated as "not set".
+- Rows go two-line at <= 760px (name and position on top, input and tag below).
+
+### Where it is stored
+
+- **Sample:** `localStorage` key `reading.goals.v1` holds `{ enabled: [...], targets: { id: { year: n } } }`, merged over the seed. Resetting deletes the key.
+- **Real build:** the same JSON would be saved server-side through the Worker (KV), behind owner-only authentication, for example Cloudflare Access in front of `goals.html` and the write route. **Cloudflare Access needs Naufal's OK before it is set up.** The public page would read the saved goals from the Worker and show the `edit goals` control only to the owner. The widget order (section 10) could optionally be saved in the same KV record instead of per browser, so every visitor sees his arrangement, or kept per visitor; that is a product choice.
+- No BookOrbit write is involved: BookOrbit's goal is read through the key and never edited from this site.
+
+## 10. Interaction
 
 - **Cover hover or focus:** lift 4px, blue border, status line above the shelf updates with title, author, finished date and stars. Non-matching covers dim to 14% when a chip filter is on.
 - **Cover click or tap, or a now-reading card:** goes to the per-book page for that title (`book.html?b=<slug>`). The page is described in section 7. In production the slug would map to an opaque key for one `bookId`.
-- **Reordering:** the viewer cannot rearrange widgets; the order is fixed in markup. Building it would mean giving each section a stable id, making headings drag handles (pointer events or HTML5 drag and drop), saving the id order in `localStorage` (for example `reading.layout.v1`), re-applying it on load before first paint to avoid a flash, adding keyboard move up / down buttons and a reset link, and deciding how it behaves on phones (long-press or buttons only). Cheaper alternative: ship two fixed arrangements and store only the viewer's choice.
 - **Heat calendar tooltip:** floating tooltip on hover, tap to open and close on touch (see components). Cells are not individually focusable (a year has 365), so the tooltip is pointer and touch only; keyboard users get the monthly hours in the month labels.
+- **Goals card:** `edit goals` opens `goals.html`. Coming back (including from the back/forward cache) re-reads the saved goals.
 
-## 10. Data map
+### Rearranging widgets
+
+Every dashboard widget has a `::` handle. Widgets are: main column `heat` (heatmap + pace & sessions together), `months`, `traj`, `patterns` (hours + weekdays together), `funnel`; sidebar `now`, `goals`. A widget moves only within its own column.
+
+- **Pointer and touch:** press the handle and drag (Pointer Events with pointer capture, so mouse, pen and finger behave the same). The dragged widget dims with a dashed blue outline; a 3px blue line shows the drop position (before or after the nearest widget in that column); the page auto-scrolls near the top and bottom edges; releasing drops it. `Escape` cancels. On touch the handle has `touch-action: none`, so no long-press is needed: touching the handle drags, touching anything else scrolls.
+- **Keyboard:** focus the handle and press ArrowUp or ArrowDown to move the widget one place; focus stays on the handle. A visually hidden live region announces `titles per month moved to position 1 of 5.` (and `... already first.` at the ends). The handle has `aria-label`, `aria-keyshortcuts` and a title.
+- **Reset layout:** the button above the dashboard restores the default order and clears storage. It is disabled while the layout is the default.
+- **Persistence:** `localStorage` key `reading.layout.v1` = `{ "main": [ids], "side": [ids] }`. The key is removed when the order equals the default, unknown ids are ignored and new widgets are appended, so adding a widget later does not break saved layouts. The order is applied on load before the first render of the widgets' contents. Real build: per browser, or optionally in the Worker's KV with the goals (see section 9).
+- **Reduced motion:** no ring animation, no transitions; the drop still happens and is announced.
+- **Mobile:** works with the handle (tested with synthetic touch events). Sidebar widgets sort among themselves, main widgets among themselves; the two groups are not interleaved. The handles are added by script.
+
+## 11. Data map
 
 Assumptions behind every row: one read-only BookOrbit key (Access Read, no permissions, only the libraries meant to be public). The Worker never passes BookOrbit responses through; each route returns a fixed allow-list of fields. `days` windows on the `user-statistics` routes count back from today, so a past year needs a large `days` plus filtering by `day` in the Worker. `reading-history` and its summary take `year` directly.
 
@@ -172,7 +243,7 @@ Assumptions behind every row: one read-only BookOrbit key (Access Read, no permi
 | Year switcher | `2026`, `2025`, `all-time` | `GET /reading-history/summary` -> `years[]` | `all-time` = no `year` param and `days=3650` on the stats routes |
 | Hero: titles finished | `totals.titles` | `GET /reading-history/summary` -> `books` (and `reads`, `rereads`) | `year` param. All-time can also use `GET /user-statistics/summary` -> `completedBooks` |
 | Hero: pages read | `totals.pages` | `/reading-history/summary` -> `pages` | |
-| Hero: hours reading | `totals.readH` | `/reading-history/summary` -> `seconds` / 3600 | See audio caveat in section 11 |
+| Hero: hours reading | `totals.readH` | `/reading-history/summary` -> `seconds` / 3600 | See audio caveat in section 12 |
 | Hero: hours listening | `totals.listenH` | **Possibly** `/reading-history/summary` -> `formats[]` (per-format seconds) | Only if audiobooks are a BookOrbit format. discovery.md does not list format values. Otherwise **No source** |
 | Hero sub-lines: reading days | `activeDays` | `/reading-history/summary` -> `daysRead` | Or count `daily-reading` days with `readingSeconds > 0` |
 | Hero sub-line: listening days | `listenDays` | **No source** | No per-format daily data in discovery.md |
@@ -180,13 +251,13 @@ Assumptions behind every row: one read-only BookOrbit key (Access Read, no permi
 | Now reading: list, `N in progress` | `current[]` | `GET /dashboard/scrollers/continue-reading` (`limit` <= 50) -> `books`, `total`. `GET /user-statistics/summary` -> `inProgressBooks` for the all-time count | A scroller, so it works with a key. Alternative: `POST /books/query` with `readStatus includesAny [reading, rereading]` |
 | Now reading: title, author | | `continue-reading` -> `title`, `authors` | |
 | Now reading: percent | `pct` | `continue-reading` -> `readingProgress` | |
-| Now reading: status (reading / paused) | `status` | `continue-reading` -> `readStatus.status` (`reading`, `rereading`, `on_hold`) | `listening` is **No source** unless the format is audio (see section 11). `abandoned` is never shown |
-| Now reading: format label | "Paperback", "Full-cast audiobook" | `continue-reading` -> `files[].format` (add `format` to the allow-list) | BookOrbit knows file formats, not physical vs e-book vs full-cast. Labels like "Paperback" and "Full-cast" have **No source**; show the file format only |
+| Now reading: status (reading / paused) | `status` | `continue-reading` -> `readStatus.status` (`reading`, `rereading`, `on_hold`) | `listening` is **No source** unless the format is audio (see section 12). `abandoned` is never shown |
 | Now reading: ETA "~18 days left" | `eta` | derived: `pageCount`, `readingProgress`, pace from `reading-pace` | Computed in the Worker. `pageCount` is on BookCard |
-| Now reading: cover | | `GET /books/:id/thumbnail?t=<coverVersion>` | Proxied; see section 12 |
-| Goals: titles | `goal` | `/reading-history/summary` -> `goal{target,reached,metOn}` | The one real goal. `metOn` can drive a "goal met on 14 oct" note |
-| Goals: pages, audiobooks, hours listened | 3 more rows | **No source** | BookOrbit exposes one goal only. Either drop these rows or take targets from Worker config (not BookOrbit) and compute progress from the hero numbers |
-| Goals: "N of M met, 36 days to go" | | derived from the goal rows + today's date | |
+| Now reading: cover | | `GET /books/:id/thumbnail?t=<coverVersion>` | Proxied; see section 13 |
+| Goals card: titles | `goal.reached` / `goal.target` | `/reading-history/summary` -> `goal{target, reached, metOn}` | The one goal BookOrbit holds. `metOn` can drive a "goal met on 14 oct" note |
+| Goals card: pages, hours reading, hours listening, days read | `totals.*` | `/reading-history/summary` -> `pages`, `seconds`, `formats[]`, `daysRead` | Values from BookOrbit. **Targets are not BookOrbit data**: they come from the site's goal config (section 9). Hours listening carries the audio caveat |
+| Goals card: longest streak, average minutes per day | derived | `daily-reading` (`readingSeconds`) or `summary.seconds` / days elapsed | Targets from the goal config |
+| Goals card: which goals show, in what order | `enabled[]` | **Not BookOrbit**: owner's goal config (seed `goals.json`, saved by the Worker in KV in the real build) | See section 9 |
 | Goal trajectory | `trajectory[]` | `GET /user-statistics/goal-trajectory` -> `points[{year, month, actualCumulative, targetCumulative}]` | Pass `goalBooks` explicitly (it defaults to 12 and does not read the user's goal). Take the number from `/reading-history/summary.goal.target` |
 | Shelf: covers, titles, authors | `books[]` | `GET /reading-history` (`year`, `outcomes=completed`, `sort=newest`, `limit` <= 200) -> `title`, `authors[]`, `bookId`, `endedOn`, `rating`, `format`, `coverVersion` | |
 | Shelf: month groups | | `endedOn` grouped client-side, or `/reading-history/summary` -> `months[]` | `months[]` item shape is not specified in discovery.md |
@@ -206,24 +277,32 @@ Assumptions behind every row: one read-only BookOrbit key (Access Read, no permi
 | Progress funnel | `funnel` | `GET /user-statistics/progress-funnel` -> `current{started, reached25, reached50, reached75, completed}` | `previous` could add a "vs last period" delta; not designed |
 | Share: year card numbers | | same as hero | |
 | Share: year card covers | 8 covers | `/reading-history` items + thumbnails | Pick by rating or recency in the Worker |
+| Book page: title, author, stars | | `/reading-history?bookId=` -> `title`, `authors`, `rating` | |
+| Book page: finished, started, time to finish | | `endedOn`, `startedOn` (days between) | |
+| Book page: sessions, time spent, avg session | | `sessions`, `seconds` (avg = `seconds` / `sessions`) | Finished attempts only |
+| Book page: pages, pages/day | | `pageCount`; pages/day = `pageCount` / days to finish | Books only |
+| Book page: vs your year averages | | the same list for that year: mean of days, `sessions`, `seconds` | Computed client side from `/reading-history` (`year`, up to 200 items) |
+| Book page (in progress): progress, started, days, pages | | `continue-reading` -> `readingProgress`, `readStatus.startedAt`, `pageCount` | No sessions or time spent for in-progress books |
 | Footer "updated N min ago" | | Worker cache timestamp | Not BookOrbit data |
 
-## 11. Things the design shows that have no (confirmed) source
+## 12. Things the design shows that have no (confirmed) source
 
 1. **Everything that depends on audio being distinct from reading.** The design splits read vs listened in the hero, shelf chips, month chart, hours chart, weekday chart, and goals. discovery.md shows `format` / `byFormat` / `formats[]` fields but never says audiobooks are a value. Confirm against BookOrbit before keeping the split. If audio is not a format, the page collapses to reading only: drop purple, the chips, `Audiobooks` and `Hours listened` goals, and listening tiles.
 2. Listening days, listening speed, average listening session, and the "min heard" line in the heat tooltip.
-3. Goals for pages, audiobooks and hours listened. BookOrbit exposes one goal (`/reading-history/summary` -> `goal`).
-4. Physical format labels ("Paperback", "Hardcover", "Full-cast audiobook") and genre on finished books. `reading-history` items carry `format` only; genre exists only on BookCard (continue-reading / books/query), not in the history list.
-5. The per-book "take" (the quote). Personal notes live only in `/books/:id` (`personalNote`) and in annotation and marks routes, all of which discovery.md says not to use. Keep takes as authored content in the site repo (for example front matter), or remove the block.
-6. The per-book "pages per active day" sparkline, and the derived "sessions / average session" if needed per book. Per-book sessions are only on `/books/:bookId/sessions` (carries a KOReader `device`, listed as do-not-use) and on `session-timeline` (weekly, exact timestamps). The safe part is per-book totals from `/reading-history?bookId=` (`startedOn`, `endedOn`, `sessions`, `seconds`, `progressPercent`, `rating`, `pageCount`). A timeline would need a Worker that walks `session-timeline` week by week and publishes daily totals only; that is optional and costly.
+3. Goal targets other than titles are **not BookOrbit data** and not a gap in the design: they live in the site's own goal config (section 9). What remains open is where the real build stores them (Worker KV) and how the owner authenticates (Cloudflare Access, which needs Naufal's OK). The `edit goals` control and `goals.html` do not exist for visitors.
+4. Physical format labels ("Paperback", "Full-cast audiobook") and genre: **removed from the design**. BookOrbit has file formats only, and genre lives only on BookCard, not in the history list.
+5. The per-book quote: **removed**. Personal notes live only in `/books/:id` (`personalNote`) and in the annotation and marks routes, which discovery.md says not to use.
+6. The per-book pages-per-day sparkline: **removed**. Per-book sessions are only on `/books/:bookId/sessions` (carries a KOReader `device`, listed as do-not-use) and on `session-timeline` (weekly, exact timestamps). The book page now uses totals only (sessions, seconds, dates, pages) plus comparisons with the year's averages.
 7. The ETA wording ("~18 days left") is derived, not a field.
 8. Anything shown as "paused" maps to `readStatus.status = on_hold`; "listening" has no status value of its own.
 9. The OG card as an image. discovery.md covers the numbers and thumbnails, not how a PNG is produced. Options (pre-render at build time, or render in the Worker) are open.
 10. Year-ago "this time last year" strip from the reference app: deliberately not designed.
 11. The heat tooltip's "~N pages" is an estimate, not a field (see data map). The same estimate would apply to any per-day or per-month page figure.
-12. The in-progress book page (opened from a now-reading card): `continue-reading` gives progress, `startedAt` and `pageCount`, but sessions, time spent and average session exist only for finished attempts in `/reading-history`. Hide those facts for in-progress books or leave them blank.
+12. The in-progress book page (opened from a now-reading card): `continue-reading` gives progress, `startedAt` and `pageCount`; sessions, time spent and average session exist only for finished attempts in `/reading-history`, so the page shows only the four facts it has and a progress bar.
+13. **Hours listening** as a goal and as a stat, and every other read-vs-listened split, still depend on audio being a BookOrbit `format` (item 1).
+14. The ETA on in-progress audiobooks: audio duration is not in any listed field, so `~N days left` is only possible for books with `pageCount`.
 
-## 12. What the Worker must strip
+## 13. What the Worker must strip
 
 Principle: explicit allow-list per route, never forward raw JSON. Cover requests go through the Worker so the BookOrbit host and key are never exposed.
 
@@ -239,7 +318,7 @@ Principle: explicit allow-list per route, never forward raw JSON. Cover requests
 | `/user-statistics/goal-trajectory` | `points` | none; pass `goalBooks` yourself |
 | `/user-statistics/progress-funnel` | `current` (and `previous` if used) | none |
 | `/user-statistics/reading-pace` | aggregate only (mean session length) | per-session points, `bucket` |
-| `/dashboard/scrollers/continue-reading` | `title`, `authors`, `seriesName`, `seriesIndex`, `readingProgress`, `readStatus.status`, `readStatus.startedAt`, `pageCount`, `coverVersion`, `hasCover`, an opaque cover key, a file `format` label | `files` (other than the format label), `libraryId`, `tags`, `customMetadata`, `lockedFields`, `metadataScore`, `hardcoverId`, `isbn13`, `publisher`, and every field not in the allow-list |
+| `/dashboard/scrollers/continue-reading` | `title`, `authors`, `seriesName`, `seriesIndex`, `readingProgress`, `readStatus.status`, `readStatus.startedAt`, `pageCount`, `coverVersion`, `hasCover`, an opaque cover key | `files` (other than the format label), `libraryId`, `tags`, `customMetadata`, `lockedFields`, `metadataScore`, `hardcoverId`, `isbn13`, `publisher`, and every field not in the allow-list |
 | `/books/:id/thumbnail`, `/books/:id/cover` | image bytes, `t` = `coverVersion` | upstream headers other than cache headers; never expose the host or key |
 | `/auth/me` | nothing public. Server-side health check only (`authenticationMethod === "api_key"`, empty `permissions`) | `email`, `id`, `username`, `settings` entirely. Take only a goal number from `settings.dashboardConfig.readingGoal` if needed |
 
@@ -247,8 +326,10 @@ Do not call: `/books/:id` (server file paths, `personalNote`), `/books/:bookId/s
 
 Privacy decisions that change the design (from discovery.md open questions): exact times (the "when I read" chart is hour-level), device/source split (not designed), ratings (stars on hover and book page), abandoned books (not shown; `outcomes` defaults to completed).
 
-## 13. Production notes
+## 14. Production notes
 
 - A page at `/reading/` would extend `base.html`. The shell, headings, empty states and skeletons are static HTML; JS fills the numbers.
 - Empty and error states are not yet designed: show the shell with `--` values and a `// offline` note in `--dim`.
-- The sample's JS (`assets/reading.js`) renders from `RJ.get(year)`; the Worker responses should be adapted into that same shape (`totals`, `books`, `current`, `days`, `months`, `hoursR`, `hoursL`, `dowR`, `dowL`, `goals`, `trajectory`, `funnel`) so the rendering code carries over.
+- The sample's JS (`assets/reading.js`) renders from `RJ.get(year)`; the Worker responses should be adapted into that same shape (`totals`, `books`, `current`, `days`, `months`, `hoursR`, `hoursL`, `dowR`, `dowL`, `goal`, `trajectory`, `funnel`) so the rendering code carries over.
+- Two Worker routes are not BookOrbit proxies: read and write of the owner's goal config (write only behind owner auth), and optionally the saved widget order. Both are small JSON documents in KV. The sample's `assets/goals-store.js` read/write functions are the seam to replace.
+- `goals.json` stays in the site repo as the seed; KV overrides it once the owner saves.

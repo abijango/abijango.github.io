@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "period": "year",
+  "enabled": ["titles", "pages", "hoursReading", "hoursListening"],
+  "targets": {
+    "pages":          { "2026": 9000, "2025": 7000 },
+    "hoursReading":   { "2026": 250,  "2025": 180 },
+    "hoursListening": { "2026": 100,  "2025": 40 },
+    "daysRead":       { "2026": 300,  "2025": 280 },
+    "longestStreak":  { "2026": 60,   "2025": 40 },
+    "avgMinutes":     { "2026": 40,   "2025": 30 }
+  }
+}

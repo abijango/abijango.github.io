@@ -38,7 +38,7 @@
       var unit = b.kind === 'listen' ? 'listening' : (b.status === 'paused' ? 'paused' : 'reading');
       return '<a class="now fade" style="--i:' + (i + 2) + '" href="' + bookHref(b) + '">' +
         '<span class="cv">' + cover(b) + '</span>' +
-        '<span><p class="tagline" style="margin:0 0 .25rem"><b style="color:' + col + '">' + unit + '</b> &middot; ' + R.esc(b.format) + '</p>' +
+        '<span><p class="tagline" style="margin:0 0 .25rem"><b style="color:' + col + '">' + unit + '</b></p>' +
         '<h3>' + R.esc(b.title) + '</h3><p class="au">' + R.esc(b.author) + '</p>' +
         '<span class="bar" role="progressbar" aria-valuenow="' + b.pct + '" aria-valuemin="0" aria-valuemax="100" aria-label="' + R.esc(b.title) + ' progress"><i style="--w:' + b.pct + '%;--c:' + col + ';--i:' + i + '"></i></span>' +
         '<span class="prog"><b>' + b.pct + '%</b><span>' + R.eta(b) + '</span></span></span></a>';
@@ -46,13 +46,7 @@
   }
 
   function renderGoals(Y) {
-    var rows = R.goalRows(Y);
-    $('goals').innerHTML = rows.map(function (g, i) {
-      var capped = Math.min(100, g.pct), over = g.pct > 100;
-      return '<div class="goal fade" style="--i:' + (i + 1) + '"><div class="gl">' + g.label + '</div>' +
-        '<div class="bar" role="progressbar" aria-valuenow="' + Math.round(g.pct) + '" aria-valuemin="0" aria-valuemax="100" aria-label="' + g.label + ' goal"><i style="--w:' + capped + '%;--c:' + (over ? 'var(--read)' : 'var(--blue)') + ';--i:' + i + '"></i></div>' +
-        '<div class="gv"><b>' + g.fmt(g.value) + '</b> / ' + g.fmt(g.goal) + g.unit + ' &nbsp;' + (over ? '<span class="over">+' + Math.round(g.pct - 100) + '%</span>' : '<span class="dim">' + pctText(g.pct) + '</span>') + '</div></div>';
-    }).join('');
+    $('goals').innerHTML = RG.rowsHtml(RG.rows(Y, RG.read()));
   }
 
   function renderShelf(Y) {
@@ -236,4 +230,7 @@
   });
 
   renderAll(); renderShare(); bindShelf(); bindHeat();
+  RG.ready(function () { renderGoals(R.get(state.key)); });
+  window.addEventListener('pageshow', function (e) { if (e.persisted) renderGoals(R.get(state.key)); });
+  window.RJPage = { rerender: renderAll, state: state };
 })();
